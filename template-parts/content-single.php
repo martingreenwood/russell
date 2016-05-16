@@ -12,15 +12,13 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
-			<a href="<?php the_permalink();?>">
-				<?php if(has_post_thumbnail()): the_post_thumbnail('full'); endif;
+			
+			<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
 
-				the_title( '<h2 class="post-title">', '</h2>' ); ?>
-			</a>
 			<small>Posted on <?php the_date(); ?> | <?php the_category(', ') ?></small>
 
-			<?php the_excerpt();
-			
+			<?php the_content();
+
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'russell' ),
 				'after'  => '</div>',

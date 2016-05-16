@@ -14,7 +14,8 @@
 
 <aside id="secondary" class="widget-area" role="complementary">
 
-	<div id="siblings">
+	<?php if( is_page()) : ?>
+		<div id="siblings">
 
 		<h3 class="menu_title"><?php echo get_the_title( $post->post_parent ); ?></h3>
 		<ul>
@@ -30,6 +31,7 @@
 		</ul>
 
 	</div>
+	<?php endif; ?>
 
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

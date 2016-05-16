@@ -1110,3 +1110,57 @@
 	}
 }
 
+/*=================================
+=            NEWS PAGE            =
+=================================*/
+
+.news, .single-post, .archive {
+
+	#secondary {
+		@include span-columns(1);
+
+		@include media($medium-screen-up) {
+			@include span-columns(3);
+		}
+
+		@include media($large-screen-up) {
+			@include span-columns(3.5);
+			@include shift(0.5);
+		}		
+	}
+
+	.default-page {
+		padding-top: 50px;
+
+		article {
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			border-bottom: 1px solid #ccc;
+			
+			img {
+				border: 10px solid #f9f9f9;
+				display: block;
+				width: 100%;
+				margin-bottom: 20px;
+			}
+
+			h1.post-title {
+				@include rem(font-size, 28px);
+				margin: 0;
+				line-height: normal;
+			}
+
+			h2.post-title {
+				@include rem(font-size, 24px);
+				margin: 0;
+				line-height: normal;
+			}
+
+			small {
+				margin-bottom: 20px;
+				display: block;
+			}
+		}
+	}
+}
+
