@@ -2,7 +2,7 @@
 
 			<div class="search">
 				<h3>Find your new home...</h3>
-				<div class="search-box" class="clear">
+				<div class="search-box clear">
 					<select id="location" name="location">
 					<option value="">Location</option>
 					<?php

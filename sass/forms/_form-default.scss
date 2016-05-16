@@ -20,8 +20,9 @@ select {
 	line-height: normal;
 	display: block;
 	width: 100%;
-	box-shadow: $input-shadow;
 	transition: $input-transition;
+	min-height: ceil($form-line-height * 1.33);
+
 
 	&:focus {
 		border-color: $input-border-focus;
@@ -39,7 +40,7 @@ input[type="search"] {
 }
 
 select {
-	height: ceil($form-line-height * 1.33);
+	min-height: ceil($form-line-height * 1.33);
 }
 
 select[multiple],
@@ -57,15 +58,16 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
-	@include form-spacing(padding, $form-space $form-space * 2);
-	@include form-font-size(14px);
+	@include rem(padding, $form-space $form-space + ($form-space / 2));
+	@include rem(font-size, 14px);
 	background: $form-button-background;
+	border: 1px solid $form-button-background;
 	color: $form-button-color;
 	display: inline-block;
 	font-weight: 400;
 	text-transform: uppercase;
-	border: 0;
 	transition: $input-transition;
+	min-height: ceil($form-line-height * 1.33);
 
 	&:hover {
 		background: $form-button-background-hover;
