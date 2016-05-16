@@ -1,0 +1,42 @@
+{
+    "key": "group_571e3bafc4ff0",
+    "title": "Development Location Map",
+    "fields": [
+        {
+            "key": "field_571e3bbc6402c",
+            "label": "",
+            "name": "development_map",
+            "type": "google_map",
+            "instructions": "Pinpoint the development on the map - needed to generate the homepage map of all developments.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "center_lat": "54.516299",
+            "center_lng": "-2.79645",
+            "zoom": "",
+            "height": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "developments"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1461599726
+}

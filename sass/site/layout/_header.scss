@@ -1,0 +1,43 @@
+#masthead {
+	border-top: 5px solid $brand-primary;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: #fff;
+	height: 104px;
+	transition: all $base-duration $base-timing;
+
+	.site-branding {
+		float: left;
+		margin-right: 20px;
+	}
+
+	.site-logo {
+		padding: 30px 0;
+		transition: all $base-duration $base-timing;
+		
+		img {
+			width: 226px;
+			transition: all $base-duration $base-timing;
+		}
+	}
+}
+
+.sticky {
+
+	#masthead {
+		height: 63px;
+		box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
+		background: #fefefe;
+
+		.site-logo {
+			padding: 10px 0;
+		
+			img {
+				width: 154px;
+			}
+		}
+	}
+}

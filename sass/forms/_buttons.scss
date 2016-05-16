@@ -1,0 +1,23 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 0px solid;
+	border-color: $form-border-color;
+	background: $form-bg-color;
+	color: $form-button-text-color;
+	border-radius: 0;
+	outline: 0;
+	@include rem(padding, 10px 20px);
+
+	&:hover {
+		//background: $form-bg-color;
+		outline: 0;
+	}
+
+	&:active,
+	&:focus {
+		//background: $form-bg-color;
+		outline: 0;
+	}
+}

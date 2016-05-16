@@ -1,0 +1,43 @@
+#secondary {
+
+	.widget {
+		@include rem(margin, 0 0 15px);
+
+		/* Make sure select elements fit in widgets. */
+		select {
+			max-width: 100%;
+		}
+	}
+
+
+	#siblings {
+		
+		h3 {
+			@include rem(font-size, 20px);
+			padding-left: 0;
+			border-bottom: 1px solid #0089c3;
+			@include rem(margin-bottom, 10px);
+			@include rem(padding-bottom, 10px);
+		}
+
+		ul {
+			margin: 0;
+
+			li {
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid #0089c3;
+				list-style: none;
+				font-size: 14px;
+				font-weight: 400;
+
+				&.current_page_item {
+
+					a {
+						font-weight: 800;
+					}
+				}
+			}
+		}
+	}
+}

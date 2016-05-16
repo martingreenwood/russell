@@ -1,0 +1,216 @@
+{
+    "key": "group_57275549214f0",
+    "title": "Sections",
+    "fields": [
+        {
+            "key": "field_572755541e51f",
+            "label": "Top Left Image",
+            "name": "top_left_image",
+            "type": "image",
+            "instructions": "Select an image to appear on the top left - this will be auto cropped to fit in the box. (310 x 540)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_572756021e520",
+            "label": "Top Right Image",
+            "name": "top_right_image",
+            "type": "image",
+            "instructions": "Select an image to appear on the top right - this will be auto cropped to fit in the box. (310 x 540)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5727560a1e521",
+            "label": "Top Page Link",
+            "name": "top_page_link",
+            "type": "post_object",
+            "instructions": "Choose a page to link to in the middle top box",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_572756391e522",
+            "label": "Bottom Page link",
+            "name": "bottom_page_link",
+            "type": "post_object",
+            "instructions": "Choose a page to link to in the middle bottom box",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_572757291e525",
+            "label": "Bottom Left Image",
+            "name": "bottom_left_image",
+            "type": "image",
+            "instructions": "Pick an image to appear in the mid\/bottom left section - this will be auto cropped to fit (630 x 240)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_572756f01e524",
+            "label": "Bottom Right Image",
+            "name": "bottom_right_image",
+            "type": "image",
+            "instructions": "Pick an image to appear in the mid\/bottom right section - this will be auto cropped to fit (630 x 240)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_572757a31e527",
+            "label": "Bottom Left Page Link",
+            "name": "bottom_left_page_link",
+            "type": "post_object",
+            "instructions": "Choose a page to link to in the bottom left corner",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_572757841e526",
+            "label": "Bottom Right Page Link",
+            "name": "bottom_right_page_link",
+            "type": "post_object",
+            "instructions": "Choose a page to link to in the bottom right box",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "85"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1462272611
+}

@@ -1,0 +1,79 @@
+#colophon {
+	@include section-padding(50px, 50px);
+	background: $brand-primary;
+	color: white;
+
+	a, p, ul, li, span {
+		color: inherit;
+	}
+
+	ul {
+		list-style: none;
+		margin-left: 0;
+	}
+
+	h3 {
+		font-size: 20px;
+		line-height: 1;
+		margin-bottom: 30px;
+		color: white;
+		border-bottom: 1px solid white;
+		padding-bottom: 10px;
+	}
+
+	.column {
+		@include span-columns(1);
+
+		@include media ($medium-screen-up) {
+			@include span-columns(3);
+		}
+
+		@include media ($large-screen-up) {
+			@include span-columns(4);
+		}
+
+		&.contact-info {
+
+			.site-logo {
+				margin-bottom: 50px;
+			}
+			
+			img {
+				width: 80%;
+				display: block;
+			}
+
+			a {
+				background: $lightblue;
+				padding: 5px;
+				display: block;
+				margin-top: 11px;
+				text-align: center;
+				font-weight: 700;
+			}
+		}
+
+		&.contact {
+			.social {
+
+				li {
+					display: inline-block;
+
+					a {
+						background: white;
+						line-height: 32px;
+						display: block;
+						width: 32px;
+						@include rem(font-size, 18px);
+						border-radius: 50%;
+						text-align: center;
+
+						.fa {
+							color: $brand-primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}

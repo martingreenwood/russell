@@ -1,0 +1,49 @@
+{
+    "key": "group_57163b21118d2",
+    "title": "Homepage Slider",
+    "fields": [
+        {
+            "key": "field_57163b2a8976a",
+            "label": "",
+            "name": "homepage_slider",
+            "type": "gallery",
+            "instructions": "Add your homepage slides. When images are added click the image and edit it's title, caption & URL.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": 8,
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1461075043
+}

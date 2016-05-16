@@ -1,0 +1,64 @@
+{
+    "key": "group_571a6878acde1",
+    "title": "Development Stage",
+    "fields": [
+        {
+            "key": "field_571a688028345",
+            "label": "Development Stage",
+            "name": "development_stage",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Please define which stage this development is in.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_571a689e28346",
+            "label": "Select One",
+            "name": "development_stage",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "release-soon": "Release Soon",
+                "available": "Available",
+                "complete": "Complete"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "release-soon",
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "developments"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1461348688
+}

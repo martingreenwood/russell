@@ -1,0 +1,37 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+select,
+textarea {
+	color: $text-input;
+	border: 1px solid $form-border-color;
+	border-radius: 0;
+	outline: 0;
+
+	&:focus {
+
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	
+}
+
+textarea {
+	
+}
+
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}

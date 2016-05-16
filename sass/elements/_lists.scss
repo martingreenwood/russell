@@ -1,0 +1,35 @@
+ul, ol {
+	@include rem(margin, 0 0 15px 15px);
+}
+
+ul {
+	list-style: none;
+
+	li {
+		position: relative;
+
+		&:before {
+			content: "- ";
+			position: absolute;
+			left: -10px;
+		}
+	}
+}
+
+ol {
+	list-style: none;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	@include rem(margin-left, 15px);
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	@include rem(margin, 0 15px 15px);
+}

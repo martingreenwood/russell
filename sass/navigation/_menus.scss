@@ -1,0 +1,299 @@
+.main-navigation {
+	display: block;
+	float: right;
+	margin-top: 50px;
+	transition: all $base-duration $base-timing;
+	
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			float: left;
+			position: absolute;
+			@include rem(top, 20px);
+			@include rem(left, -9999px);
+			z-index: 99999;
+			background: white;
+			@include rem(padding, 20px);
+
+			ul {
+				top: 0;
+				position: relative;
+				left: 0;
+				padding: 0;
+			}
+
+			li {
+				margin: 0;
+
+				&:hover > ul,
+				&.focus > ul {
+				}
+			}
+
+			a {
+				@include rem(width, 200px);
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+	li {
+		float: left;
+		position: relative;
+		margin: 0 10px;
+
+		&:first-of-type {
+			margin-left: 0;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&:hover > a,
+		&.focus > a {
+		}
+
+		&#menu-item-137 {
+
+			> ul {
+				-webkit-column-count: 1; /* Chrome, Safari, Opera */
+				-moz-column-count: 1; /* Firefox */
+				column-count: 1;
+
+				> li {
+					margin-bottom: 20px;
+
+					> a {
+						font-weight: bold;
+					}
+
+				}
+			}
+
+			ul {
+
+				li {
+					//white-space: nowrap;
+					//width: 250px;
+				}
+			}			
+		}
+
+		&#menu-item-5146 {
+
+			> ul {
+				-webkit-column-count: 2; /* Chrome, Safari, Opera */
+				-moz-column-count: 2; /* Firefox */
+				column-count: 2;
+
+				> li {
+					margin-bottom: 20px;
+
+					> a {
+						font-weight: bold;
+					}
+
+				}
+			}
+
+			ul {
+
+				li {
+					white-space: nowrap;
+					width: 250px;
+				}
+			}
+		}
+	}
+	a {
+		display: block;
+		color: $text-color;
+		text-decoration: none;
+		@include rem(font-size, 14px);
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+#nav-icon {
+	width: 42px;
+	height: 33px;
+	position: relative;
+	background: transparent;
+	outline: 0;
+	position: absolute;
+	right: 20px;
+	top: 28px;
+
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+
+	span {
+		display: block;
+		position: absolute;
+		height: 5px;
+		width: 50%;
+		background: $brand-primary;
+		opacity: 1;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: .25s ease-in-out;
+		-moz-transition: .25s ease-in-out;
+		-o-transition: .25s ease-in-out;
+		transition: .25s ease-in-out;
+
+		&:nth-child(even) {
+			left: 50%;
+			border-radius: 0 9px 9px 0;
+		}
+
+		&:nth-child(odd) {
+			left:0px;
+			border-radius: 9px 0 0 9px;
+		}
+
+		&:nth-child(1), &:nth-child(2) {
+			top: 0px;
+		}
+
+		&:nth-child(3), &:nth-child(4) {
+			top: 14px;
+		}
+
+		&:nth-child(5), &:nth-child(6) {
+			top: 28px;
+		}
+	}
+}
+
+.sticky {
+	#nav-icon {
+		top: 12px;
+	}
+}
+
+.toggled {
+
+	#nav-icon {	
+		
+		span{
+			
+			&:nth-child(1), &:nth-child(6) {
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+
+			&:nth-child(2), &:nth-child(5) {
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+			}
+
+			&:nth-child(1) {
+				left: 5px;
+				top: 7px;
+			}
+
+			&:nth-child(2) {
+				left: calc(50% - 5px);
+				top: 7px;
+			}
+
+			&:nth-child(3) {
+				left: -50%;
+				opacity: 0;
+			}
+
+			&:nth-child(4) {
+				left: 100%;
+				opacity: 0;
+			}
+
+			&:nth-child(5) {
+				left: 5px;
+				top: 18px;
+			}
+
+			&:nth-child(6) {
+				left: calc(50% - 5px);
+				top: 18px;
+			}
+		}
+	}
+}
+
+@include media ($large-screen-up) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		@include rem(margin, 0 0 15px);
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+
+.sticky {
+
+	.main-navigation {
+		margin-top: 20px;
+	}
+}

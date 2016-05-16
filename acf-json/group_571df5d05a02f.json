@@ -1,0 +1,78 @@
+{
+    "key": "group_571df5d05a02f",
+    "title": "Select Dev & House Type",
+    "fields": [
+        {
+            "key": "field_571df5da9bfd8",
+            "label": "Choose Development",
+            "name": "choose_development",
+            "type": "relationship",
+            "instructions": "Please choose the the development to associate this plot with.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "developments"
+            ],
+            "taxonomy": [
+
+            ],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": 1,
+            "max": 1,
+            "return_format": "id"
+        },
+        {
+            "key": "field_571df6229bfd9",
+            "label": "Choose House Type",
+            "name": "choose_house_type",
+            "type": "relationship",
+            "instructions": "Please choose the house type to associate this plot with.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "housetypes"
+            ],
+            "taxonomy": [
+
+            ],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": 1,
+            "max": 1,
+            "return_format": "id"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "plots"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1461581523
+}
