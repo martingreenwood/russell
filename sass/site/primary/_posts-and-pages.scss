@@ -2,15 +2,44 @@
 =            Global            =
 ==============================*/
 
-.hentry {margin: 0;}
+.hentry {
+	margin: 0;
+}
 
-.byline, .updated:not(.published){ display: none; }
+.byline, .updated:not(.published) { 
+	display: none; 
+}
 
-.single .byline, .group-blog .byline { display: inline; }
+.single, .group-blog {
+	
+	.byline { 
+		display: inline; 
+	}
+}
 
-.page-content, .entry-content, .entry-summary { @include rem(margin, 0); }
+.page-content, .entry-content, .entry-summary { 
+	@include rem(margin, 0);
+}
 
-.page-links { clear: both; @include rem(margin, 0 0 15px); }
+.page-links { 
+	clear: both; 
+	@include rem(margin, 0 0 15px);
+}
+
+#primary {
+	
+	ul {
+		
+		li {
+			
+			&:before {
+				content: "- ";
+				position: absolute;
+				left: -10px;
+			}
+		}
+	}
+}
 
 /*==================================
 =            Base Pages            =

@@ -7,12 +7,6 @@ ul {
 
 	li {
 		position: relative;
-
-		&:before {
-			content: "- ";
-			position: absolute;
-			left: -10px;
-		}
 	}
 }
 
