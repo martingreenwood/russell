@@ -1,0 +1,62 @@
+{
+    "key": "group_5739e926b5be2",
+    "title": "Property Type",
+    "fields": [
+        {
+            "key": "field_5739e92fc7c90",
+            "label": "",
+            "name": "property_type",
+            "type": "select",
+            "instructions": "select the property type (defaults to House)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "apartment": "Apartment",
+                "bungalow": "Bungalow",
+                "cottage": "Cottage",
+                "detached": "Detached",
+                "duplex": "Duplex",
+                "house": "House",
+                "mews": "Mews",
+                "penthouse": "Penthouse",
+                "retiremnt": "Retirement",
+                "semi-detached": "Semi Detached",
+                "terraced": "Terraced",
+                "townhose": "Townhouse"
+            },
+            "default_value": [
+                "House"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "housetypes"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1463413316
+}

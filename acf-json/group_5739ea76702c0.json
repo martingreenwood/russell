@@ -1,0 +1,47 @@
+{
+    "key": "group_5739ea76702c0",
+    "title": "Number of Bedrooms",
+    "fields": [
+        {
+            "key": "field_5739ea7f66472",
+            "label": "",
+            "name": "number_of_bedrooms",
+            "type": "number",
+            "instructions": "Please select the number of bedrooms.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 5,
+            "step": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "housetypes"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1463413423
+}

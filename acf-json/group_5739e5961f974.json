@@ -1,0 +1,40 @@
+{
+    "key": "group_5739e5961f974",
+    "title": "Enable Info Popup",
+    "fields": [
+        {
+            "key": "field_5739e59d7f10b",
+            "label": "Tick to enable info popup on site plan",
+            "name": "enable_info_popup",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "plots"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1463412178
+}

@@ -1,0 +1,48 @@
+{
+    "key": "group_5739e6d31f0cb",
+    "title": "Special Offers",
+    "fields": [
+        {
+            "key": "field_5739e6da992ab",
+            "label": "",
+            "name": "special_offers",
+            "type": "checkbox",
+            "instructions": "Tick which special offers should be visable on the search page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "help-to-buy": "Help to Buy",
+                "free-carpets": "Free Carpets",
+                "stamp-duty-paid": "Stanp Duty Paid"
+            },
+            "default_value": [
+
+            ],
+            "layout": "vertical",
+            "toggle": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "plots"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1463412535
+}
