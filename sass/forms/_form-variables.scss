@@ -2,13 +2,13 @@ $input-bg:           #fff !default;
 $input-color:        #999 !default;
 $input-border:       #ddd !default;
 $input-border-focus: #999 !default;
-$input-label:        #666 !default;
+$input-label:        #333 !default;
 $input-error:        #ca3c3c !default;
 $input-shadow:       1px 1px 2px #eee inset !default;
 $input-transition:   all .3s ease-in-out !default;
 
-$form-button-background:       #333 !default;
-$form-button-background-hover: #0078e7 !default;
+$form-button-background:       $brand-primary !default;
+$form-button-background-hover: darken($brand-primary, 10%) !default;
 $form-button-color:            #fff !default;
 
 $form-required: #f00 !default;

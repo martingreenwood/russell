@@ -1018,3 +1018,95 @@
 		}
 	}
 }
+
+
+/*==================================
+=            Contact Us            =
+==================================*/
+
+.contact-us {
+
+	#primary {
+		
+		.column {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(3);
+			}
+
+			@include media($large-screen-up) {
+				@include span-columns(4);
+			}
+
+			h4 {
+				margin: 0;
+				color: $dark-gray;
+			}
+
+			p {
+				margin: 0;
+
+				a {
+					font-weight: 800;
+				}
+			}
+		}
+
+		.entry-content {
+			
+			h3 {
+				@include rem(font-size, 24px);
+				line-height: normal;
+				color: $dark-gray;
+			}
+		}
+
+		.general, .sales {
+			margin-bottom: 20px;
+		}
+
+		.headoffice {
+
+			small {
+				margin-top: 20px;
+				display: block;
+			}
+		}
+	}
+
+	.contact-form {
+		@include section-padding(50px, 50px);
+		background: #f9f9f9;
+
+		h2 {
+			@include rem(font-size, 24px);	
+			@include rem(margin-bottom, 50px);
+		}
+
+		.gform_wrapper {
+
+			.gfield {
+				margin-right: 0;
+				width: 100%;
+
+				.ginput_complex {
+					
+					span {
+						position: relative;
+
+						label {
+							position: absolute;
+							margin: 0;
+							bottom: 11px;
+							font-size: 10px;
+							color: #999;
+							right: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
