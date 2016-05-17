@@ -1,0 +1,43 @@
+{
+    "key": "group_573ad72256bda",
+    "title": "Plot Plan PDF",
+    "fields": [
+        {
+            "key": "field_573ad72b83ad9",
+            "label": "",
+            "name": "house_type_plan_pdf",
+            "type": "file",
+            "instructions": "Add the house type downloadable PDF",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "housetypes"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1463474043
+}
