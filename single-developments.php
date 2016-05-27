@@ -63,9 +63,9 @@ get_header(); ?>
 
 			<div class="shareme">
 				<?php 
-				//if ( function_exists( 'sharing_display' ) ) {
+				if ( function_exists( 'sharing_display' ) ) {
 					sharing_display( '', true );
-				//}
+				}
 				?>
 			</div>
 
