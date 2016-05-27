@@ -1,0 +1,96 @@
+{
+    "key": "group_5747216f24a1a",
+    "title": "Development Downloads",
+    "fields": [
+        {
+            "key": "field_5747219b2b9b5",
+            "label": "Development Brochure",
+            "name": "development_brochure",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Please add your development brochure PDF",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_574721782b9b4",
+            "label": "Add Brochure",
+            "name": "development_brochure",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "uploadedTo",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_57472226bd9b9",
+            "label": "Development Siteplan",
+            "name": "development_siteplan",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Please add your development siteplan PDF",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5747223dbd9ba",
+            "label": "Add Siteplan",
+            "name": "development_siteplan_pdf",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "uploadedTo",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "developments"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1464279636
+}

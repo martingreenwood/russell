@@ -1,0 +1,150 @@
+/*=====================================
+=            Your New Home            =
+=====================================*/
+
+
+.your-new-home {
+
+	article {
+		@include rem(margin-bottom, 30px);
+	}
+
+	.top-half {
+		margin-bottom: 20px;
+
+		.column {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4);
+			}
+
+			&.left-img, &.right-img {
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 50%;
+			}
+
+			.top-link, .bottom-link {
+				@include rem(padding, 20px);
+				height: calc(50% - 10px);
+				min-height: 267px;
+				float: left;
+				width: 100%;
+				@include house-icon();
+
+				h3 {
+					@include rem(margin-bottom, 15px);
+					@include rem(font-size, 24px);
+				}
+			}
+
+			.top-link {
+				background-color: #E6E6E8;
+				@include rem(margin-bottom, 10px);
+			}
+
+			.bottom-link {
+				background-color: $lightblue;
+				@include rem(margin-top, 10px);
+				color: white;
+
+				h3, p, a {
+					color: inherit;
+				}
+			}
+		}
+	}
+
+	.bottom-half {
+		@include section-padding(0, 50px);
+
+		.mid-top {
+			margin-bottom: 20px;
+
+			.left-img {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(6);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(8);
+				}
+			}
+
+			.right-link {
+				background-color: #E6E6E8;
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(3);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(4);
+				}
+			}
+		}
+
+		.mid-bottom {
+
+			.right-img {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(6);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(8);
+				}
+			}
+
+			.left-link {
+				background-color: $brand-primary;
+				color: white;
+
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(3);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(4);
+				}
+
+				h3, p, a {
+					color: inherit;
+				}
+			}
+		}
+
+		.mid-bottom, .mid-top {
+
+			.left-img, .right-img {
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 50%;
+				min-height: 267px;
+			}
+
+			.left-link, .right-link { 
+				@include rem(padding, 20px);
+				min-height: 267px;
+				@include house-icon();
+
+				h3 {
+					@include rem(margin-bottom, 15px);
+					@include rem(font-size, 24px);
+				}
+			}
+		}
+	}
+}

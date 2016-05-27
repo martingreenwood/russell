@@ -1,0 +1,120 @@
+{
+    "key": "group_574809a57e616",
+    "title": "Development 360",
+    "fields": [
+        {
+            "key": "field_574809beca5ad",
+            "label": "Enable 360 Popup",
+            "name": "enable_360_popup",
+            "type": "true_false",
+            "instructions": "Tick to enable the 360 popup for this development.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Tick to show",
+            "default_value": 0
+        },
+        {
+            "key": "field_57480a1cca5ae",
+            "label": "360 URL",
+            "name": "360_url",
+            "type": "url",
+            "instructions": "Enter the url to your 360 view folder.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_574809beca5ad",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_57480a4aca5af",
+            "label": "360 Image",
+            "name": "360_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_574809beca5ad",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_57480a60ca5b0",
+            "label": "360 Fallback Image",
+            "name": "360_fallback_image",
+            "type": "image",
+            "instructions": "Add a fallback image for those developments without a 360",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "developments"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1464339130
+}

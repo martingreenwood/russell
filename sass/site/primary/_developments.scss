@@ -1,0 +1,89 @@
+/*====================================
+=            DEVELOPMENTS            =
+====================================*/
+
+.single-developments {
+
+	.feature-image {
+		position: relative;
+
+		#dev_logo {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			width: 195px;
+		}
+	}
+
+	#dev-title {
+		@include section-padding(50px, 0);
+
+		h1 {
+			margin: 0;
+		}
+	}
+
+	#secondary {
+		@include span-columns(1);
+
+		@include media ($medium-screen-up) {
+			@include span-columns(3);
+		}
+
+		@include media ($large-screen-up) {
+			@include span-columns(3.5);
+		}
+
+		.intro {
+			margin-bottom: 30px;
+
+			h1, h2 {
+				margin: 0;
+				line-height: normal
+			}
+		}
+
+		.quicklinks {
+			margin-bottom: 30px;
+
+			ul {
+				margin: 0;
+
+				li {
+					
+					a {
+						display: block;
+						background: #00527b;
+						margin-bottom: 5px;
+						color: white;
+						font-weight: 700;
+						padding: 10px;
+						background-image: url(assets/slide-next.svg);
+						background-size: 13px;
+						background-repeat: no-repeat;
+						background-position: 97% 50%;
+					}
+				}
+			}
+		}
+
+		.showhome {
+			margin-bottom: 30px;
+		}
+
+		.shareme {
+		}
+	}
+
+	#primary {
+		@include span-columns(1);
+
+		@include media ($medium-screen-up) {
+			@include span-columns(6);
+		}
+
+		@include media ($large-screen-up) {
+			@include span-columns(8.5);
+		}
+	}
+}

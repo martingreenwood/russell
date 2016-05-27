@@ -81,6 +81,44 @@
             "maxlength": "",
             "readonly": 0,
             "disabled": 0
+        },
+        {
+            "key": "field_5746d4ff28a9b",
+            "label": "Show Home Opening Times",
+            "name": "show_home_opening_times",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Add your show home openning times, for example:  Show home open every Friday, Saturday & Sunday 11am \u2013 5.30pm",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5746d44928a9a",
+            "label": "",
+            "name": "visitor_opening_times",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br",
+            "readonly": 0,
+            "disabled": 0
         }
     ],
     "location": [
@@ -92,13 +130,13 @@
             }
         ]
     ],
-    "menu_order": 0,
-    "position": "normal",
+    "menu_order": 2,
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1461348021
+    "modified": 1464259912
 }

@@ -162,6 +162,16 @@ function russell_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'russell_scripts' );
 
+/*=====================================
+=            ADMIN ENQUEUE            =
+=====================================*/
+
+function russell_admin_enqueue() {
+	wp_enqueue_style( 'russ-admin-css', get_template_directory_uri() . '/css/russ-admin.css');
+	wp_enqueue_script( 'russ-admin-js', get_template_directory_uri() . '/js/russ-admin.js', '', '1', true );
+}
+add_action('admin_enqueue_scripts', 'russell_admin_enqueue');
+
 /**
  * Custom Excerpt
  */
@@ -179,6 +189,30 @@ function new_excerpt_more($excerpt)
 	return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+/*====================================================
+=            Remove Comments from toolbar            =
+====================================================*/
+
+function russ_admin_bar_render() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+}
+add_action( 'wp_before_admin_bar_render', 'russ_admin_bar_render' );
+
+/*============================================
+=            UNHOOK JETPACK SHARE            =
+============================================*/
+
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+add_action( 'loop_start', 'jptweak_remove_share' );
+
 
 /**
  * Setup custom post types.
@@ -216,4 +250,3 @@ require get_template_directory() . '/lib/acf-gravity_forms.php';
 require get_template_directory() . '/inc/dev-menu.php';
 require get_template_directory() . '/inc/locations-menu.php';
 require get_template_directory() . '/inc/planning-menu.php';
-

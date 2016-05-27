@@ -1,0 +1,154 @@
+{
+    "key": "group_574811e493c76",
+    "title": "Local Area",
+    "fields": [
+        {
+            "key": "field_574811f1cb9a8",
+            "label": "Intro Content",
+            "name": "intro_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "full",
+            "media_upload": 0
+        },
+        {
+            "key": "field_5748125acb9aa",
+            "label": "Read More Link",
+            "name": "local_area_link",
+            "type": "page_link",
+            "instructions": "Please select the local area page to link to.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "locations"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_574812a8cb9ab",
+            "label": "Amenities",
+            "name": "amenities",
+            "type": "repeater",
+            "instructions": "Enter you local area amenities.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_574812cccb9ac",
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Amenity",
+            "sub_fields": [
+                {
+                    "key": "field_574812cccb9ac",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_574812e3cb9ad",
+                    "label": "Type",
+                    "name": "type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "school": "School",
+                        "sports": "Sports & Leisure",
+                        "shopping": "Shopping",
+                        "transport": "Public Transport"
+                    },
+                    "default_value": [
+
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_57481364cb9ae",
+                    "label": "Location",
+                    "name": "location",
+                    "type": "google_map",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 100,
+                        "class": "",
+                        "id": ""
+                    },
+                    "center_lat": "",
+                    "center_lng": "",
+                    "zoom": "",
+                    "height": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "developments"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1464342038
+}
