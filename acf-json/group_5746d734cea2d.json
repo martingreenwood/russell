@@ -1,12 +1,12 @@
 {
-    "key": "group_5721efb2c9a35",
-    "title": "Feature Video",
+    "key": "group_5746d734cea2d",
+    "title": "Development Logo",
     "fields": [
         {
-            "key": "field_5721f06b08900",
-            "label": "Feature Video",
-            "name": "feature_video",
-            "type": "oembed",
+            "key": "field_5746d7546c0c0",
+            "label": "Select your development logo",
+            "name": "select_your_development_logo",
+            "type": "message",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,13 +15,14 @@
                 "class": "",
                 "id": ""
             },
-            "width": "",
-            "height": ""
+            "message": "Please upload your development logo - ideally this should be a SVG.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
-            "key": "field_5721f08708901",
-            "label": "Feature Video Image",
-            "name": "feature_video_image",
+            "key": "field_5746d73b6c0bf",
+            "label": "",
+            "name": "development_logo",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -46,13 +47,6 @@
     "location": [
         [
             {
-                "param": "page_type",
-                "operator": "==",
-                "value": "front_page"
-            }
-        ],
-        [
-            {
                 "param": "post_type",
                 "operator": "==",
                 "value": "developments"
@@ -67,5 +61,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1464338397
+    "modified": 1464260515
 }

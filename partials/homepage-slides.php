@@ -13,5 +13,5 @@
 	                <?php if ($sliderlink): ?></a><?php endif; ?>
 	            </div>
 	        <?php endforeach; ?>
-	    </ul>
+	    </div>
 	<?php endif; ?>

@@ -1,0 +1,21 @@
+.wp-core-ui {
+
+	.posp_container {
+		background-color: #f9f9f9;
+		width: 100% !important;
+		height: 50px;
+		z-index: 100;
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		display: none;
+		border-radius: 0;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+
+		.button-primary {
+			float: right;
+			margin-right: 10px !important;
+		}
+	}
+}

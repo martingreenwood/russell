@@ -1,0 +1,50 @@
+{
+    "key": "group_57480fe780316",
+    "title": "Development Slider",
+    "fields": [
+        {
+            "key": "field_57480ff6ea2ad",
+            "label": "Slider Images",
+            "name": "development_slider",
+            "type": "gallery",
+            "instructions": "Please add a few images to the development slider - if empty this will fallback to the feature image - which if empty will fall back to a default. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "preview_size": "thumbnail",
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "developments"
+            }
+        ]
+    ],
+    "menu_order": -1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1464340577
+}

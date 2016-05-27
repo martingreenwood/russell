@@ -1,0 +1,74 @@
+/*============================================
+=            Sinlge Planning Page            =
+============================================*/
+
+.single-planning {
+
+	 #main {
+
+		.column {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(4.5);
+			}
+
+			@include media($large-screen-up) {
+				@include span-columns(6);
+			}
+	 	}
+
+	 	.box {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(3);
+			}
+
+			@include media($large-screen-up) {
+				@include span-columns(4);
+			}
+
+			&.wide {
+				@include span-columns(1);
+
+				@include media($medium-screen-up) {
+					@include span-columns(6);
+				}
+
+				@include media($large-screen-up) {
+					@include span-columns(8);
+				}
+			}
+
+			&.full {
+				@include span-columns(1);
+
+				@include media($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media($large-screen-up) {
+					@include span-columns(12);
+				}
+			}
+
+			img {
+				display: block;
+			}
+
+			.map {
+				height: 253px;
+			}
+	 	}
+ 	}
+
+	#feedback {
+		background: #f4f4f4;
+		@include section-padding(50px, 50px);
+
+		h1 {
+			margin: 0;
+		}
+	}
+}

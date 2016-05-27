@@ -1,0 +1,42 @@
+/*==============================
+=            AWARDS            =
+==============================*/
+
+
+.ra-awards {
+	
+	.award {
+		@include rem(margin-bottom, 20px);
+		@include rem(padding-bottom, 20px);
+		border-bottom: 1px solid #eee;
+
+		.info, .limage {
+			float: left;
+			width: 50%;
+		}
+
+		&:nth-child(odd) {
+			.info {
+				@include rem(padding-right, 10px);
+			}
+			.limage {
+				@include rem(padding-left, 10px);
+			}
+		}
+
+		&:nth-child(even) {
+			.info {
+				@include rem(padding-left, 10px);
+			}
+			.limage {
+				@include rem(padding-right, 10px);
+			}
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+	}
+}
