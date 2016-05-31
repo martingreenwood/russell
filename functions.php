@@ -175,7 +175,6 @@ add_action('admin_enqueue_scripts', 'russell_admin_enqueue');
 /**
  * Custom Excerpt
  */
-// custom excerpt length
 function russell_excerpt_length( $length ) {
 	return 30;
 }

@@ -33,58 +33,104 @@ get_header(); ?>
 
 	<div class="container">
 
-		<div id="dev-title">
-			<h1>Cragg Close</h1>
+		<div class="row">
+			<div id="dev-title">
+				<h1>Cragg Close</h1>
+			</div>
 		</div>
 
-		<div id="secondary">
+		<div class="row">
+			<div id="secondary">
 
-			<div class="intro">
-				<h2>Kendal, Cumbria LA9 4HE</h2>
-				<br>
-				<h3>2 - 4 Bedroom properties
-					<br>starting from £199,500</h3>
+				<div class="intro">
+					<h2>Kendal, Cumbria LA9 4HE</h2>
+					<br>
+					<h3>2 - 4 Bedroom properties
+						<br>starting from £199,500</h3>
+				</div>
+
+				<div class="quicklinks">
+					<ul>
+						<li><a href="">Register your interest</a></li>
+						<li><a href="">Search for gomes at Cragg Close</a></li>
+						<li><a href="">Download a brochure</a></li>
+						<li><a href="">View site plan</a></li>
+					</ul>
+				</div>
+
+				<div class="showhome">
+					<h3>Show home open every<br>
+					Friday, Saturday &smp; Sunday<br>
+					11am – 5.30pm.</h3>
+				</div>
+
+				<div class="shareme">
+					<?php 
+					if ( function_exists( 'sharing_display' ) ) {
+						sharing_display( '', true );
+					}
+					?>
+				</div>
+
 			</div>
 
-			<div class="quicklinks">
-				<ul>
-					<li><a href="">Register your interest</a></li>
-					<li><a href="">Search for gomes at Cragg Close</a></li>
-					<li><a href="">Download a brochure</a></li>
-					<li><a href="">View site plan</a></li>
-				</ul>
-			</div>
+			<div id="primary" class="content-area">
 
-			<div class="showhome">
-				<h3>Show home open every<br>
-				Friday, Saturday &ap; Sunday<br>
-				11am – 5.30pm.</h3>
-			</div>
+				<main id="main" class="site-main" role="main">
 
-			<div class="shareme">
-				<?php 
-				if ( function_exists( 'sharing_display' ) ) {
-					sharing_display( '', true );
-				}
-				?>
-			</div>
+					<?php
+					while ( have_posts() ) : the_post();
 
+						get_template_part( 'template-parts/content', 'page' );
+
+					endwhile; // End of the loop.
+					?>
+
+				</main>
+
+			</div>
 		</div>
+		
+	</div>
 
-		<div id="primary" class="content-area">
+	<div class="container grid">
 
-			<main id="main" class="site-main" role="main">
+		<div class="row">
+			<div class="video youtube">
+				<a href="#dev_video">
+					<?php $feature_video_image = get_field('feature_video_image'); ?>
+					<img src="<?php echo $feature_video_image['sizes']['thumbnail']; ?>">
+				</a>
+				<div id="dev_video">
+					<a class="close_vid" href="#dev_video"></a>
+					<div class="table">
+						<div class="cell middle">
+							<div class="vid-wrap">
+								<div class="embed-container">
+									<?php $iframe = get_field('feature_video');
 
-				<?php
-				while ( have_posts() ) : the_post();
+									preg_match('/src="(.+?)"/', $iframe, $matches);
+									$src = $matches[1];
+									$params = array(
+									    'controls'    => 0,
+									    'hd'        => 1,
+									    'autohide'    => 1
+									);
+									$new_src = add_query_arg($params, $src);
+									$iframe = str_replace($src, $new_src, $iframe);
+									$attributes = 'frameborder="0"';
+									$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
 
-					get_template_part( 'template-parts/content', 'page' );
-
-				endwhile; // End of the loop.
-				?>
-
-			</main>
-
+									echo $iframe;
+									?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="gallery">
+			</div>
 		</div>
 
 	</div>

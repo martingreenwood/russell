@@ -66,9 +66,7 @@ $(function() {
 	});
 });
 
-// close popup video
-
-// Youtube Footer Link
+// Youtube popup Link
 $(function() {
 	$('.youtube a').on('click', function(event) {
 		event.preventDefault();
