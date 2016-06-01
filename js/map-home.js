@@ -191,7 +191,7 @@ var map = null;
 
 $(document).ready(function(){
 
-	$('.map').each(function(){
+	$('.home-map').each(function(){
 
 		// create map
 		map = new_map( $(this) );

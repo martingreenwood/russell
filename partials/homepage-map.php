@@ -4,7 +4,7 @@
 				<p><span class="av">Available</span> <span class="rs">Release Soon</span></p>
 			</div>
 			
-			<div class="map">
+			<div class="home-map">
 
 				<?php
 				$available_developments = new WP_Query(array( 

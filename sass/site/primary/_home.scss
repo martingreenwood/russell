@@ -274,7 +274,7 @@
 			position: relative;
 		}
 
-		.map {
+		.home-map {
 			width: 100%;
 			height: 500px;
 			border: 0;
@@ -319,7 +319,7 @@
 		}
 
 		/* fixes potential theme css conflict */
-		.map img {
+		.home-map img {
 		   max-width: inherit !important;
 		}
 

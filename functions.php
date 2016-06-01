@@ -42,6 +42,7 @@ function russell_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'cover1600', 1600, 450, true );
+	add_image_size( 'devfeat', 620, 300, true );
 	/*
 	 * Enable support for Logo in Customiser.
 	 *
@@ -148,7 +149,7 @@ function russell_scripts() {
 
 	wp_enqueue_script( 'russ-js', get_template_directory_uri() . '/js/russ.js', '', '1', true );
 
-	if (is_front_page() || is_singular( 'planning' )) {
+	if (is_front_page() || is_singular( 'planning' ) || is_singular( 'developments' )) {
 	wp_enqueue_script( 'russ-map', '//maps.googleapis.com/maps/api/js?sensor=false', '', '', true );
 	}
 
@@ -156,7 +157,7 @@ function russell_scripts() {
 	wp_enqueue_script( 'russ-dev-map', get_template_directory_uri() . '/js/map-home.js', '', '1', true );
 	}
 
-	if (is_singular( 'planning' )) {
+	if (is_singular( 'planning' ) || is_singular( 'developments' )) {
 	wp_enqueue_script( 'russ-base-map', get_template_directory_uri() . '/js/map-default.js', '', '1', true );
 	}
 }

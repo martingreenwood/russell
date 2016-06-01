@@ -100,6 +100,127 @@
 
 	.grid {
 
+
+		.small-map {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(6);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(8); 
+			}
+
+			.map {
+				width: 100%;
+				height: 300px;
+			}
+
+			/* fixes potential theme css conflict */
+			.map img {
+			   max-width: inherit !important;
+			}
+		}
+
+		.quote {
+			background-color: #D3ECEA;
+			height: 300px;
+			@include span-columns(1);
+			@include house-icon();
+			padding: 20px;
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4); 
+			}
+		}
+
+		.video {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4); 
+			}
+
+			img {
+				display: block;
+			}
+		}
+
+		.feature-gallery {
+			@include span-columns(1);
+			position: relative;
+			background-size: cover;
+			background-position: center;
+
+			@include media ($medium-screen-up) {
+				@include span-columns(6);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(8); 
+			}
+
+			.gallery {
+				margin: 0;
+			}
+
+			.gallery-item {
+				margin: 0;
+				display: none;
+
+				&:first-of-type {
+					display: block;
+					opacity: 0
+				}
+
+				img {
+					display: block;
+				}
+			}
+
+			.clickme {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				background: $brand-primary;
+				z-index: 0;
+
+				h2, p {
+					display: inline-block;
+					color: white;
+					margin: 0;
+				}
+
+				h2 {
+					margin-right: 10px;
+					margin-left: 10px;
+					font-size: 22px;
+					padding: 8px 0;
+				}
+
+				svg {
+					position: absolute;
+					top: -20px;
+					width: 40px;
+					right: 20px;
+
+					.house-icon-svg {
+						fill: $brand-primary;
+						stroke: $brand-primary;
+					}
+				}
+			}
+		}
+
 		#dev_video {
 			position: fixed;
 			top: 0;
@@ -148,6 +269,52 @@
 				max-width: 640px;
 				margin: 0 auto;
 				padding: 20px;
+			}
+		}
+
+		.third {
+			@include span-columns(1);
+			height: 300px;
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4); 
+			}
+
+			&.view360 {
+				position: relative;
+
+				.icon360 {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background-image: url(assets/virtual-icon.png);
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+
+			&.help-to-buy {
+				background-color: $brand-primary;
+
+				a {
+					padding: 20px;
+					display: block;
+					height: 100%;
+					@include house-icon();
+
+					img {
+						width: 115px;
+					}
+
+					p {
+						color: white;
+						margin: 0;
+					}
+				}
 			}
 		}
 	}
