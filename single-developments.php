@@ -107,10 +107,23 @@ get_header(); ?>
 
 		<div class="row">
 			<?php get_template_part( 'partials/development', 'advert' ); ?>
-			<?php get_template_part( 'partials/development', 'random-img' ); ?>
+			<?php get_template_part( 'partials/development', '360' ); ?>
 			<?php get_template_part( 'partials/development', 'random-img' ); ?>
 		</div>
 
+	</div>
+
+	<div id="siteplan">
+		<div class="container">
+			<div class="row">
+				<?php if( have_rows('add_your_site_plans') ): while ( have_rows('add_your_site_plans') ) : the_row();
+						the_sub_field('title');
+						the_sub_field('active');
+						the_sub_field('plan');
+					endwhile;
+				endif; ?>
+			</div>
+		</div>
 	</div>
 
 <?php

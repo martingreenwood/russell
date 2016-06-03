@@ -5,6 +5,6 @@
 				$development_gallery = get_field('development_gallery', $asoc_gal_ID, false);
 				$coverImg = end($development_gallery);
 				$coverImgSrc = wp_get_attachment_image( $coverImg );
+				echo $coverImgSrc; 
 				?>
-				<?php echo $coverImgSrc; ?>">
 			</div>

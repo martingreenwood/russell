@@ -75,6 +75,15 @@ $(function() {
 	});
 });
 
+// view360 popup Link
+$(function() {
+	$('.view360 a').on('click', function(event) {
+		event.preventDefault();
+		var target = $(this).attr('href');
+		$(target).toggleClass('show');
+	});
+});
+
 /*====================================
 =            EQUAL HIGHTS            =
 ====================================*/

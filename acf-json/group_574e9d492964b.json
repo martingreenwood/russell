@@ -80,7 +80,7 @@
                         "id": ""
                     },
                     "post_type": [
-
+                        "page"
                     ],
                     "taxonomy": [
 
@@ -108,5 +108,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1464769969
+    "modified": 1464770226
 }

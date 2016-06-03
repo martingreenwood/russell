@@ -99,7 +99,7 @@
 	}
 
 	.grid {
-
+		@include section-padding(0, 50px);
 
 		.small-map {
 			@include span-columns(1);
@@ -136,6 +136,17 @@
 
 			@include media ($large-screen-up) {
 				@include span-columns(4); 
+			}
+
+			h3 {
+				font-size: 24px;
+				line-height: 1.2;
+				color: $brand-primary;
+			}
+
+			p {
+				margin: 20px 0 0 0;
+				color: $lightblue;
 			}
 		}
 
@@ -294,6 +305,52 @@
 					background-image: url(assets/virtual-icon.png);
 					background-position: center;
 					background-repeat: no-repeat;
+				}
+
+				.close_popup {
+					position: absolute;
+					top: 5px;
+					right: 5px;
+					width: 26px;
+					height: 26px;
+					text-align: center;
+					z-index: 10;
+
+					&:before, &:after {
+						content: "";
+						background: white;
+						height: 100%;
+						width: 2px;
+						position: absolute;
+						top: 50%;
+						margin-top: -13px;
+						left: 50%;
+						margin-left: -1px;
+					}
+					&:before {
+						transform: rotate(45deg);
+					}
+
+					&:after {
+						transform: rotate(-45deg);
+					}
+				}
+
+
+				#open360 {
+					position: fixed;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					background: rgba(0,0,0,0.8);
+					z-index: 10;
+					text-align: center;
+					display: none;
+
+					&.show {
+						display: block;
+					}
 				}
 			}
 
