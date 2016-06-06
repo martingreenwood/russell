@@ -71,3 +71,11 @@ $base-duration: 300ms;
 $base-timing: ease-in-out;
 
 $base-transition: all $base-duration $base-timing;
+
+// Tabs
+$tab-link-color: $dark-gray;
+$tab-border: 1px solid $base-border-color;
+$tab-active-background: $base-background-color;
+$tab-inactive-color: $base-background-color;
+$tab-inactive-hover-color: #c0c0c0;
+$tab-mode: $medium-screen;

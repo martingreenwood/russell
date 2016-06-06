@@ -50,11 +50,16 @@ get_header(); ?>
 				</div>
 
 				<div class="quicklinks">
+					<?php
+					$development_brochure = get_field('development_brochure'); 
+					?>
 					<ul>
-						<li><a href="">Register your interest</a></li>
-						<li><a href="">Search for gomes at Cragg Close</a></li>
-						<li><a href="">Download a brochure</a></li>
-						<li><a href="">View site plan</a></li>
+						<li><a href="#reginterest">Register your interest</a></li>
+						<li><a href="#" id="search" data-search="<?php echo str_replace(' ', '-', get_the_title()) ?>">Search for gomes at Cragg Close</a></li>
+						<?php if($development_brochure): ?>
+							<li><a target="_blank" href="<?php echo $development_brochure['url']; ?>">Download a brochure</a></li>
+						<?php endif; ?>
+						<li><a href="#siteplan">View site plan</a></li>
 					</ul>
 				</div>
 
@@ -116,12 +121,71 @@ get_header(); ?>
 	<div id="siteplan">
 		<div class="container">
 			<div class="row">
-				<?php if( have_rows('add_your_site_plans') ): while ( have_rows('add_your_site_plans') ) : the_row();
-						the_sub_field('title');
-						the_sub_field('active');
-						the_sub_field('plan');
-					endwhile;
+
+				<ul class="tabs">
+				<?php 
+				if( have_rows('add_your_site_plans') ): 
+				while ( have_rows('add_your_site_plans') ) : the_row();
+				$plan_title = get_sub_field('title');
+				$plan_active = get_sub_field('active');
+				$plan_plan = get_sub_field('plan');
+				?>
+				<li class="tab">
+					<a href="#<?php echo str_replace(' ','-',strtolower($plan_title)); ?>" class="tab-link <?php if($plan_active): ?>is-active<?php endif; ?>"><?php echo $plan_title; ?></a>
+				</li>
+				<?php endwhile;
 				endif; ?>
+				<?php 
+				$development_siteplan_pdf = get_field('development_siteplan_pdf');
+				if ($development_siteplan_pdf): ?>
+				<li class="plan-download">
+					<a target="_blank" href="<?php echo $development_siteplan_pdf['url']; ?>">Download Siteplan &amp; Spcification</a>
+				</li>
+				<?php endif; ?>
+				</ul>
+
+				<ul class="tabs-body">
+				<?php 
+				if( have_rows('add_your_site_plans') ): 
+				while ( have_rows('add_your_site_plans') ) : the_row();
+				$plan_title = get_sub_field('title');
+				$plan_active = get_sub_field('active');
+				$plan_plan = get_sub_field('plan');
+				?>
+					<li id="<?php echo str_replace(' ','-',strtolower($plan_title)); ?>" class="tab-content <?php if($plan_active): ?>is-active<?php endif; ?>">
+						<img src="<?php echo $plan_plan['url']; ?>" alt="<?php echo get_the_title() . ' ' . $plan_title; ?>">
+
+						<!-- PLOTS -->
+
+
+					</li>
+				<?php endwhile;
+				endif; ?>
+				</ul>
+
+				<div class="ledgend">
+					<ul>
+						<li>
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/available.svg"> <span>Available</span>
+						</li>
+						<li>
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/sold.svg"> <span>Sold</span>
+						</li>
+						<li>
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/reserved.svg"> <span>Reserved</span>
+						</li>
+						<li>
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/coming-soon.svg"> <span>Coming Soon</span>
+						</li>
+						<li>
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/not-released.svg"> <span>Not Released</span>
+						</li>
+						<li>
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/show-home.svg"> <span>Show Home</span>
+						</li>
+					</ul>
+				</div>
+
 			</div>
 		</div>
 	</div>

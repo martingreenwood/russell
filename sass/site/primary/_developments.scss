@@ -152,6 +152,8 @@
 
 		.video {
 			@include span-columns(1);
+			height: 300px;
+			overflow: hidden;
 
 			@include media ($medium-screen-up) {
 				@include span-columns(3);
@@ -286,6 +288,7 @@
 		.third {
 			@include span-columns(1);
 			height: 300px;
+			overflow: hidden;
 
 			@include media ($medium-screen-up) {
 				@include span-columns(3);
@@ -302,7 +305,7 @@
 					position: absolute;
 					width: 100%;
 					height: 100%;
-					background-image: url(assets/virtual-icon.png);
+					background-image: url(assets/virtual-icon-white.svg);
 					background-position: center;
 					background-repeat: no-repeat;
 				}
@@ -371,6 +374,118 @@
 						color: white;
 						margin: 0;
 					}
+				}
+			}
+		}
+	}
+	
+	#siteplan {
+		background: #eeeeee;
+		position: relative;
+		@include section-padding(50px, 50px);
+
+		.ledgend {
+			position: absolute;
+			top: 120px;
+
+			ul {
+				margin: 0;
+				width: 250px;
+
+				li {
+					display: inline-block;
+					width: 100%;
+
+					img {
+						float: left;
+						width: 30px;
+					}
+
+					span {
+						float: left;
+						line-height: 2.2;
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+
+		.tabs {
+			@include clearfix;
+			padding: 0;
+			margin: 0;
+			position: relative;
+
+			.plan-download {
+				position: absolute;
+				right: 0;
+				top: 13px;
+
+				a {
+					background: #00527b;
+					padding: 7px 10px;
+					color: white;
+					font-weight: 600;
+				}
+			}
+
+			.tab {
+				list-style: none;
+
+				@include media($tab-mode) {
+					display: inline;
+				}
+			}
+
+			.tab-link {
+				display: block;
+				font-size: 30px;
+				font-weight: 600;
+				margin-right: 10px;
+				color: #999;
+
+				@include media($tab-mode) {
+					display: inline-block;
+				}
+
+				&:hover {
+					color: $brand-primary;
+				}
+
+				&:focus {
+					outline: none;
+				}
+
+				&.is-active {
+					color: $brand-primary;
+
+					@include media($tab-mode) {
+					}
+				}
+			}
+		}
+
+		.tabs-body {
+			@include clearfix;
+			padding: 0;
+			margin: 0;
+
+			.tab-content {
+				display: none;
+				width: 100%;
+				text-align: center;
+				padding-top: 50px;
+
+				&.is-active {
+					color: $brand-primary;
+					display: block;
+
+					@include media($tab-mode) {
+					}
+				}
+
+				@include media($tab-mode) {
+					float: left;
 				}
 			}
 		}

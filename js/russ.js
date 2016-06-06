@@ -84,14 +84,31 @@ $(function() {
 	});
 });
 
-/*====================================
-=            EQUAL HIGHTS            =
-====================================*/
+// tabs
+$(function () {
+	$('.tabs').on('click', '.tab-link', function(event) {
+		tabTarget = $(this).attr('href');
+		console.log(tabTarget);
 
-// http://css-tricks.com/equal-height-blocks-in-rows/
-// It's been modified into a function called at page load and then each time the page is resized. 
-// One large modification was to remove the set height before each new calculation.
+		if (!$(this).hasClass('is-active')) {
+			event.preventDefault();
+			$('.tab-link').removeClass('is-active');
+			$('.tab-content').removeClass('is-active');
+			$(this).addClass('is-active');
+			$(tabTarget).addClass('is-active');
+		} else {
+			event.preventDefault();
+		}
+	});
+});
 
+
+/*=================================
+=            FUNCTIONS            =
+==================================*/
+
+
+// equal heights 
 equalheight = function(container){
 	var currentTallest = 0,
 		currentRowStart = 0,
