@@ -154,6 +154,7 @@
 			@include span-columns(1);
 			height: 300px;
 			overflow: hidden;
+			position: relative;
 
 			@include media ($medium-screen-up) {
 				@include span-columns(3);
@@ -165,6 +166,17 @@
 
 			img {
 				display: block;
+			}
+
+			.play-icon {
+				background-image: url(assets/play.svg);
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 50%;
+				margin-top: -50px;
+				left: 50%;
+				margin-left: -50px;
 			}
 		}
 
@@ -303,11 +315,19 @@
 
 				.icon360 {
 					position: absolute;
-					width: 100%;
-					height: 100%;
-					background-image: url(assets/virtual-icon-white.svg);
+					width: 100px;
+					height: 100px;
+					background-image: url(assets/virtual-icon.svg);
 					background-position: center;
 					background-repeat: no-repeat;
+					right: 50%;
+					top: 50%;
+					margin-right: -30px;
+					margin-top: -50px;
+					background-color: rgba(255,255,255, 0.6);
+					border-radius: 50%;
+					padding: 10px;
+					background-size: 87%;
 				}
 
 				.close_popup {

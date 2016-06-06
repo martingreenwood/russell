@@ -2,6 +2,7 @@
 				<a href="#dev_video">
 					<?php $feature_video_image = get_field('feature_video_image'); ?>
 					<img src="<?php echo $feature_video_image['sizes']['thumbnail']; ?>">
+					<div class="play-icon"></div>
 				</a>
 				<div id="dev_video">
 					<a class="close_vid" href="#dev_video"></a>

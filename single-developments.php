@@ -156,7 +156,46 @@ get_header(); ?>
 						<img src="<?php echo $plan_plan['url']; ?>" alt="<?php echo get_the_title() . ' ' . $plan_title; ?>">
 
 						<!-- PLOTS -->
+						<?php echo $post->ID; ?>
+						<ul id="plots">
+						<?php 
+						$args = array( 
+							'post_type' 		=> 'plots', 
+							'posts_per_page' 	=> -1,
+							'meta_key' 			=> 'choose_development',
+							'meta_value' 		=> '146',
+						);
 
+						$plots = get_posts(array(
+							'post_type' => 'plots',
+							'posts_per_page' 	=> -1,
+							'meta_query' => array(
+								array(
+									'key' => 'choose_development', // name of custom field
+									'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
+									'compare' => 'LIKE'
+								)
+							)
+						));
+
+						if ($plots) {
+							foreach( $plots as $plot ): ?>
+							<li>
+								<h4><?php echo get_the_title( $plot->ID ); ?></h4>
+								<p><?php the_field('choose_development', $plot->ID); ?></p>
+							</li>
+							<?php endforeach;
+						}
+
+						/*$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) : $loop->the_post(); ?>
+							<li>
+								<h4><?php the_title(); ?></h4>
+								<p><?php the_field('choose_development'); ?></p>
+							</li>
+						<?php endwhile; wp_reset_query(); wp_reset_postdata();*/
+						?>
+						</ul>
 
 					</li>
 				<?php endwhile;
