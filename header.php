@@ -20,9 +20,9 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class($pagename); ?>>
+<body <?php body_class(); ?>>
 
-<div id="page" class="site">
+<div id="page" class="site <?php echo str_replace(" ", "-", strtolower(get_the_title())); ?>">
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">

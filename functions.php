@@ -150,11 +150,15 @@ function russell_scripts() {
 	wp_enqueue_script( 'russ-js', get_template_directory_uri() . '/js/russ.js', '', '1', true );
 
 	if (is_front_page() || is_singular( 'planning' ) || is_singular( 'developments' )) {
-	wp_enqueue_script( 'russ-map', '//maps.googleapis.com/maps/api/js?sensor=false', '', '', true );
+	wp_enqueue_script( 'russ-map', '//maps.googleapis.com/maps/api/js?key=AIzaSyBO09_0XtvNzf8QkZWH_UHDyvLwwVCm_rY', '', '', true );
 	}
 
 	if (is_front_page()) {
 	wp_enqueue_script( 'russ-dev-map', get_template_directory_uri() . '/js/map-home.js', '', '1', true );
+	}
+
+	if (is_singular( 'developments' )) {
+	wp_enqueue_script( 'russ-local-map', get_template_directory_uri() . '/js/map-locality.js', '', '1', true );
 	}
 
 	if (is_singular( 'planning' ) || is_singular( 'developments' )) {
