@@ -148,7 +148,7 @@
                                             "name": "image_url",
                                             "type": "page_link",
                                             "instructions": "",
-                                            "required": 1,
+                                            "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {
                                                 "width": "",
@@ -459,7 +459,7 @@
                                             "name": "quote",
                                             "type": "post_object",
                                             "instructions": "",
-                                            "required": 1,
+                                            "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {
                                                 "width": "",
@@ -584,5 +584,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1465483555
+    "modified": 1465483711
 }
