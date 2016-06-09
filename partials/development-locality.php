@@ -31,7 +31,7 @@
 		if( !empty($development_map) ):
 		?>
 		<div class="local-map">
-			<div class="marker" data-icon="<?php echo get_template_directory_uri(); ?>/assets/available.svg" data-lat="<?php echo $development_map['lat']; ?>" data-lng="<?php echo $development_map['lng']; ?>">
+			<div class="marker" data-icon="<?php echo get_template_directory_uri(); ?>/assets/available.png" data-lat="<?php echo $development_map['lat']; ?>" data-lng="<?php echo $development_map['lng']; ?>">
 				<h4 style="margin: 0;"><?php the_title(); ?></h4>
 			</div>
 			<?php

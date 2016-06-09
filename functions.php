@@ -143,7 +143,7 @@ function russell_jquery_enqueue() {
 
 function russell_scripts() {
 	wp_enqueue_style( 'font-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' );
-	wp_enqueue_style( 'font-style', '//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' );
+	wp_enqueue_style( 'font-style', '//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' );
 
 	wp_enqueue_style( 'russell-style', get_stylesheet_uri() );
 

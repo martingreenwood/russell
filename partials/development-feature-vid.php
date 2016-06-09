@@ -1,6 +1,6 @@
 			<div class="video youtube">
 				<a href="#dev_video">
-					<?php $feature_video_image = get_field('feature_video_image'); ?>
+					<?php $feature_video_image = get_sub_field('video_thumbnail'); ?>
 					<img src="<?php echo $feature_video_image['sizes']['thumbnail']; ?>">
 					<div class="play-icon"></div>
 				</a>
@@ -10,7 +10,7 @@
 						<div class="cell middle">
 							<div class="vid-wrap">
 								<div class="embed-container">
-									<?php $iframe = get_field('feature_video');
+									<?php $iframe = get_sub_field('dev_video');
 
 									preg_match('/src="(.+?)"/', $iframe, $matches);
 									$src = $matches[1];

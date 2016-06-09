@@ -101,16 +101,157 @@
 	.grid {
 		@include section-padding(0, 50px);
 
+		.column {
+			height: 300px;
+			overflow: hidden;
+			position: relative;
+
+			&.span1 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(1);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(1); 
+				}
+			}
+
+			&.span2 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(1.5);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(2);
+				}
+			}
+
+			&.span3 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(2.25);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(3);
+				}
+			}
+
+			&.span4 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(3);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(4);
+				}
+			}
+
+			&.span5 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(4.5);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(5);
+				}
+			}
+
+			&.span6 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(4.5);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(6);
+				}
+			}
+
+			&.span7 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(7);
+				}
+			}
+
+			&.span8 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(8);
+				}
+			}
+
+			&.span9 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(9);
+				}
+			}
+
+			&.span10 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(10);
+				}
+			}
+
+			&.span11 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(12);
+				}
+			}
+
+			&.span12 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(12);
+				}
+			}
+		}
+
 		.small-map {
-			@include span-columns(1);
-
-			@include media ($medium-screen-up) {
-				@include span-columns(6);
-			}
-
-			@include media ($large-screen-up) {
-				@include span-columns(8); 
-			}
 
 			.map {
 				width: 100%;
@@ -126,17 +267,8 @@
 		.quote {
 			background-color: #D3ECEA;
 			height: 300px;
-			@include span-columns(1);
 			@include house-icon();
 			padding: 20px;
-
-			@include media ($medium-screen-up) {
-				@include span-columns(3);
-			}
-
-			@include media ($large-screen-up) {
-				@include span-columns(4); 
-			}
 
 			h3 {
 				font-size: 24px;
@@ -151,18 +283,6 @@
 		}
 
 		.video {
-			@include span-columns(1);
-			height: 300px;
-			overflow: hidden;
-			position: relative;
-
-			@include media ($medium-screen-up) {
-				@include span-columns(3);
-			}
-
-			@include media ($large-screen-up) {
-				@include span-columns(4); 
-			}
 
 			img {
 				display: block;
@@ -181,18 +301,8 @@
 		}
 
 		.feature-gallery {
-			@include span-columns(1);
-			position: relative;
 			background-size: cover;
 			background-position: center;
-
-			@include media ($medium-screen-up) {
-				@include span-columns(6);
-			}
-
-			@include media ($large-screen-up) {
-				@include span-columns(8); 
-			}
 
 			.gallery {
 				margin: 0;
@@ -297,6 +407,94 @@
 			}
 		}
 
+		.view360 {
+			position: relative;
+
+			.icon360 {
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				background-image: url(assets/virtual-icon.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+				right: 50%;
+				top: 50%;
+				margin-right: -30px;
+				margin-top: -50px;
+				background-color: rgba(255,255,255, 0.6);
+				border-radius: 50%;
+				padding: 10px;
+				background-size: 87%;
+			}
+
+			.close_popup {
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				width: 26px;
+				height: 26px;
+				text-align: center;
+				z-index: 10;
+
+				&:before, &:after {
+					content: "";
+					background: white;
+					height: 100%;
+					width: 2px;
+					position: absolute;
+					top: 50%;
+					margin-top: -13px;
+					left: 50%;
+					margin-left: -1px;
+				}
+				&:before {
+					transform: rotate(45deg);
+				}
+
+				&:after {
+					transform: rotate(-45deg);
+				}
+			}
+
+
+			#open360 {
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: rgba(0,0,0,0.8);
+				z-index: 10;
+				text-align: center;
+				display: none;
+
+				&.show {
+					display: block;
+				}
+			}
+		}
+
+		.text_box {
+			height: 100%;
+			
+			a {
+				padding: 20px;
+				display: block;
+				height: 100%;
+				@include house-icon();
+
+				img {
+					width: 115px;
+				}
+
+				p {
+					color: white;
+					margin: 0;
+				}
+			}
+		}
+
+
 		.third {
 			@include span-columns(1);
 			height: 300px;
@@ -308,93 +506,6 @@
 
 			@include media ($large-screen-up) {
 				@include span-columns(4); 
-			}
-
-			&.view360 {
-				position: relative;
-
-				.icon360 {
-					position: absolute;
-					width: 100px;
-					height: 100px;
-					background-image: url(assets/virtual-icon.svg);
-					background-position: center;
-					background-repeat: no-repeat;
-					right: 50%;
-					top: 50%;
-					margin-right: -30px;
-					margin-top: -50px;
-					background-color: rgba(255,255,255, 0.6);
-					border-radius: 50%;
-					padding: 10px;
-					background-size: 87%;
-				}
-
-				.close_popup {
-					position: absolute;
-					top: 5px;
-					right: 5px;
-					width: 26px;
-					height: 26px;
-					text-align: center;
-					z-index: 10;
-
-					&:before, &:after {
-						content: "";
-						background: white;
-						height: 100%;
-						width: 2px;
-						position: absolute;
-						top: 50%;
-						margin-top: -13px;
-						left: 50%;
-						margin-left: -1px;
-					}
-					&:before {
-						transform: rotate(45deg);
-					}
-
-					&:after {
-						transform: rotate(-45deg);
-					}
-				}
-
-
-				#open360 {
-					position: fixed;
-					width: 100%;
-					height: 100%;
-					top: 0;
-					left: 0;
-					background: rgba(0,0,0,0.8);
-					z-index: 10;
-					text-align: center;
-					display: none;
-
-					&.show {
-						display: block;
-					}
-				}
-			}
-
-			&.help-to-buy {
-				background-color: $brand-primary;
-
-				a {
-					padding: 20px;
-					display: block;
-					height: 100%;
-					@include house-icon();
-
-					img {
-						width: 115px;
-					}
-
-					p {
-						color: white;
-						margin: 0;
-					}
-				}
 			}
 		}
 	}

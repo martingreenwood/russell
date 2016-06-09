@@ -17,7 +17,7 @@
 
 				while ( $available_developments->have_posts() ) : $available_developments->the_post(); 
 				$location = get_field('development_map'); $dev_id = $available_developments->post->ID; ?>
-					<div class="marker" data-icon="<?php echo get_template_directory_uri(); ?>/assets/<?php the_field('development_stage');?>.svg" data-target="<?php echo str_replace(' ', '-', strtolower( get_the_title() )); ?>" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
+					<div class="marker" data-icon="<?php echo get_template_directory_uri(); ?>/assets/<?php the_field('development_stage');?>.png" data-target="<?php echo str_replace(' ', '-', strtolower( get_the_title() )); ?>" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
 					</div>
 				<?php endwhile; wp_reset_postdata(); ?>
 

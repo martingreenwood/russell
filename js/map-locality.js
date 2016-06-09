@@ -27,7 +27,7 @@ function new_map( $el ) {
 	var args = {
 		zoom		: 14,
 		scrollwheel	: false,
-		draggable 	: false,
+		draggable 	: true,
 		center		: new google.maps.LatLng(0, 0),
 		mapTypeId	: google.maps.MapTypeId.ROADMAP
 	};
@@ -79,6 +79,7 @@ function add_marker( $marker, map ) {
 
 	var icon = {
 		url: $marker.attr('data-icon'), // url
+	    size: new google.maps.Size(100, 100),     // original size you defined in the SVG file
 		scaledSize: new google.maps.Size(24, 24), // scaled size
 		//origin: new google.maps.Point(0,0), // origin
 		//anchor: new google.maps.Point(0, 0) // anchor
