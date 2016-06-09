@@ -1,4 +1,5 @@
-			<?php if(get_field('enabale_specification_section')): ?>
+			<?php if(get_field('enabale_specification_section')): 
+			$dev_colour = get_field('development_colour'); ?>
 
 				<?php 
 					//specification
@@ -11,14 +12,14 @@
 
 				<ul class="spec-tabs">
 					<li class="spec-tab">
-						<a class="spec-tab-link is-active" href="#spec">Specification
+						<a style="color: <?php echo $dev_colour; ?>" class="spec-tab-link is-active" href="#spec">Specification
 						<?php if($spec_caveat): ?><small><?php echo $spec_caveat; ?></small><?php endif; ?>
 						</a>
 					</li>
 
 					<?php if($show_affordable_specificartion): ?>
 					<li class="spec-tab">
-						<a class="spec-tab-link" href="#affspec">Affordable Specification
+						<a style="color: <?php echo $dev_colour; ?>" class="spec-tab-link" href="#affspec">Affordable Specification
 						<?php if($aff_spec_caveat): ?><small><?php echo $aff_spec_caveat; ?></small><?php endif; ?>
 						</a>
 					</li>
@@ -29,7 +30,7 @@
 				<div class="spec-ledgend">
 					<ul>
 						<li>
-							<i class="fa fa-check-circle" aria-hidden="true"></i>
+							<i style="color: <?php echo $dev_colour; ?>" class="fa fa-check-circle" aria-hidden="true"></i>
 							Item included as standard - subject to stage of construction
 						</li>
 						<li>
@@ -44,7 +45,7 @@
 					<li id="spec" class="spec-tab-content is-active">
 
 						<div class="general-items items">
-							<h3>General</h3>
+							<h3 style="color: <?php echo $dev_colour; ?>">General</h3>
 							<ul>
 							<?php 
 							if( have_rows('general_items') ): while ( have_rows('general_items') ) : the_row();
@@ -54,7 +55,7 @@
 								<?php if($optional): ?>
 									<i class="fa fa-plus-circle" aria-hidden="true"></i>
 								<?php else: ?>
-									<i class="fa fa-check-circle" aria-hidden="true"></i>
+									<i style="color: <?php echo $dev_colour; ?>" class="fa fa-check-circle" aria-hidden="true"></i>
 								<?php endif; ?>
 									<span><?php echo $item; ?></span>
 								</li>
@@ -65,7 +66,7 @@
 						</div>
 
 						<div class="kitchen-items items">
-							<h3>Kitchen</h3>
+							<h3 style="color: <?php echo $dev_colour; ?>">Kitchen</h3>
 							<ul>
 							<?php 
 							if( have_rows('kitchen_items') ): while ( have_rows('kitchen_items') ) : the_row();
@@ -75,7 +76,7 @@
 								<?php if($optional): ?>
 									<i class="fa fa-plus-circle" aria-hidden="true"></i>
 								<?php else: ?>
-									<i class="fa fa-check-circle" aria-hidden="true"></i>
+									<i style="color: <?php echo $dev_colour; ?>" class="fa fa-check-circle" aria-hidden="true"></i>
 								<?php endif; ?>
 									<span><?php echo $item; ?></span>
 								</li>
@@ -86,7 +87,7 @@
 						</div>
 
 						<div class="bathroom-items items">
-							<h3>Bathroom</h3>
+							<h3 style="color: <?php echo $dev_colour; ?>">Bathroom</h3>
 							<ul>
 							<?php 
 							if( have_rows('bathroom_items') ): while ( have_rows('bathroom_items') ) : the_row();
@@ -96,7 +97,7 @@
 								<?php if($optional): ?>
 									<i class="fa fa-plus-circle" aria-hidden="true"></i>
 								<?php else: ?>
-									<i class="fa fa-check-circle" aria-hidden="true"></i>
+									<i style="color: <?php echo $dev_colour; ?>" class="fa fa-check-circle" aria-hidden="true"></i>
 								<?php endif; ?>
 									<span><?php echo $item; ?></span>
 								</li>
@@ -112,7 +113,7 @@
 					<li id="affspec" class="spec-tab-content">
 
 						<div class="general-items items">
-							<h3>General</h3>
+							<h3 style="color: <?php echo $dev_colour; ?>">General</h3>
 							<ul>
 							<?php 
 							if( have_rows('affordable_general_items') ): while ( have_rows('affordable_general_items') ) : the_row();

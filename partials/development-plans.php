@@ -1,3 +1,4 @@
+				<?php $dev_colour = get_field('development_colour'); ?>
 				<ul class="tabs">
 				<?php 
 				if( have_rows('add_your_site_plans') ): 
@@ -7,7 +8,7 @@
 				$plan_plan = get_sub_field('plan');
 				?>
 				<li class="tab">
-					<a href="#<?php echo str_replace(' ','-',strtolower($plan_title)); ?>" class="tab-link <?php if($plan_active): ?>is-active<?php endif; ?>"><?php echo $plan_title; ?></a>
+					<a style="color: <?php echo $dev_colour; ?>" href="#<?php echo str_replace(' ','-',strtolower($plan_title)); ?>" class="tab-link <?php if($plan_active): ?>is-active<?php endif; ?>"><?php echo $plan_title; ?></a>
 				</li>
 				<?php endwhile;
 				endif; ?>
@@ -15,7 +16,7 @@
 				$development_siteplan_pdf = get_field('development_siteplan_pdf');
 				if ($development_siteplan_pdf): ?>
 				<li class="plan-download">
-					<a target="_blank" href="<?php echo $development_siteplan_pdf['url']; ?>">Download Siteplan &amp; Spcification</a>
+					<a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $development_siteplan_pdf['url']; ?>">Download Siteplan &amp; Spcification</a>
 				</li>
 				<?php endif; ?>
 				</ul>

@@ -13,12 +13,42 @@
 	}
 
 	h3 {
-		font-size: 20px;
+		font-size: 24px;
 		line-height: 1;
 		margin-bottom: 30px;
 		color: white;
-		border-bottom: 1px solid white;
-		padding-bottom: 10px;
+	}
+
+	hr {
+		color: white;
+		background: white;
+	}
+
+	.menu-footer-container {
+		float: left;
+
+		ul {
+			margin: 0;
+
+			li {
+				float: left;
+				border-right: 1px solid white;
+				margin-right: 8px;
+				padding-right: 8px;
+				line-height: 1;
+
+				&:last-of-type {
+					margin: 0;;
+					padding: 0;
+					border: none;
+				}
+			}
+		}
+	}
+
+	.copyright {
+		float: right;
+		line-height: 1;
 	}
 
 	.column {
@@ -33,14 +63,18 @@
 		}
 
 		&.contact-info {
+			margin-top: 54px;
 
-			.site-logo {
-				margin-bottom: 50px;
+			p {
+				font-weight: 700;
 			}
-			
-			img {
-				width: 80%;
-				display: block;
+		}
+
+		&.signup {
+			margin-top: 54px;
+
+			p {
+				font-weight: 700;
 			}
 
 			a {
@@ -54,6 +88,7 @@
 		}
 
 		&.contact {
+
 			.social {
 
 				li {

@@ -21,12 +21,12 @@ $base-z-index: 0;
 
 // Colors
 $brand-primary: #00527b;
-$text-color: #666666;
+$text-color: #636466;
 $text-screen: $text-color;
 $text-input: $text-color;
 
 $lightblue: #0088c3;
-$dark-gray: #636466;
+$dark-gray: $text-color;
 $medium-gray: #999;
 $cloud-grey: #f1f1f2;
 $light-gray: #f9f9f9;

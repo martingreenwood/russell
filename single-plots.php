@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single developments.
+ * The template for displaying all single plots.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *

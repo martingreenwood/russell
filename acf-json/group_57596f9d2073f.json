@@ -1,0 +1,39 @@
+{
+    "key": "group_57596f9d2073f",
+    "title": "Development Colour",
+    "fields": [
+        {
+            "key": "field_57596fa91d084",
+            "label": "Select Development Colour",
+            "name": "development_colour",
+            "type": "color_picker",
+            "instructions": "Choose the ",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#00527b"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "developments"
+            }
+        ]
+    ],
+    "menu_order": -10,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1465479215
+}

@@ -148,8 +148,8 @@
                                             "name": "image_url",
                                             "type": "page_link",
                                             "instructions": "",
-                                            "required": "",
-                                            "conditional_logic": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
                                             "wrapper": {
                                                 "width": "",
                                                 "class": "",
@@ -160,13 +160,14 @@
                                                 "locations",
                                                 "planning",
                                                 "developments",
-                                                "plots"
+                                                "plots",
+                                                "attachment"
                                             ],
                                             "taxonomy": [
 
                                             ],
-                                            "allow_null": "",
-                                            "multiple": ""
+                                            "allow_null": 1,
+                                            "multiple": 1
                                         },
                                         {
                                             "key": "field_57595535f263c",
@@ -583,5 +584,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1465473537
+    "modified": 1465483555
 }
