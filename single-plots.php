@@ -7,30 +7,45 @@
  * @package russell
  */
 get_header(); 
-$dev_colour = get_field('development_colour');
+
+$developmentID  = get_field('choose_development');
+$house_typeID  = get_field('choose_house_type');
+$dev_colour = get_field('development_colour', $developmentID[0]);
 ?>
 
 	<div class="feature-image" style="border-color: <?php echo $dev_colour; ?>">
-		<?php get_template_part( 'partials/development', 'slider' ); ?>
+		<?php get_template_part( 'partials/plot', 'slider' ); ?>
 	</div>
 
 	<div class="container">
 
 		<div class="row">
 			<div id="dev-title">
-				<h1 style="color: <?php echo $dev_colour; ?>"><?php the_title(); ?></h1>
+				<h1 style="color: <?php echo $dev_colour; ?>"><?php echo get_the_title($developmentID[0]); ?></h1>
 			</div>
 		</div>
 
 		<div class="row">
 			<div id="secondary">
-				<?php get_template_part( 'partials/development', 'sidebar' ); ?>
+				<?php get_template_part( 'partials/plot', 'sidebar' ); ?>
 			</div>
 
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
 					<?php
 					while ( have_posts() ) : the_post();
+						$plotNum = get_the_title();
+						$plotNum = explode(" ", $plotNum);
+
+						$house_typeName = get_the_title($house_typeID[0]);
+						?>
+
+						<h2>
+							<span class="left"><?php echo $house_typeName; ?>: Plot <?php echo current($plotNum); ?></span>
+							<span class="right"> <span class="price"><?php the_field('field_name'); ?>	</span> </span>
+						</h2>
+
+						<?php echo '<h2>' . get_field('big_title'). '</h2>';
 						get_template_part( 'template-parts/content', 'page' );
 					endwhile;
 					?>
@@ -106,21 +121,9 @@ $dev_colour = get_field('development_colour');
 	<div id="siteplan">
 		<div class="container">
 			<div class="row">
-				<?php get_template_part( 'partials/development', 'plans' ); ?>
+				<?php get_template_part( 'partials/plot', 'plans' ); ?>
 			</div>
 		</div>
-	</div>
-
-	<div id="specifications">
-		<div class="container">
-			<div class="row">
-				<?php get_template_part( 'partials/development', 'specs' ); ?>
-			</div>
-		</div>
-	</div>
-
-	<div id="locality">
-		<?php get_template_part( 'partials/development', 'locality' ); ?>
 	</div>
 
 <?php
