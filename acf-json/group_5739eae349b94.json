@@ -43,6 +43,44 @@
             "button_label": "Add Plan",
             "sub_fields": [
                 {
+                    "key": "field_575a8d796de4f",
+                    "label": "Width",
+                    "name": "width",
+                    "type": "select",
+                    "instructions": "Select the width of this column. Bear in mind how floor plans you have: eg 2 floorplans would we 6 column each, 3 floor plans would be 4 columns each.  Total columns = 12. ",
+                    "required": "",
+                    "conditional_logic": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "span1": "1 Column",
+                        "span2": "2 Columns",
+                        "span3": "3 Columns",
+                        "span4": "4 Columns",
+                        "span5": "5 Columns",
+                        "span6": "6 Columns",
+                        "span7": "7 Columns",
+                        "span8": "8 Columns",
+                        "span9": "9 Columns",
+                        "span10": "10 Columns",
+                        "span11": "11 Columns",
+                        "span12": "12 Columns"
+                    },
+                    "default_value": [
+                        "4 Columns"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
                     "key": "field_5739eb198c503",
                     "label": "Plan Image",
                     "name": "plan_image",
@@ -106,5 +144,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1463474517
+    "modified": 1465552432
 }

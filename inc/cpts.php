@@ -75,7 +75,7 @@ $cpts = array(
 		'Plots',
 		'dashicons-welcome-comments',
 		array('title', 'editor', 'thumbnail'),
-		false,
+		true,
 	),
 
 	// Case Studies
@@ -138,7 +138,6 @@ function cpts_register() {
 	    'menu_icon' 			=> $cpt_icon,
 	    'supports' 				=> $cpt_supports,
   		'show_in_rest'			=> true,
-
 		);
 
 		register_post_type($cpt_wp_name, $args );

@@ -1,6 +1,13 @@
 							<div class="image">
-								<?php if(get_sub_field('image_url')): ?> 
+								<?php 
+								$image_link = get_sub_field('image_link');
+
+								if($image_link == 'page'): ?> 
 								<a href="<?php the_sub_field('image_url') ?>">
+								<?php endif; ?>
+
+								<?php if($image_link == 'file'): ?> 
+								<a href="<?php the_sub_field('image_file') ?>">
 								<?php endif; ?>
 
 									<?php 
@@ -23,7 +30,7 @@
 									
 									echo $the_image; ?>
 								
-								<?php if(get_sub_field('image_url')): ?> 
+								<?php if($image_link != 'none'): ?> 
 								</a>
 								<?php endif; ?>
 							</div>

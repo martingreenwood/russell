@@ -19,7 +19,7 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 
 	<div class="container">
 
-		<div class="row">
+		<div>
 			<div id="dev-title">
 				<h1 style="color: <?php echo $dev_colour; ?>"><?php echo get_the_title($developmentID[0]); ?></h1>
 			</div>
@@ -33,20 +33,30 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
 					<?php
-					while ( have_posts() ) : the_post();
-						$plotNum = get_the_title();
-						$plotNum = explode(" ", $plotNum);
+					while ( have_posts() ) : the_post();?>
+						<header>
+							<?php
+							$plotNum = get_the_title();
+							$plotNum = explode(" ", $plotNum);
 
-						$house_typeName = get_the_title($house_typeID[0]);
-						?>
+							$house_typeName = get_the_title($house_typeID[0]);
 
-						<h2>
-							<span class="left"><?php echo $house_typeName; ?>: Plot <?php echo current($plotNum); ?></span>
-							<span class="right"> <span class="price"><?php the_field('field_name'); ?>	</span> </span>
-						</h2>
-
-						<?php echo '<h2>' . get_field('big_title'). '</h2>';
-						get_template_part( 'template-parts/content', 'page' );
+							$plot_price = get_field('plot_price');
+							if (!$plot_price):
+								$plot_price =  "TBC";
+							else:
+								$plot_price = '<span class="price">' . $plot_price .'</span>';
+							endif;
+							?>
+							<h2>
+								<span class="left"><?php echo $house_typeName; ?>: Plot <?php echo current($plotNum); ?></span>
+								<span style="color: <?php echo $dev_colour; ?>" class="right">£<?php echo $plot_price; ?></span>
+							</h2>
+						</header>
+						<header class="sub">
+							<?php echo '<h3>' . get_field('big_title'). '</h3>'; ?>
+						</header>
+						<?php get_template_part( 'template-parts/content', 'page' );
 					endwhile;
 					?>
 				</main>
@@ -118,13 +128,15 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 	<?php endif; ?>
 
 
-	<div id="siteplan">
+	<?php if( have_rows('floor_plan', $house_typeID[0]) ): ?>
+	<div id="plans">
 		<div class="container">
 			<div class="row">
 				<?php get_template_part( 'partials/plot', 'plans' ); ?>
 			</div>
 		</div>
 	</div>
+	<?php endif; ?>
 
 <?php
 get_footer();
