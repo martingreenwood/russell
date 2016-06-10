@@ -34,12 +34,12 @@ $cpts = array(
 		'Gallery',
 		'Galleries',
 		'dashicons-format-gallery',
-		array('title'),
+		array('title', 'editor'),
 		false,
 	),
 
 	// Planning
-	$galleries = array(
+	$planning = array(
 		'planning',
 		'Planning',
 		'Planning',

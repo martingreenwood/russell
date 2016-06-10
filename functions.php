@@ -108,7 +108,7 @@ add_action( 'after_setup_theme', 'russell_setup' );
  * @global int $content_width
  */
 function russell_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'russell_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'russell_content_width', 960 );
 }
 add_action( 'after_setup_theme', 'russell_content_width', 0 );
 

@@ -49,3 +49,615 @@
 		vertical-align: middle;
 	}
 }
+
+// grid
+
+.grid {
+	@include section-padding(0, 50px);
+
+	.column {
+		height: 263px;
+		//height: 300px;
+		overflow: hidden;
+		position: relative;
+
+		&.span1 {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(1);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(1); 
+			}
+		}
+
+		&.span2 {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(1.5);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(2);
+			}
+		}
+
+		&.span3 {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(2.25);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(3);
+			}
+		}
+
+		&.span4 {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4);
+			}
+		}
+
+		&.span5 {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(4.5);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(5);
+			}
+		}
+
+		&.span6 {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(4.5);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(6);
+			}
+		}
+
+		&.span7 {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(9);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(7);
+			}
+		}
+
+		&.span8 {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(9);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(8);
+			}
+		}
+
+		&.span9 {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(9);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(9);
+			}
+		}
+
+		&.span10 {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(9);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(10);
+			}
+		}
+
+		&.span11 {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(9);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(12);
+			}
+		}
+
+		&.span12 {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(9);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(12);
+			}
+		}
+	}
+
+	.small-map {
+
+		.map {
+			width: 100%;
+			height: 263px;
+		}
+
+		/* fixes potential theme css conflict */
+		.map img {
+		   max-width: inherit !important;
+		}
+	}
+
+	.quote {
+		background-color: #D3ECEA;
+		height: 100%;
+		@include house-icon();
+		padding: 20px;
+
+		h3 {
+			font-size: 24px;
+			line-height: 1.2;
+			color: $brand-primary;
+		}
+
+		p {
+			margin: 20px 0 0 0;
+			color: $lightblue;
+		}
+	}
+
+	.video {
+
+		img {
+			display: block;
+		}
+
+		.play-icon {
+			background-image: url(assets/play.svg);
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 50%;
+			margin-top: -50px;
+			left: 50%;
+			margin-left: -50px;
+		}
+	}
+
+	.feature-gallery {
+		background-size: cover;
+		background-position: center;
+
+		.gallery {
+			margin: 0;
+		}
+
+		.gallery-item {
+			margin: 0;
+			display: none;
+
+			&:first-of-type {
+				display: block;
+				opacity: 0
+			}
+
+			img {
+				display: block;
+			}
+		}
+
+		.clickme {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background: $brand-primary;
+			z-index: 0;
+
+			h2, p {
+				display: inline-block;
+				color: white;
+				margin: 0;
+			}
+
+			h2 {
+				margin-right: 10px;
+				margin-left: 10px;
+				font-size: 22px;
+				padding: 8px 0;
+			}
+
+			svg {
+				position: absolute;
+				top: -20px;
+				width: 40px;
+				right: 20px;
+
+				.house-icon-svg {
+					//fill: $brand-primary;
+					//stroke: $brand-primary;
+				}
+			}
+		}
+	}
+
+	#dev_video {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 999;
+		background: rgba(0,0,0,0.8);
+		display: none;
+
+		&.show {
+			display: block;
+		}
+
+		.close_vid {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			width: 26px;
+			height: 26px;
+			text-align: center;
+			z-index: 10;
+
+			&:before, &:after {
+				content: "";
+				background: white;
+				height: 100%;
+				width: 2px;
+				position: absolute;
+				top: 50%;
+				margin-top: -13px;
+				left: 50%;
+				margin-left: -1px;
+			}
+
+			&:before {
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+		
+		.vid-wrap {
+			max-width: 640px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+	}
+
+	.view360 {
+		position: relative;
+		height: 100%;
+
+		.icon360 {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-image: url(assets/virtual-icon.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			right: 50%;
+			top: 50%;
+			margin-right: -30px;
+			margin-top: -50px;
+			background-color: rgba(255,255,255, 0.6);
+			border-radius: 50%;
+			padding: 10px;
+			background-size: 87%;
+		}
+
+		.close_popup {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			width: 26px;
+			height: 26px;
+			text-align: center;
+			z-index: 10;
+
+			&:before, &:after {
+				content: "";
+				background: white;
+				height: 100%;
+				width: 2px;
+				position: absolute;
+				top: 50%;
+				margin-top: -13px;
+				left: 50%;
+				margin-left: -1px;
+			}
+			&:before {
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+
+
+		#open360 {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba(0,0,0,0.8);
+			z-index: 10;
+			text-align: center;
+			display: none;
+
+			&.show {
+				display: block;
+			}
+		}
+	}
+
+	.text_box {
+		height: 100%;
+		
+		a {
+			padding: 20px;
+			display: block;
+			height: 100%;
+			@include house-icon();
+
+			img {
+				width: 115px;
+			}
+
+			p {
+				color: white;
+				margin: 0;
+			}
+		}
+	}
+
+
+	.third {
+		@include span-columns(1);
+		height: 100%;
+		overflow: hidden;
+
+		@include media ($medium-screen-up) {
+			@include span-columns(3);
+		}
+
+		@include media ($large-screen-up) {
+			@include span-columns(4); 
+		}
+	}
+}
+
+#siteplan {
+	background: #eeeeee;
+	position: relative;
+	@include section-padding(50px, 50px);
+
+	.ledgend {
+		position: absolute;
+		top: 120px;
+
+		ul {
+			margin: 0;
+			width: 250px;
+
+			li {
+				display: inline-block;
+				width: 100%;
+
+				img {
+					float: left;
+					width: 30px;
+				}
+
+				span {
+					float: left;
+					line-height: 2.2;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	.tabs {
+		@include clearfix;
+		padding: 0;
+		margin: 0;
+		position: relative;
+
+		.plan-download {
+			position: absolute;
+			right: 0;
+			top: 13px;
+
+			a {
+				background: #00527b;
+				padding: 7px 10px;
+				color: white;
+				font-weight: 600;
+			}
+		}
+
+		.tab {
+			list-style: none;
+
+			@include media($tab-mode) {
+				display: inline;
+			}
+		}
+
+		.tab-link {
+			display: block;
+			font-size: 30px;
+			font-weight: 600;
+			margin-right: 10px;
+			opacity: 0.5;
+
+			@include media($tab-mode) {
+				display: inline-block;
+			}
+
+			&:hover {
+				color: $brand-primary;
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			&.is-active {
+				color: $brand-primary;
+				opacity: 1;
+
+				@include media($tab-mode) {
+				}
+			}
+		}
+	}
+
+	.tabs-body {
+		@include clearfix;
+		padding: 0;
+		margin: 0;
+
+		.tab-content {
+			display: none;
+			width: 100%;
+			text-align: center;
+			padding-top: 50px;
+
+			&.is-active {
+				color: $brand-primary;
+				display: block;
+
+				@include media($tab-mode) {
+				}
+			}
+
+			@include media($tab-mode) {
+				float: left;
+			}
+
+			#plots {
+				margin: 0;
+				padding: 0;
+
+
+				li[class^='plot-'] {
+					position: absolute;
+					cursor: pointer;
+					width: 24px;
+					height: 24px;
+
+					&.available {
+						background-image: url(assets/available.svg);
+					}
+					&.coming-soon {
+						background-image: url(assets/coming-soon.svg);
+					}
+					&.release-soon {
+						background-image: url(assets/coming-soon.svg);
+					}
+					&.not-released {
+						background-image: url(assets/not-released.svg);
+					}
+					&.reserved {
+						background-image: url(assets/reserved.svg);
+					}
+					&.show-home {
+						background-image: url(assets/show-home.svg);
+					}
+					&.sold {
+						background-image: url(assets/sold.svg);
+					}
+					&.affordable {
+						background-image: url(assets/affordable.svg);
+					}
+
+					.plot-popup {
+						display: none;
+						position: absolute;
+						width: 230px;
+						padding: 10px;
+						background-color: $lightblue;
+						left: -103px;
+						top: 32px;
+						z-index: 5;
+
+						.tri {
+							width: 24px;
+							height: 24px;
+							position: absolute;
+							top: -10px;
+							left: 50%;
+							margin-left: -12px;
+							background: $lightblue;
+							transform: rotate(-45deg);
+							z-index: -1;
+						}
+
+						h4, h3 {
+							color: white;
+							text-align: left;
+							line-height: 1.2;
+						}
+
+						a {
+							background: #00527b;
+							width: 100%;
+							display: block;
+							color: white;
+							padding: 6px;
+							font-weight: 700
+						}
+					}
+
+					&.show {
+	
+						.plot-popup {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
