@@ -68,7 +68,7 @@
 								$house_type_name = str_replace("'", "", $house_type_name);
 								$house_type_name = str_replace('"', "", $house_type_name);
 								$house_type_name = str_replace(" ", "-", strtolower($house_type_name));
-								$house_type_img = get_the_post_thumbnail( $house_type_id[0], 'thumbnail' );
+								$house_type_img = get_the_post_thumbnail( $house_type_id[0], 'full' );
 
 								$plot_price = get_field('plot_price', $plot->ID);
 								if (!$plot_price): 
