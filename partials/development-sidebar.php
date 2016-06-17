@@ -12,7 +12,7 @@
 					?>
 					<ul>
 						<li><a style="background-color: <?php echo $dev_colour; ?>" href="#reginterest">Register your interest</a></li>
-						<li><a style="background-color: <?php echo $dev_colour; ?>" href="#" id="search" data-search="<?php echo str_replace(' ', '-', get_the_title()) ?>">Search for gomes at Cragg Close</a></li>
+						<li><a style="background-color: <?php echo $dev_colour; ?>" href="#" id="search" data-search="<?php echo str_replace(' ', '-', get_the_title()) ?>">Search for homes at Cragg Close</a></li>
 						<?php if($development_brochure): ?>
 							<li><a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $development_brochure['url']; ?>">Download a brochure</a></li>
 						<?php endif; ?>
