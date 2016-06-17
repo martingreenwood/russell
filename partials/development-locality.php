@@ -41,7 +41,7 @@
 			$amenity_type = get_sub_field('type'); 
 			$amenity_name = get_sub_field('name'); 
 			?>
-			<div class="marker" data-icon="<?php echo get_template_directory_uri(); ?>/assets/<?php echo $amenity_type; ?>.svg" data-lat="<?php echo $amenity_location['lat']; ?>" data-lng="<?php echo $amenity_location['lng']; ?>">
+			<div class="marker" data-icon="<?php echo get_template_directory_uri(); ?>/assets/<?php echo $amenity_type; ?>.png" data-lat="<?php echo $amenity_location['lat']; ?>" data-lng="<?php echo $amenity_location['lng']; ?>">
 				<h4 style="color: <?php echo $dev_colour; ?>; margin: 0;"><?php echo $amenity_name ?></h4>
 			</div>
 			<?php endwhile;

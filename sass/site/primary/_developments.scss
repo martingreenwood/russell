@@ -225,27 +225,123 @@
 
 						&.available {
 							background-image: url(assets/available.svg);
+
+							.plot-popup {
+								background: $lightblue;
+
+								.tri {
+									background: $lightblue;
+								}
+
+								a {
+									background: brand-primary;
+								}
+							}
 						}
 						&.coming-soon {
 							background-image: url(assets/coming-soon.svg);
+
+							.plot-popup {
+								background: #ff9900;
+
+								.tri {
+									background: #ff9900;
+								}
+
+								a {
+									background: darken(#ff9900, 20%);
+								}
+							}
 						}
 						&.release-soon {
 							background-image: url(assets/coming-soon.svg);
+
+							.plot-popup {
+								background: #ff9900;
+
+								.tri {
+									background: #ff9900;
+								}
+
+								a {
+									background: darken(#ff9900, 20%);
+								}
+							}
 						}
 						&.not-released {
 							background-image: url(assets/not-released.svg);
+
+							.plot-popup {
+								background: #993399;
+
+								.tri {
+									background: #993399;
+								}
+
+								a {
+									background: darken(#993399, 20%);
+								}
+							}
 						}
 						&.reserved {
 							background-image: url(assets/reserved.svg);
+
+							.plot-popup {
+								background: #66cc66;
+
+								.tri {
+									background: #66cc66;
+								}
+
+								a {
+									background: darken(#66cc66, 20%);
+								}
+							}
 						}
 						&.show-home {
 							background-image: url(assets/show-home.svg);
+
+							.plot-popup {
+								background: #006666;
+
+								.tri {
+									background: #006666;
+								}
+
+								a {
+									background: darken(#006666, 20%);
+								}
+							}
 						}
 						&.sold {
 							background-image: url(assets/sold.svg);
+
+							.plot-popup {
+								background: #cc3333;
+								
+								.tri {
+									background: #cc3333;
+								}
+								
+								a {
+									background: darken(#cc3333, 20%);
+								}
+							}
 						}
 						&.affordable {
 							background-image: url(assets/affordable.svg);
+
+							.plot-popup {
+								background: $lightblue;
+
+								.tri {
+									background: $lightblue;
+								}
+
+								a {
+									background: $brand-primary;
+								}
+							}
 						}
 
 						.plot-popup {

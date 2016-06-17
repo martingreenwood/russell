@@ -79,8 +79,8 @@ function add_marker( $marker, map ) {
 
 	var icon = {
 		url: $marker.attr('data-icon'), // url
-		size: new google.maps.Size(100, 100),     // original size you defined in the SVG file
-		scaledSize: new google.maps.Size(24, 24), // scaled size
+		size: new google.maps.Size(22, 22),     // original size you defined in the SVG file
+		scaledSize: new google.maps.Size(22, 22), // scaled size
 		//origin: new google.maps.Point(0,0), // origin
 		//anchor: new google.maps.Point(0, 0) // anchor
 	}
