@@ -2,7 +2,7 @@
 				$developmentID  = get_field('choose_development');
 				$house_typeID  = get_field('choose_house_type');
 				$dev_colour = get_field('development_colour', $developmentID[0]); 
-				$plot_epc = get_field('brochure_link'); 
+				$plot_epc = get_field('epc_link'); 
 				$plot_pdf = get_field('plot_plan_pdf'); 
 				?>
 
@@ -11,10 +11,10 @@
 					
 					<ul class="links">
 						<?php if($plot_epc): ?>
-							<li><a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $plot_epc['url']; ?>">Download EPC</a></li>
+							<li><a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $plot_epc; ?>">Download EPC</a></li>
 						<?php endif; ?>
 						<?php if($plot_pdf): ?>
-							<li><a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $plot_pdf['url']; ?>">Download Plan</a></li>
+							<li><a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $plot_pdf; ?>">Download Plan</a></li>
 						<?php endif; ?>
 					</ul>
 				</div>

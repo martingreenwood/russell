@@ -11,19 +11,19 @@
 				<div class="quicklinks">
 					<?php
 					$plot_brochure = get_field('brochure_link'); 
-					$plot_epc = get_field('brochure_link'); 
+					$plot_epc = get_field('epc_link'); 
 					$plot_pdf = get_field('plot_plan_pdf'); 
 					?>
 					<ul>
 						<li><a style="background-color: <?php echo $dev_colour; ?>" href="<?php echo get_permalink( $developmentID[0] ); ?>">Development Overview</a></li>
 						<?php if($plot_brochure): ?>
-							<li><a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $plot_brochure['url']; ?>">Download Brochure</a></li>
+							<li><a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $plot_brochure; ?>">Download Brochure</a></li>
 						<?php endif; ?>
 						<?php if($plot_epc): ?>
-							<li><a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $plot_epc['url']; ?>">Download EPC</a></li>
+							<li><a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $plot_epc; ?>">Download EPC</a></li>
 						<?php endif; ?>
 						<?php if($plot_pdf): ?>
-							<li><a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $plot_pdf['url']; ?>">Download Plan</a></li>
+							<li><a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $plot_pdf; ?>">Download Plan</a></li>
 						<?php endif; ?>
 						<li><a style="background-color: <?php echo $dev_colour; ?>" href="#reginterest">Register your interest</a></li>
 					</ul>
