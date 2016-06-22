@@ -278,6 +278,9 @@ get_header(); ?>
 						
 						<?php endif; // end if sold ?>
 				<?php else: // dev has not seeb set so show everyrhing ?>
+					
+					<?php // dont show sold || not-released
+					if ($plot_availability != "sold" && $plot_availability != "not-released"): ?>
 					<div class="search-result" data-availabiility="<?php echo $plot_availability; ?>" data-price="<?php echo $plot_price_filter; ?>" data-room="<?php echo $house_rooms; ?>">
 
 						<?php if($special_offers): ?> 
@@ -312,7 +315,8 @@ get_header(); ?>
 						<a class="btn" href="<?php echo $plot_link; ?>">View Plot</a>
 						<a class="btn" href="<?php echo $dev_link; ?>">View Development</a>
 
-					</div>
+					</div> <?php endif; // end if sold ?>
+
 					<?php endif; // end if dev is set ?>
 					<?php endforeach; ?>
 				</div>
