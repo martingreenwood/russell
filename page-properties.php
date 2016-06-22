@@ -277,6 +277,42 @@ get_header(); ?>
 
 						
 						<?php endif; // end if sold ?>
+				<?php else: // dev has not seeb set so show everyrhing ?>
+					<div class="search-result" data-availabiility="<?php echo $plot_availability; ?>" data-price="<?php echo $plot_price_filter; ?>" data-room="<?php echo $house_rooms; ?>">
+
+						<?php if($special_offers): ?> 
+						<div class="feature">
+							<p><?php echo str_replace("-"," ",current($special_offers)); ?></p>
+						</div>
+						<?php endif; ?>
+
+						<?php echo $house_image; ?>
+
+						<div class="sub-title">
+							<small><?php echo $dev_title; ?> - Plot <?php echo current($plot_number); ?></small>
+							<h3><?php echo $big_title; ?></h3>
+						</div>
+						<hr>
+						<div class="plot_features">
+							<?php if($plot_features): ?>
+							<ul>
+							<?php foreach ($plot_features as $plot_feature): ?>
+								<li><?php echo $plot_feature; ?></li>
+							<?php endforeach; ?>
+							</ul>
+							<?php endif; ?>
+						</div>
+
+						<div class="houseprice">
+							<p>£<?php echo $plot_price; ?></p>
+							<p><?php echo $house_rooms ?> Bedrooms</p>
+							<div class="clear"></div>
+						</div>
+
+						<a class="btn" href="<?php echo $plot_link; ?>">View Plot</a>
+						<a class="btn" href="<?php echo $dev_link; ?>">View Development</a>
+
+					</div>
 					<?php endif; // end if dev is set ?>
 					<?php endforeach; ?>
 				</div>
