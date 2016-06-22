@@ -1,43 +1,53 @@
+	<section id="homesearch">
 		<div class="container">
 
 			<div class="search">
 				<h3>Find your new home...</h3>
 				<div class="search-box clear">
-					<select id="location" name="location">
-					<option value="">Location</option>
-					<?php
+					<form id="quicksearch" method="post" action="<?php echo home_url( '/properties' ); ?>">
+						
+						<fieldset>
+							<select id="location" required="" data-parsley-error-message="<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>" name="location">
+							<option value="">Select Location</option>
+							<?php
+							$all_developments = new WP_Query(array( 
+								'post_type' 		=> 'developments', 
+								'posts_per_page' 	=> -1,
+								'meta_key'			=> 'development_stage',
+								'meta_value'		=> 'complete',
+								'meta_compare'		=> '!=',
+							));
 
-					$all_developments = new WP_Query(array( 
-						'post_type' => 'developments', 
-						'posts_per_page' => -1,
-					));
+							$development_locations = array();
+							while ( $all_developments->have_posts() ) : $all_developments->the_post();
+								$development_location = get_field('Town');
+								$development_locations[] = $development_location;
+							endwhile; wp_reset_query();
 
-					$development_locations = array();
-					while ( $all_developments->have_posts() ) : $all_developments->the_post();
-						$development_location = get_field('Town');
-						$development_locations[] = $development_location;
-					endwhile; wp_reset_query();
+							$unique_development_locations = array_unique($development_locations);
 
-					$unique_development_locations = array_unique($development_locations);
+							foreach ($unique_development_locations as $development_location) {
+								if ($development_location):
+								echo "<option value='".strtolower($development_location)."'>".$development_location."</option>";
+								endif;
+							}
 
-					foreach ($unique_development_locations as $development_location) {
-						echo "<option value='".strtolower($development_location)."'>".$development_location."</option>";
-					}
+							?>
+							</select>
+						</fieldset>
+						<fieldset>
+							<select id="bedrooms" required="" data-parsley-error-message="<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>" name="bedrooms">
+								<option value="">Select Min Bedrooms</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+								<option value="4">Four</option>
+								<option value="5">Five</option>
+							</select>
+						</fieldset>
 
-					?>
-					</select>
-					<select id="bedrooms" name="bedrooms">
-						<option value="0">Min Bedrooms</option>
-						<option value="1">One</option>
-						<option value="2">Two</option>
-						<option value="3">Three</option>
-						<option value="4">Four</option>
-						<option value="5">Five</option>
-					</select>
-
-					<input type="button" id="search_developments" value="Search Homes">
-					
-					<div id="loading"></div>
+						<input type="submit" id="search_developments" value="Search Homes">
+					</form>
 				</div>
 			</div>
 
@@ -64,3 +74,4 @@
 				<p>Head Office: 01539 722635</p>
 			</div>
 		</div>
+	</section>

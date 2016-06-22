@@ -50,7 +50,7 @@
 
 					<div class="signup column">
 						<p>Join our mailing list for news &amp; offers:<br>
-						<a href="<?php home_url( '/sign-up' ); ?>">Sign Up Here</a></p>
+						<a href="<?php echo home_url( '/sign-up' ); ?>">Sign Up Here</a></p>
 					</div>
 				</div>
 

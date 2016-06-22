@@ -50,6 +50,13 @@
 	background-color: $light-gray;
 	@include rem(padding, 20px);
 
+	#quicksearch {
+		position: relative;
+		float: left;
+		width: 100%;
+
+	}
+
 	.search {
 		@include span-columns(1);
 
@@ -66,17 +73,45 @@
 			margin: 0 0 10px 0;
 		}
 
-		select, input {
+		fieldset, select, input {
 			float: left;
 		}
 
-		select {
+		fieldset {
 			background: white;
+			width: 100%;
+			padding: 0;
+			border: 0;
+			position: relative;
+			@include rem(max-width, 200px);
+			@include rem(margin-right, 10px);
+
+			.parsley-errors-list {
+				margin: 0;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+
+					li.parsley-custom-error-message {
+						position: absolute;
+						right: 7px;
+						line-height: 36px;
+						font-size: 16px;
+						color: #cc0000;
+					}
+			}
+
+			.parsley-error {
+				border: 1px solid #cc0000;
+			}
+		}
+
+		select {
+			background-color: white;
 			width: 100%;
 			padding: 0;
 			@include rem(max-width, 200px);
 			@include rem(line-height, 34px);
-			@include rem(margin-right, 10px);
 			@include rem(text-indent, 10px);
 		}
 	}
@@ -643,4 +678,3 @@
 		}
 	}
 }
-

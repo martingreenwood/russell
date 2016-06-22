@@ -1,7 +1,6 @@
 				<?php $dev_colour = get_field('development_colour'); ?>
 				<ul class="tabs">
 				<?php 
-				if( have_rows('add_your_site_plans') ): 
 				while ( have_rows('add_your_site_plans') ) : the_row();
 				$plan_title = get_sub_field('title');
 				$plan_active = get_sub_field('active');
@@ -10,8 +9,8 @@
 				<li class="tab">
 					<a style="color: <?php echo $dev_colour; ?>" href="#<?php echo str_replace(' ','-',strtolower($plan_title)); ?>" class="tab-link <?php if($plan_active): ?>is-active<?php endif; ?>"><?php echo $plan_title; ?></a>
 				</li>
-				<?php endwhile;
-				endif; ?>
+				<?php endwhile; ?>
+				
 				<?php 
 				$development_siteplan_pdf = get_field('development_siteplan_pdf');
 				if ($development_siteplan_pdf): ?>
@@ -59,10 +58,9 @@
 								$plot_num = current($plot_num);
 
 								$development_stage = get_field('development_stage', $plot->ID);
-								
+
 								$plot_availability = get_field('plot_availability', $plot->ID);
-								
-	
+
 								$house_type_id = get_field('choose_house_type', $plot->ID); //array
 								$house_type_name = get_the_title( $house_type_id[0] );
 								$house_type_name = str_replace("'", "", $house_type_name);
@@ -72,6 +70,9 @@
 
 								$plot_price = get_field('plot_price', $plot->ID);
 								if (!$plot_price): 
+									$plot_price = "TBC";
+
+								elseif ($plot_price == 'TBC' || $plot_price == 'TBA'): 
 									$plot_price = "TBC";
 								else: 
 									$plot_price = '<span class="price">'.get_field('plot_price', $plot->ID) .'</span>';
@@ -83,10 +84,28 @@
 							<li class="plot-<?php echo $plot_num; ?> <?php echo $plot_availability; ?> <?php echo $development_stage; ?>">
 								<div class="plot-popup">
 									<div class="tri"></div>
+									<?php if($plot_availability == 'sold'): ?>
+									
 									<?php echo $house_type_img; ?>
 									<h4>Plot <?php echo $plot_num; ?>, <?php echo $plot_title; ?></h4>
-									<h3>£<?php echo $plot_price; ?></h3>
-									<a href="<?php echo get_permalink( $plot->ID ); ?>">View Property Details</a>
+									<p class="btn">PLOT SOLD</p>
+									
+									<?php elseif($plot_availability == 'reserved'): ?>
+									
+									<?php echo $house_type_img; ?>
+									<h4>Plot <?php echo $plot_num; ?>, <?php echo $plot_title; ?></h4>
+									<p class="btn">PLOT RESERVED</p>
+
+									<?php else: ?>
+
+									<a href="<?php echo get_permalink( $plot->ID ); ?>">
+										<?php echo $house_type_img; ?>
+										<h4>Plot <?php echo $plot_num; ?>, <?php echo $plot_title; ?></h4>
+										<h3>£<?php echo $plot_price; ?></h3>
+										<p class="btn">View Property Details</p>
+									</a>
+
+									<?php endif; ?>
 								</div>
 							</li>
 							<?php endforeach;
@@ -95,8 +114,7 @@
 						</ul>
 
 					</li>
-				<?php endwhile;
-				endif; ?>
+				<?php endwhile; endif; ?>
 				</ul>
 
 				<div class="ledgend">

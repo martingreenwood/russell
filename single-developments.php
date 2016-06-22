@@ -102,7 +102,7 @@ $dev_colour = get_field('development_colour');
 	</div>
 	<?php endif; ?>
 
-
+	<?php if( have_rows('add_your_site_plans') ): ?>
 	<div id="siteplan">
 		<div class="container">
 			<div class="row">
@@ -110,7 +110,9 @@ $dev_colour = get_field('development_colour');
 			</div>
 		</div>
 	</div>
+	<?php endif; ?>
 
+	<?php if(get_field('enabale_specification_section')): ?>
 	<div id="specifications">
 		<div class="container">
 			<div class="row">
@@ -118,9 +120,21 @@ $dev_colour = get_field('development_colour');
 			</div>
 		</div>
 	</div>
+	<?php endif; ?>
 
 	<div id="locality">
 		<?php get_template_part( 'partials/development', 'locality' ); ?>
+	</div>
+
+	<div id="reginterest">
+		<div class="container">
+			<div class="table">
+				<div class="cell middle">
+					<a id="closeme" href="#"></a>
+					<?php echo do_shortcode( '[gravityform id="1" title="false" description="false"]' ); ?>
+				</div>
+			</div>
+		</div>
 	</div>
 
 <?php

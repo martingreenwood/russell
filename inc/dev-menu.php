@@ -111,7 +111,7 @@ function build_dev_menu( $items, $args ) {
 			'classes'		   => 'view_all_props',
 			'ID'               => 99999999999987654, //an unlikely, high number
 			'db_id'            => 99999999999987654, //an unlikely, high number
-			'url'              => '#'
+			'url'              => home_url( '/properties/')
 		);
 		$items[] = (object) $view_all;
 

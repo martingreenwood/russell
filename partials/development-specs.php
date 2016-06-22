@@ -1,4 +1,4 @@
-			<?php if(get_field('enabale_specification_section')): 
+			<?php 
 			$dev_colour = get_field('development_colour'); ?>
 
 				<?php 
@@ -183,5 +183,3 @@
 				<div class="spec-tc">
 					<?php the_field('specification_terms_&_conditions'); ?>
 				</div>
-
-			<?php endif; ?>

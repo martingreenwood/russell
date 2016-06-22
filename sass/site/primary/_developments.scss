@@ -227,14 +227,14 @@
 							background-image: url(assets/available.svg);
 
 							.plot-popup {
-								background: $lightblue;
+								background: #0080be;
 
 								.tri {
-									background: $lightblue;
+									background: #0080be;
 								}
 
-								a {
-									background: brand-primary;
+								.btn {
+									background: darken(#0080be, 20%);
 								}
 							}
 						}
@@ -242,14 +242,14 @@
 							background-image: url(assets/coming-soon.svg);
 
 							.plot-popup {
-								background: #ff9900;
+								background: #f39200;
 
 								.tri {
-									background: #ff9900;
+									background: #f39200;
 								}
 
-								a {
-									background: darken(#ff9900, 20%);
+								.btn {
+									background: darken(#f39200, 20%);
 								}
 							}
 						}
@@ -257,14 +257,14 @@
 							background-image: url(assets/coming-soon.svg);
 
 							.plot-popup {
-								background: #ff9900;
+								background: #f39200;
 
 								.tri {
-									background: #ff9900;
+									background: #f39200;
 								}
 
-								a {
-									background: darken(#ff9900, 20%);
+								.btn {
+									background: darken(#f39200, 20%);
 								}
 							}
 						}
@@ -272,14 +272,14 @@
 							background-image: url(assets/not-released.svg);
 
 							.plot-popup {
-								background: #993399;
+								background: #814a97;
 
 								.tri {
-									background: #993399;
+									background: #814a97;
 								}
 
-								a {
-									background: darken(#993399, 20%);
+								.btn {
+									background: darken(#814a97, 20%);
 								}
 							}
 						}
@@ -287,14 +287,14 @@
 							background-image: url(assets/reserved.svg);
 
 							.plot-popup {
-								background: #66cc66;
+								background: #72bb6f;
 
 								.tri {
-									background: #66cc66;
+									background: #72bb6f;
 								}
 
-								a {
-									background: darken(#66cc66, 20%);
+								.btn {
+									background: darken(#72bb6f, 20%);
 								}
 							}
 						}
@@ -302,14 +302,14 @@
 							background-image: url(assets/show-home.svg);
 
 							.plot-popup {
-								background: #006666;
+								background: #00537b;
 
 								.tri {
-									background: #006666;
+									background: #00537b;
 								}
 
-								a {
-									background: darken(#006666, 20%);
+								.btn {
+									background: darken(#00537b, 20%);
 								}
 							}
 						}
@@ -317,14 +317,14 @@
 							background-image: url(assets/sold.svg);
 
 							.plot-popup {
-								background: #cc3333;
+								background: #d53620;
 								
 								.tri {
-									background: #cc3333;
+									background: #d53620;
 								}
 								
-								a {
-									background: darken(#cc3333, 20%);
+								.btn {
+									background: darken(#d53620, 20%);
 								}
 							}
 						}
@@ -332,14 +332,14 @@
 							background-image: url(assets/affordable.svg);
 
 							.plot-popup {
-								background: $lightblue;
+								background: #0080be;
 
 								.tri {
-									background: $lightblue;
+									background: #0080be;
 								}
 
-								a {
-									background: $brand-primary;
+								.btn {
+									background: darken(#0080be, 20%);
 								}
 							}
 						}
@@ -372,9 +372,10 @@
 								line-height: 1.2;
 							}
 
-							a {
+							.btn {
 								background: #00527b;
 								width: 100%;
+								margin: 0;
 								display: block;
 								color: white;
 								padding: 6px;
@@ -622,6 +623,84 @@
 
 			p {
 				margin-bottom: 5px;
+			}
+		}
+	}
+
+	#reginterest {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 20px;
+		overflow: scroll;
+		z-index: 555;
+		background: rgba(0,0,0,0.8);
+		transition: all 300ms ease-in-out;
+
+		#closeme {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			width: 36px;
+			height: 36px;
+
+			&:before {
+				content: "";
+				width: 36px;
+				height: 2px;
+				background: $lightblue;
+				position: absolute;
+				left: 0;
+				top: 18px;
+				transform: rotate(-45deg);
+			}
+
+			&:after {
+				content: "";
+				width: 36px;
+				height: 2px;
+				background: $lightblue;
+				position: absolute;
+				left: 0;
+				top: 18px;
+				transform: rotate(45deg);
+			}
+		}
+
+		&.reveal {
+			width: 100%;
+		}
+
+		&.down {
+			height: 100%;
+		}
+
+		.gform_wrapper {
+			margin-top: 50px;
+		}
+
+		.gform_fields {
+
+			.gfield {
+				
+				label {
+					color: white;
+				}
+
+				.gfield_checkbox {
+
+					li {
+
+						label {
+							color: #ccc;
+
+							&:before {
+								border-color: white;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

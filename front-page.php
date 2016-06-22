@@ -19,9 +19,7 @@ get_header(); ?>
 	<?php get_template_part( 'partials/homepage', 'slides' ); ?>
 	</section>
 
-	<section id="homesearch">
 	<?php get_template_part( 'partials/homepage', 'search-bar' ); ?>
-	</section>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main container" role="main">

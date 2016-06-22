@@ -14,7 +14,7 @@ input[type="file"],
 textarea,
 select {
 	@include form-spacing(padding, $form-space);
-	background: $input-bg;
+	background-color: $input-bg;
 	color: $input-color;
 	border: 1px solid $input-border;
 	line-height: normal;
@@ -60,7 +60,7 @@ input[type="button"],
 button {
 	@include rem(padding, $form-space $form-space + ($form-space / 2));
 	@include rem(font-size, 14px);
-	background: $form-button-background;
+	background-color: $form-button-background;
 	border: 1px solid $form-button-background;
 	color: $form-button-color;
 	display: inline-block;
@@ -70,7 +70,7 @@ button {
 	min-height: ceil($form-line-height * 1.33);
 
 	&:hover {
-		background: $form-button-background-hover;
+		background-color: $form-button-background-hover;
 	}
 }
 

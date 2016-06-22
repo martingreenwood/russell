@@ -218,6 +218,30 @@ function jptweak_remove_share() {
 add_action( 'loop_start', 'jptweak_remove_share' );
 
 
+
+
+add_filter( 'rest_query_vars', function ( $valid_vars ) {
+    return array_merge( $valid_vars, array( 'choose_development', 'meta_query' ) );
+} );
+
+add_filter( 'rest_post_query', function( $args, $request ) {
+    $key   = $request->get_param( 'meta_key' );
+    $value = $request->get_param( 'meta_value' );
+
+    if ( 'choose_development' == $key && ! empty( $value ) ) {
+        $args['meta_query'] = array(
+            array(
+                'key'     => $key,
+                'value'   => $value,
+                'compare' => '=',
+            )
+        );      
+    }
+
+    return $args;
+}, 10, 2 );
+
+
 /**
  * Setup custom post types.
  */

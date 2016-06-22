@@ -27,3 +27,20 @@ function russell_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'russell_body_classes' );
+
+
+// Usage:
+// get_id_by_slug('any-page-slug');
+
+function get_id_by_slug( $slug, $post_type ) {
+	$post = get_page_by_path($slug, OBJECT, $post_type);
+
+	if ($post) {
+		
+		return $post->ID;
+	
+	} else {
+
+		return 0;
+	}
+}
