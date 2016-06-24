@@ -46,7 +46,16 @@
 							</select>
 						</fieldset>
 
-						<input type="submit" id="qs_search_developments" name="qs_search_developments" value="Search Homes">
+						<fieldset class="price-box" style="display: none;">
+							<select id="minprice" name="minprice">
+								<option value="100000">£100,000</option>
+							</select>
+							<select id="maxprice" name="maxprice">
+								<option value="900000">£900,000</option>
+							</select>
+						</fieldset>
+
+						<input type="submit" id="search_developments" value="Search Homes">
 					</form>
 				</div>
 			</div>

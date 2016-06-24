@@ -33,6 +33,12 @@ if (isset($_GET['devlocation'])) {
 	$devlocation = null;
 }
 
+if (isset($_GET['location'])) {
+	$location = $_GET['location'];
+} else {
+	$location = null;
+}
+
 if (isset($_GET['bedrooms'])) {
 	$bedrooms = $_GET['bedrooms'];
 } else {
@@ -92,6 +98,13 @@ get_header(); ?>
 						else:
 							$checked = '';
 						endif;
+
+						if(isset($location)) {
+							if ( strtolower($development_location) == $location ) {
+								$checked = 'checked';
+							}
+						}
+
 						echo "<p><input name='devlocation[]' type='checkbox' ".$checked." data-id='".$dev_id."' data-location='".strtolower($development_location)."' value='".$dev_search_name."'><label>".get_the_title().", ".$development_location."</label></p>";
 					endwhile; wp_reset_query();
 					?>
@@ -193,9 +206,9 @@ get_header(); ?>
 					endif;
 
 					if (!$plot_price): 
-						$plot_price_filter = "8999999";
+						$plot_price_filter = "900000";
 					elseif ($plot_price == 'TBC' || $plot_price == 'TBA'):
-						$plot_price_filter = "8999999";
+						$plot_price_filter = "900000";
 					else:
 						$plot_price_filter = $plot_price;
 					endif;
@@ -227,6 +240,7 @@ get_header(); ?>
 					$dev_title 			= get_the_title( current($choose_development) ); 
 					$dev_title_filter 	= strtolower(str_replace(' ','-', get_the_title( current($choose_development) ))); 
 					$dev_link 			= get_permalink( current($choose_development) ); 
+					$dev_location 		= strtolower(str_replace(' ','-', get_field('Town', current($choose_development) )));
 					
 					// check to see if devlocation has been set
 					if(isset($_GET['devlocation'])):
@@ -234,9 +248,59 @@ get_header(); ?>
 						// dont show sold || not-released
 						if ($plot_availability != "sold" && $plot_availability != "not-released"):
 						
-						if ( in_array($dev_title_filter, $devlocation) && $house_rooms >= $bedrooms && $plot_price_filter >= $minprice && $plot_price_filter <= $maxprice):
+						if ( in_array($dev_title_filter, $devlocation) && $house_rooms >= $bedrooms && $plot_price_filter >= $minprice && $plot_price_filter <= $maxprice ):
+						
 						?>
-						<div class="search-result" data-availabiility="<?php echo $plot_availability; ?>" data-price="<?php echo $plot_price_filter; ?>" data-room="<?php echo $house_rooms; ?>">
+						<div class="search-result" data-availabiility="<?php echo $plot_availability; ?>" data-price="<?php echo $plot_price_filter; ?>" data-room="<?php echo $house_rooms; ?>" data-location="<?php echo $dev_location; ?>">
+
+							<?php if($special_offers): ?> 
+							<div class="feature">
+								<p><?php echo str_replace("-"," ",current($special_offers)); ?></p>
+							</div>
+							<?php endif; ?>
+
+							<?php echo $house_image; ?>
+
+							<div class="sub-title">
+								<small><?php echo $dev_title; ?> - Plot <?php echo current($plot_number); ?></small>
+								<h3><?php echo $big_title; ?></h3>
+							</div>
+							<hr>
+							<div class="plot_features">
+								<?php if($plot_features): ?>
+								<ul>
+								<?php foreach ($plot_features as $plot_feature): ?>
+									<li><?php echo $plot_feature; ?></li>
+								<?php endforeach; ?>
+								</ul>
+								<?php endif; ?>
+							</div>
+
+							<div class="houseprice">
+								<p>£<?php echo $plot_price; ?></p>
+								<p><?php echo $house_rooms ?> Bedrooms</p>
+								<div class="clear"></div>
+							</div>
+
+							<a class="btn" href="<?php echo $plot_link; ?>">View Plot</a>
+							<a class="btn" href="<?php echo $dev_link; ?>">View Development</a>
+
+						</div>
+						<?php else: // else if nothing matches ?>
+						<?php endif; // end if match ?>
+
+						
+						<?php endif; // end if sold ?>
+				<?php elseif (isset($_GET['location'])): ?>
+						
+						<?php 
+						// dont show sold || not-released
+						if ($plot_availability != "sold" && $plot_availability != "not-released"):
+						
+						if ( strtolower($dev_location) == $location && $house_rooms >= $bedrooms && $plot_price_filter >= $minprice && $plot_price_filter <= $maxprice ):
+						
+						?>
+						<div class="search-result" data-availabiility="<?php echo $plot_availability; ?>" data-price="<?php echo $plot_price_filter; ?>" data-room="<?php echo $house_rooms; ?>" data-location="<?php echo $dev_location; ?>">
 
 							<?php if($special_offers): ?> 
 							<div class="feature">
@@ -280,8 +344,7 @@ get_header(); ?>
 					
 					<?php // dont show sold || not-released
 					if ($plot_availability != "sold" && $plot_availability != "not-released"): ?>
-					<div class="search-result" data-availabiility="<?php echo $plot_availability; ?>" data-price="<?php echo $plot_price_filter; ?>" data-room="<?php echo $house_rooms; ?>">
-
+					<div class="search-result">
 						<?php if($special_offers): ?> 
 						<div class="feature">
 							<p><?php echo str_replace("-"," ",current($special_offers)); ?></p>
