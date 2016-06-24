@@ -26,12 +26,6 @@ if (isset($_POST['qs_rooms'])) {
 	$qs_rooms = null;
 }
 
-if (isset($_POST['qs_search_developments'])){
-	header("Location: ?devlocation%5B%5D=oversands-view&bedrooms=1&minprice=100000&maxprice=900000");
-}
-// redire=ct here:
-// ?devlocation%5B%5D=oversands-view&bedrooms=1&minprice=210000&maxprice=150000
-
 // GET SEARCH VARS
 if (isset($_GET['devlocation'])) {
 	$devlocation = $_GET['devlocation'];

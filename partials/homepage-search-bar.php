@@ -4,7 +4,7 @@
 			<div class="search">
 				<h3>Find your new home...</h3>
 				<div class="search-box clear">
-					<form id="quicksearch" method="post" action="<?php echo home_url( '/properties' ); ?>">
+					<form id="quicksearch" method="get" action="<?php echo home_url( '/properties' ); ?>">
 						
 						<fieldset>
 							<select id="location" required="" data-parsley-error-message="<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>" name="location">
