@@ -11,6 +11,10 @@
 		<?php 
 			$development_logo = get_field('development_logo', $developmentID[0]); 
 			if ($development_logo): ?>
-				<img id="dev_logo" src="<?php echo $development_logo['url']; ?>" width="195" height="195">
-			<?php endif;
+			<div id="dev_logo">
+				<div class="container">
+					<img src="<?php echo $development_logo['url']; ?>" width="195" height="195">
+				</div>
+			</div>
+			<?php endif; 
 		?>

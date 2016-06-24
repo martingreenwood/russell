@@ -2,6 +2,22 @@
 =            Global            =
 ==============================*/
 
+#loading-page {
+	position: fixed;
+	background-color: #31ABDF;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	text-align: center;
+	transition: all 300ms ease-in-out;
+
+	&.hide {
+		opacity: 0;
+	}
+}
+
 .hentry {
 	margin: 0;
 }

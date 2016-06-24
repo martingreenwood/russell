@@ -48,14 +48,14 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 							$house_typeName = get_the_title($house_typeID[0]);
 
 							$plot_price = get_field('plot_price');
-							if (!$plot_price):
-								$plot_price =  "TBC";
-							else:
+							if (is_numeric($plot_price)):
 								$plot_price = '<span class="price">' . $plot_price .'</span>';
+							else:
+								$plot_price =  "TBC";
 							endif;
 							?>
 							<h2>
-								<span class="left"><?php echo $house_typeName; ?>: Plot <?php echo current($plotNum); ?> <?php if($enable_opposite_hand): ?>(* opposite hand)<?php endif; ?></span>
+								<span class="left"><?php echo $house_typeName; ?>: Plot <?php echo current($plotNum); ?> <?php if($enable_opposite_hand): ?> (opposite hand plot).<?php endif; ?></span>
 								<span style="color: <?php echo $dev_colour; ?>" class="right">£<?php echo $plot_price; ?></span>
 							</h2>
 						</header>

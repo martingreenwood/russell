@@ -231,6 +231,13 @@ $(window).resize(function() {
 	equalheight('.your-new-home .top-half .column');
 });
 
+$(window).load(function() {
+	$('#loading-page').addClass('hide');
+	setTimeout(function() {
+		$('#loading-page').remove();
+	}, 600)
+});
+
 // form valkdation
 $(function () {
 	$('form').parsley();

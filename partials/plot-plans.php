@@ -24,6 +24,9 @@
 					<?php 
 						$plan_image = get_sub_field('plan_image');
 						$plan_width = get_sub_field('width');
+						if (!$plan_width || is_array($plan_width)) {
+							$plan_width = 'span4';
+						}
 					?>
 					<div class="room <?php echo $plan_width; ?>">
 						<img src="<?php echo $plan_image['url']; ?>" alt="floor plan for this plot">

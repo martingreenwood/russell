@@ -26,6 +26,11 @@ if (isset($_POST['qs_rooms'])) {
 	$qs_rooms = null;
 }
 
+if (isset($_POST['qs_search_developments'])){
+	header("Location: ?devlocation%5B%5D=oversands-view&bedrooms=1&minprice=100000&maxprice=900000");
+}
+// redire=ct here:
+// ?devlocation%5B%5D=oversands-view&bedrooms=1&minprice=210000&maxprice=150000
 
 // GET SEARCH VARS
 if (isset($_GET['devlocation'])) {
@@ -43,13 +48,13 @@ if (isset($_GET['bedrooms'])) {
 if (isset($_GET['maxprice'])) {
 	$maxprice = $_GET['maxprice'];
 } else {
-	$maxprice = null;
+	$maxprice = 900000;
 }
 
 if (isset($_GET['minprice'])) {
 	$minprice = $_GET['minprice'];
 } else {
-	$minprice = null;
+	$minprice = 0;
 }
 
 get_header(); ?>
@@ -114,7 +119,7 @@ get_header(); ?>
 					<select id="minprice" required="" data-parsley-error-message="<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>" name="minprice">
 						<option value="">Select Min Price</option>
 						<?php 
-						foreach (range(100000,500000,10000) as $min_p): ?>
+						foreach (range(100000,900000,10000) as $min_p): ?>
 						<option <?php if($minprice == $min_p) { ?>selected<?php } ?> value="<?php echo $min_p; ?>">£<?php echo number_format($min_p); ?></option>
 						<?php endforeach; ?>
 					</select>
@@ -122,7 +127,7 @@ get_header(); ?>
 					<select id="maxprice" required="" data-parsley-error-message="<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>" name="maxprice">
 						<option value="">Select Max Price</option>
 						<?php 
-						foreach (range(100000,500000,10000) as $max_p): ?>
+						foreach (range(100000,900000,10000) as $max_p): ?>
 						<option <?php if($maxprice == $max_p) { ?>selected<?php } ?> value="<?php echo $max_p; ?>">£<?php echo number_format($max_p); ?></option>
 						<?php endforeach; ?>
 					</select>

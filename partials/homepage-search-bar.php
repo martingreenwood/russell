@@ -46,7 +46,7 @@
 							</select>
 						</fieldset>
 
-						<input type="submit" id="search_developments" value="Search Homes">
+						<input type="submit" id="qs_search_developments" name="qs_search_developments" value="Search Homes">
 					</form>
 				</div>
 			</div>
