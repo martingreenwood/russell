@@ -39,6 +39,12 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 							$plotNum = get_the_title();
 							$plotNum = explode(" ", $plotNum);
 
+							if (get_field('enable_opposite_hand')){
+								$enable_opposite_hand = true;
+							} else {
+								$enable_opposite_hand = false;
+							}
+
 							$house_typeName = get_the_title($house_typeID[0]);
 
 							$plot_price = get_field('plot_price');
@@ -49,16 +55,20 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 							endif;
 							?>
 							<h2>
-								<span class="left"><?php echo $house_typeName; ?>: Plot <?php echo current($plotNum); ?></span>
+								<span class="left"><?php echo $house_typeName; ?>: Plot <?php echo current($plotNum); ?> <?php if($enable_opposite_hand): ?>(* opposite hand)<?php endif; ?></span>
 								<span style="color: <?php echo $dev_colour; ?>" class="right">£<?php echo $plot_price; ?></span>
 							</h2>
 						</header>
 						<header class="sub">
 							<?php echo '<h3>' . get_field('big_title'). '</h3>'; ?>
 						</header>
-						<?php get_template_part( 'template-parts/content', 'page' );
-					endwhile;
-					?>
+						<?php get_template_part( 'template-parts/content', 'page' ); ?>
+						<?php if($enable_opposite_hand): ?>
+						<div class="opp">
+							<?php the_field('opposite_hand_text'); ?>
+						</div>
+						<?php endif; ?>
+					<?php endwhile; ?>
 				</main>
 			</div>
 		</div>

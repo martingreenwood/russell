@@ -21,10 +21,10 @@
         },
         {
             "key": "field_5759385c5126d",
-            "label": "",
+            "label": "Row",
             "name": "feature_grid",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "This is a row. This will house your columns. Add a row for every horizontal section of content you need. ",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -33,9 +33,9 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 1,
+            "min": 0,
             "max": "",
-            "layout": "block",
+            "layout": "table",
             "button_label": "Add Row",
             "sub_fields": [
                 {
@@ -43,7 +43,7 @@
                     "label": "Columns",
                     "name": "columns",
                     "type": "repeater",
-                    "instructions": "",
+                    "instructions": "These are columns. These will house you content. Add a column for every section of content you need in this row. ",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -52,9 +52,9 @@
                         "id": ""
                     },
                     "collapsed": "",
-                    "min": 1,
+                    "min": 0,
                     "max": "",
-                    "layout": "row",
+                    "layout": "table",
                     "button_label": "Add Column",
                     "sub_fields": [
                         {
@@ -649,5 +649,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1466151124
+    "modified": 1466765464
 }
