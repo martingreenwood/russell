@@ -11,6 +11,10 @@
 
 // SIGNUP
 .sign-up, #reginterest, .join-our-mailing-list {
+
+	.container {
+		height: 100%;
+	}
 	
 	.gform_fields {
 		@include span-columns(1);

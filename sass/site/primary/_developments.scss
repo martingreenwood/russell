@@ -65,7 +65,7 @@
 
 				li {
 					
-					a {
+					a, input[type="submit"], input[type="reset"], input[type="button"], button{
 						display: block;
 						background: #00527b;
 						margin-bottom: 5px;
@@ -76,6 +76,13 @@
 						background-size: 9px;
 						background-repeat: no-repeat;
 						background-position: 98% 50%;
+						font-size: inherit;
+						border: 0;
+						text-transform: none;
+						width: 100%;
+						text-align: left;
+						transition: inherit;
+						min-width: inherit;
 					}
 				}
 			}
@@ -635,7 +642,7 @@
 		height: 20px;
 		overflow: scroll;
 		z-index: 555;
-		background: rgba(0,0,0,0.8);
+		background: rgba(0,53,76,0.9);
 		transition: all 300ms ease-in-out;
 
 		#closeme {

@@ -12,7 +12,16 @@
 					?>
 					<ul>
 						<li><a style="background-color: <?php echo $dev_colour; ?>" href="#reginterest">Register your interest</a></li>
-						<li><a style="background-color: <?php echo $dev_colour; ?>" href="#" id="search" data-search="<?php echo str_replace(' ', '-', get_the_title()) ?>">Search for homes at Cragg Close</a></li>
+						<li>
+							<form id="quicksearch" method="get" action="<?php echo home_url( '/properties' ); ?>">
+								<input id="devlocation" name="devlocation[]" type="hidden" value="<?php echo str_replace(' ', '-', strtolower(get_the_title())); ?>">
+								<input id="minprice" name="minprice" type="hidden" value="100000">
+								<input id="maxprice" name="maxprice" type="hidden" value="900000">
+								<input id="bedrooms" name="bedrooms" type="hidden" value="1">
+								<input style="background-color: <?php echo $dev_colour; ?>" type="submit" value="Search for homes at Cragg Close">
+							</form>
+						</li>
+
 						<?php if($development_brochure): ?>
 							<li><a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $development_brochure['url']; ?>">Download a brochure</a></li>
 						<?php endif; ?>

@@ -163,7 +163,7 @@ $(function() {
 $(function() {
 	$('a[href="#reginterest"]').on('click', function(event) {
 		event.preventDefault();
-
+		$('body').addClass('disablescroll');
 		$('#reginterest').addClass('reveal');
 
 		setTimeout(function() {
@@ -173,6 +173,7 @@ $(function() {
 
 	$('#closeme').on('click', function(event) {
 		event.preventDefault();
+		$('body').removeClass('disablescroll');
 
 		$('#reginterest').removeClass('down');
 
@@ -238,7 +239,7 @@ $(window).load(function() {
 	}, 600)
 });
 
-// form valkdation
+// form validation
 $(function () {
 	$('form').parsley();
 });

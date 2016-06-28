@@ -2,6 +2,10 @@
 =            Global            =
 ==============================*/
 
+.disablescroll {
+	overflow: hidden;
+}
+
 #loading-page {
 	position: fixed;
 	background-color: #ffffff;
