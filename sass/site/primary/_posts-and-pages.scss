@@ -4,7 +4,7 @@
 
 #loading-page {
 	position: fixed;
-	background-color: #66CEFF;
+	background-color: #ffffff;
 	width: 100vw;
 	height: 100vh;
 	top: 0;
@@ -12,6 +12,9 @@
 	z-index: 999;
 	text-align: center;
 	transition: all 300ms ease-in-out;
+
+	img#loading-image {
+	}
 
 	&.hide {
 		opacity: 0;
@@ -136,4 +139,47 @@
 			@include span-columns(4);
 		}
 	}	
+}
+
+/*====================================================
+=            Login / Register / PWD reset            =
+====================================================*/
+
+.log-in, .lost-password {
+
+	#content {
+		min-height: 100vh;
+
+		.page-title {
+			text-align: center;
+		}
+
+		.tml {
+
+			.tml-submit-wrap {
+				
+				input {
+					width: 100%;
+					display: block;
+				}
+			}
+
+			.tml-action-links {
+				width: 100%;
+				margin: 0;
+				display: block;
+
+				li {
+
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+
+		#theme-my-login {
+			margin: 0 auto;
+		}
+	}
 }

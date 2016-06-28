@@ -10,7 +10,7 @@
 @import "form-default";
 
 // SIGNUP
-#reginterest, .join-our-mailing-list {
+.sign-up, #reginterest, .join-our-mailing-list {
 	
 	.gform_fields {
 		@include span-columns(1);
@@ -65,6 +65,7 @@
 					    background: $brand-primary;
 					    border-color: $brand-primary;
 					    outline: 0;
+					    content: "\f00c";
 					}
 
 					input:focus + label {
@@ -102,6 +103,8 @@
 							padding: 2px;
 							margin-right: 10px;
 							text-align: center;
+							font: normal normal normal 13px/1 FontAwesome;
+							color: white;
 						 }
 					}
 				}
