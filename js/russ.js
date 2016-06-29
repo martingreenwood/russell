@@ -80,10 +80,10 @@ $(function() {
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		autoplay: true,
+		autoplay: false,
   		autoplaySpeed: 7000,
 		speed: 500,
-		fade: true,
+		fade: false,
 		cssEase: 'linear',
 	});
 });
@@ -103,6 +103,7 @@ $(function() {
 		event.preventDefault();
 		var target = $(this).attr('href');
 		$(target).toggleClass('show');
+		$('body').toggleClass('disablescroll');
 	});
 });
 
@@ -112,6 +113,7 @@ $(function() {
 		event.preventDefault();
 		var target = $(this).attr('href');
 		$(target).toggleClass('show');
+		$('body').toggleClass('disablescroll');
 	});
 });
 

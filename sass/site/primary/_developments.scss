@@ -115,8 +115,12 @@
 		@include section-padding(50px, 50px);
 
 		.ledgend {
-			position: absolute;
-			top: 120px;
+			display: none;
+
+			@include media ($medium-screen-up) {
+				position: absolute;
+				top: 120px;
+			}
 
 			ul {
 				margin: 0;
@@ -200,6 +204,7 @@
 			@include clearfix;
 			padding: 0;
 			margin: 0;
+			overflow: hidden;
 
 			.tab-content {
 				display: none;
@@ -220,18 +225,36 @@
 				}
 
 				#plots {
-					margin: 0;
+					margin: 50px 0 0 0;
 					padding: 0;
 
+					@include media ($large-screen-up) {
+						margin: 0;	
+					}
 
 					li[class^='plot-'] {
-						position: absolute;
-						cursor: pointer;
-						width: 24px;
-						height: 24px;
+						background-image: none;
+						@include span-columns(1);
+
+						// Most Tablets 
+						@include media ($medium-screen-up) {
+							@include span-columns(4.5);
+							@include omega(2n);
+							margin-bottom: 20px;
+						}
+
+						// large screens
+						@media screen and (min-width: 1000px) {
+							position: absolute;
+							cursor: pointer;
+							width: 24px;
+							height: 24px;
+						}
 
 						&.available {
-							background-image: url(assets/available.svg);
+							@media screen and (min-width: 1000px) {
+								background-image: url(assets/available.svg);
+							}
 
 							.plot-popup {
 								background: #0080be;
@@ -246,7 +269,9 @@
 							}
 						}
 						&.coming-soon {
-							background-image: url(assets/coming-soon.svg);
+							@media screen and (min-width: 1000px) {
+								background-image: url(assets/coming-soon.svg);
+							}
 
 							.plot-popup {
 								background: #f39200;
@@ -261,7 +286,9 @@
 							}
 						}
 						&.release-soon {
-							background-image: url(assets/coming-soon.svg);
+							@media screen and (min-width: 1000px) {
+								background-image: url(assets/coming-soon.svg);
+							}
 
 							.plot-popup {
 								background: #f39200;
@@ -276,7 +303,9 @@
 							}
 						}
 						&.not-released {
-							background-image: url(assets/not-released.svg);
+							@media screen and (min-width: 1000px) {
+								background-image: url(assets/not-released.svg);
+							}
 
 							.plot-popup {
 								background: #814a97;
@@ -291,7 +320,9 @@
 							}
 						}
 						&.reserved {
-							background-image: url(assets/reserved.svg);
+							@media screen and (min-width: 1000px) {
+								background-image: url(assets/reserved.svg);
+							}
 
 							.plot-popup {
 								background: #72bb6f;
@@ -306,7 +337,9 @@
 							}
 						}
 						&.show-home {
-							background-image: url(assets/show-home.svg);
+							@media screen and (min-width: 1000px) {
+								background-image: url(assets/show-home.svg);
+							}
 
 							.plot-popup {
 								background: #00537b;
@@ -321,7 +354,9 @@
 							}
 						}
 						&.sold {
-							background-image: url(assets/sold.svg);
+							@media screen and (min-width: 1000px) {
+								background-image: url(assets/sold.svg);
+							}
 
 							.plot-popup {
 								background: #d53620;
@@ -336,7 +371,9 @@
 							}
 						}
 						&.affordable {
-							background-image: url(assets/affordable.svg);
+							@media screen and (min-width: 1000px) {
+								background-image: url(assets/affordable.svg);
+							}
 
 							.plot-popup {
 								background: #0080be;
@@ -352,25 +389,30 @@
 						}
 
 						.plot-popup {
-							display: none;
-							position: absolute;
-							width: 230px;
-							padding: 10px;
 							background-color: $lightblue;
-							left: -103px;
-							top: 32px;
-							z-index: 5;
+							padding: 10px;
+
+							@media screen and (min-width: 1000px) {
+								display: none;
+								position: absolute;
+								width: 230px;
+								left: -103px;
+								top: 32px;
+								z-index: 5;
+							}
 
 							.tri {
-								width: 24px;
-								height: 24px;
-								position: absolute;
-								top: -10px;
-								left: 50%;
-								margin-left: -12px;
-								background: $lightblue;
-								transform: rotate(-45deg);
-								z-index: -1;
+								@media screen and (min-width: 1000px) {
+									width: 24px;
+									height: 24px;
+									position: absolute;
+									top: -10px;
+									left: 50%;
+									margin-left: -12px;
+									background: $lightblue;
+									transform: rotate(-45deg);
+									z-index: -1;
+								}
 							}
 
 							h4, h3 {
@@ -617,15 +659,16 @@
 		}
 
 		.type {
-			@include span-columns(1);
+			float: left;
+			width: 100%;
 			padding-top: 50px;
 
 			@include media ($medium-screen-up) {
-				@include span-columns(4.5);
+				width: 50%;
 			}
 
 			@include media ($large-screen-up) {
-				@include span-columns(3); 
+				width: 25%;
 			}
 
 			p {

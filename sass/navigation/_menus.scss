@@ -144,12 +144,14 @@
 #nav-icon {
 	width: 42px;
 	height: 33px;
+	border: 0;
 	position: relative;
 	background: transparent;
 	outline: 0;
 	position: absolute;
 	right: 20px;
 	top: 28px;
+	z-index: 11;
 
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
@@ -209,9 +211,94 @@
 
 .toggled {
 
-	#nav-icon {	
+	.menu-main-container {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,53,76,0.9);
+		z-index: 10;
+		display: table;
+		overflow: scroll;
+
+		ul {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+
+			// dev menu
+			#menu-item-5146 {
+				ul {
+					-webkit-column-count: 1;
+					-moz-column-count: 1;
+					column-count: 1;
+
+					li {
+						white-space: normal;
+						width: 100%;
+					}
+				}
+			}
+
+			// all items
+			li {
+				display: block;
+				float: none;
+				margin: 0 auto;
+				max-width: 390px;
+				width: 80%;
+				border-bottom: 1px solid #ddd;
+				line-height: 64px;
+				text-align: left;
+
+				&:last-of-type {
+					margin-bottom: 0;
+					padding-bottom: 0;
+					border-bottom: 0;
+				}
+
+				&.menu-item-has-children {
+					background-image: url(assets/dropdown-white.svg);
+					background-repeat: no-repeat;
+					background-size: 20px;
+					background-position: 100% 50%;
+				}
+			
+				a {
+					color: white;
+					font-size: 20px;
+					display: block;
+					width: 100%;
+				}
+
+				&:hover, &.focus {
+					
+					ul {
+						left: auto;
+						position: relative;
+						background: rgba(0,0,0,0.1);
+						padding: 0 15px;
+						top: 0;
+						width: 100%;
+
+						li {
+							width: 100%;
+
+							ul {
+								background: transparent;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#nav-icon {
 		
 		span{
+			background: white;
 			
 			&:nth-child(1), &:nth-child(6) {
 				-webkit-transform: rotate(45deg);
