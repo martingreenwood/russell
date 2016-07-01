@@ -44,11 +44,16 @@ get_header(); ?>
 	<div class="jobs">
 	
 		<div class="container">
+		<h2>Current Vacancies</h2>
 		<?php if( have_rows('job_oppurtunities') ): while ( have_rows('job_oppurtunities') ) : the_row(); ?>
 
 			<div class="job">
-				<h3><?php the_sub_field('job_title'); ?></h3>
-				<?php the_sub_field('job_details'); ?>
+				<div class="half">
+					<h3><?php the_sub_field('job_title'); ?></h3>
+				</div>
+				<div class="half">
+					<?php the_sub_field('job_details'); ?>
+				</div>
 			</div>
 			<?php endwhile;
 		else : ?>
@@ -56,7 +61,7 @@ get_header(); ?>
 
 		<?php endif; ?>
 		</div>
-		
+
 	</div>
 
 
