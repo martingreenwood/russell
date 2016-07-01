@@ -79,6 +79,16 @@
 			margin: 0;
 		}
 
+		.gform_fields {
+			.gfield {
+				.gfield_checkbox {
+					li {
+						width: 100%;
+					}
+				}
+			}
+		}
+
 		.ginput_complex label {
 			display: none;
 		}
