@@ -18,7 +18,7 @@
 			z-index: 99999;
 			background: white;
 			@include rem(padding, 20px);
-			@include rem(padding-top, 0px);
+			@include rem(padding-top, 40px);
 
 			ul {
 				top: 0;
@@ -32,6 +32,7 @@
 
 				&:hover > ul,
 				&.focus > ul {
+					margin-left: 0;
 				}
 			}
 
