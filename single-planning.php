@@ -54,7 +54,7 @@ get_header(); ?>
 					<?php $location = get_field('location_map');
 					if( !empty($location) ): ?>
 						<div class="map">
-							<div class="marker" data-icon="<?php echo get_template_directory_uri(); ?>/assets/available.svg" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+							<div class="marker" data-icon="<?php echo get_template_directory_uri(); ?>/assets/available.png" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
 						</div>
 						<?php endif; ?>
 					</div>

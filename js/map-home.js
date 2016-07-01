@@ -27,7 +27,7 @@ function new_map( $el ) {
 	var args = {
 		zoom		: 14,
 		scrollwheel	: false,
-		draggable 	: false,
+		draggable 	: true,
 		center		: new google.maps.LatLng(0, 0),
 		mapTypeId	: google.maps.MapTypeId.ROADMAP
 	};
