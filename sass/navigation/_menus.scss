@@ -219,17 +219,17 @@
 		height: 100%;
 		background: rgba(0,53,76,0.9);
 		z-index: 10;
-		display: table;
 		overflow: scroll;
 
 		ul {
-			display: table-cell;
+			display: block;
+			margin-top: 100px;
 			vertical-align: middle;
 			text-align: center;
-			overflow: scroll;
 
 			// dev menu
 			#menu-item-5146 {
+				
 				ul {
 					-webkit-column-count: 1;
 					-moz-column-count: 1;
@@ -240,6 +240,10 @@
 						width: 100%;
 					}
 				}
+			}
+
+			ul {
+				margin-top: 0;
 			}
 
 			// all items

@@ -142,12 +142,12 @@ function russell_jquery_enqueue() {
 }
 
 function russell_scripts() {
-	wp_enqueue_style( 'font-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' );
 	wp_enqueue_style( 'font-style', '//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' );
 
 	wp_enqueue_style( 'russell-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'russ-js', get_template_directory_uri() . '/js/russ.js', '', '1', true );
+	wp_enqueue_script( 'russ-fa', '//use.fontawesome.com/1933b7f144.js', '', '1', true );
 
 	if (is_front_page() || is_singular( 'planning' ) || is_singular( 'developments' )) {
 	wp_enqueue_script( 'russ-map', '//maps.googleapis.com/maps/api/js?key=AIzaSyBO09_0XtvNzf8QkZWH_UHDyvLwwVCm_rY', '', '', true );
