@@ -33,5 +33,7 @@
 	</div>
 	<?php endif; ?>
 
+	<?php if( is_home()) : ?>
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<?php endif; ?>
 </aside><!-- #secondary -->
