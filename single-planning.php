@@ -69,6 +69,14 @@ get_header(); ?>
 
 				<div class="row">
 					
+					<div class="img box full">
+						<img src="<?php the_field('site_plan'); ?>" alt="">
+					</div>
+
+				</div>
+
+				<div class="row">
+					
 					<div class="column">
 						<?php the_field('drainage'); ?>
 					</div>
