@@ -21,7 +21,7 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div class="container default-page">
+	<div class="container">
 
 		<div id="primary" class="content-area">
 
@@ -53,7 +53,6 @@ get_header(); ?>
 
 		</div><!-- #primary -->
 
-		<?php get_sidebar(); ?>
 	</div>
 
 <?php
