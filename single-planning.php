@@ -24,12 +24,12 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div class="container default-page">
 
-		<div id="primary" class="content-area full">
+	<div id="primary" class="content-area full">
 
-			<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main" role="main">
 
+			<div class="container">
 				<div class="row">
 					
 					<div class="column">
@@ -41,7 +41,9 @@ get_header(); ?>
 					</div>
 
 				</div>
+			</div>
 
+			<div class="container">
 				<div class="row">
 					
 					<div class="img box eq-height">
@@ -58,7 +60,9 @@ get_header(); ?>
 					</div>
 
 				</div>
+			</div>
 
+			<div class="container">
 				<div class="row">
 					
 					<div class="img box full">
@@ -66,15 +70,23 @@ get_header(); ?>
 					</div>
 
 				</div>
+			</div>
 
-				<div class="row">
-					
-					<div class="img box full">
-						<img src="<?php the_field('site_plan'); ?>" alt="">
+			<section class="site-plan">
+				
+				<div class="container">
+					<div class="row">
+						
+						<div class="img box full">
+							<img src="<?php the_field('site_plan'); ?>" alt="">
+						</div>
+
 					</div>
-
 				</div>
 
+			</section>
+
+			<div class="container">
 				<div class="row">
 					
 					<div class="column">
@@ -86,12 +98,13 @@ get_header(); ?>
 					</div>
 
 				</div>
+			</div>
 
-			</main>
+		</main>
 
-		</div><!-- #primary -->
+	</div><!-- #primary -->
 
-	</div>
+
 
 	<section id="feedback">
 		
