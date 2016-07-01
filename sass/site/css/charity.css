@@ -1,0 +1,7 @@
+/*=======================================
+=            CASE STUDY PAGE            =
+=======================================*/
+.supporting-our-community article {
+  -webkit-columns: 2;
+  -moz-columns: 1;
+  columns: 1; }

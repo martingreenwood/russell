@@ -39,7 +39,7 @@ get_header(); ?>
 
 			<div class="charity-logos">
 			<?php $charity_logos = get_field('charity_logos'); if( $charity_logos ): ?>
-		        <?php foreach( $charity_logos as $charity_logo ): $charity_link = get_field('external_url', $image['ID']); ?>
+		        <?php foreach( $charity_logos as $charity_logo ): $charity_link = get_field('external_url', $charity_link['ID']); ?>
 		            <div class="charity-logo">
 		            	<?php if ($charity_link): ?><a target="_blank" href="<?php echo $charity_link; ?>"><?php endif; ?>
 		                <img src="<?php echo $charity_logo['url']; ?>" alt="<?php echo $charity_logo['alt']; ?>" />
