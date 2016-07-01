@@ -82,5 +82,9 @@
 		.ginput_complex label {
 			display: none;
 		}
+
+		input[type="checkbox"]+label, input[type="radio"]+label {
+			font-weight: normal;
+		}
 	}
 }
