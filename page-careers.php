@@ -37,23 +37,28 @@ get_header(); ?>
 
 			</main>
 
-			<div class="jobs">
-			<?php if( have_rows('job_oppurtunities') ): while ( have_rows('job_oppurtunities') ) : the_row(); ?>
-
-				<div class="job">
-					<h3><?php the_sub_field('job_title'); ?></h3>
-					<?php the_sub_field('job_details'); ?>
-				</div>
-				<?php endwhile;
-			else : ?>
-			    <h3>Sorry, we do not currently have any job oppurtunities available. Keep checking back as we update this page often.</h3>
-
-			<?php endif; ?>
-			</div>
-
 		</div><!-- #primary -->
 
 	</div>
+
+	<div class="jobs">
+	
+		<div class="container">
+		<?php if( have_rows('job_oppurtunities') ): while ( have_rows('job_oppurtunities') ) : the_row(); ?>
+
+			<div class="job">
+				<h3><?php the_sub_field('job_title'); ?></h3>
+				<?php the_sub_field('job_details'); ?>
+			</div>
+			<?php endwhile;
+		else : ?>
+		    <h3>Sorry, we do not currently have any job oppurtunities available. Keep checking back as we update this page often.</h3>
+
+		<?php endif; ?>
+		</div>
+		
+	</div>
+
 
 <?php
 get_footer();
