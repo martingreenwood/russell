@@ -15,7 +15,7 @@
 				$development_siteplan_pdf = get_field('development_siteplan_pdf');
 				if ($development_siteplan_pdf): ?>
 				<li class="plan-download">
-					<a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $development_siteplan_pdf['url']; ?>">Download Siteplan &amp; Spcification</a>
+					<a style="background-color: <?php echo $dev_colour; ?>" target="_blank" href="<?php echo $development_siteplan_pdf['url']; ?>">Download Site plan &amp; Specification</a>
 				</li>
 				<?php endif; ?>
 				</ul>

@@ -6,7 +6,8 @@
 				<div class="search-box clear">
 					<form id="quicksearch" method="get" action="<?php echo home_url( '/properties' ); ?>">
 						
-						<fieldset>
+
+						<div class="wrap">
 							<select id="location" required="" data-parsley-error-message="<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>" name="location">
 							<option value="">Select Location</option>
 							<?php
@@ -34,8 +35,8 @@
 
 							?>
 							</select>
-						</fieldset>
-						<fieldset>
+						</div>
+						<div class="wrap">
 							<select id="bedrooms" required="" data-parsley-error-message="<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>" name="bedrooms">
 								<option value="">Select Min Bedrooms</option>
 								<option value="1">One</option>
@@ -44,16 +45,11 @@
 								<option value="4">Four</option>
 								<option value="5">Five</option>
 							</select>
-						</fieldset>
+						</div>
 
-						<fieldset class="price-box" style="display: none;">
-							<select id="minprice" name="minprice">
-								<option value="100000">£100,000</option>
-							</select>
-							<select id="maxprice" name="maxprice">
-								<option value="900000">£900,000</option>
-							</select>
-						</fieldset>
+
+						<input type="hidden" id="minprice" name="minprice" value="100000">
+						<input type="hidden" id="maxprice" name="maxprice" value="900000">
 
 						<input type="submit" id="search_developments" value="Search Homes">
 					</form>

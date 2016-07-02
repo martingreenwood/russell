@@ -226,6 +226,7 @@ equalheight = function(container){
 // Add the divs you want to be equal to this.
 $(window).load(function() {
 	equalheight('.eq-height');
+	//equalheight('.column');
 	equalheight('.your-new-home .top-half .column');
 });
 

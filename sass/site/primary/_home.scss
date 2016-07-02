@@ -54,14 +54,13 @@
 		position: relative;
 		float: left;
 		width: 100%;
-
 	}
 
 	.search {
 		@include span-columns(1);
 
 		@include media($medium-screen-up) {
-			@include span-columns(6);
+			@include span-columns(5.5);
 		}
 
 		@include media($large-screen-up) {
@@ -77,23 +76,47 @@
 			float: left;
 		}
 
-		fieldset {
-			background: white;
+		#search_developments {
 			width: 100%;
-			padding: 0;
+			margin-top: 10px;
 			border: 0;
+
+			@include media($large-screen-up) {
+				width: auto;
+				margin-top: 0;
+				margin-left: 20px;
+			}
+		}
+
+		.wrap {
+			float: left;
 			position: relative;
-			@include rem(max-width, 200px);
-			@include rem(margin-right, 10px);
+			width: 100%;
+
+			@include media($medium-screen-up) {
+				width: 49%;
+				margin-right: 2%;
+				margin-bottom: 0;
+			}
+
+			@include media($large-screen-up) {
+				width: 200px;
+				margin-right: 20px;
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+			}
 		}
 
 		select {
-			background-color: white;
 			width: 100%;
 			padding: 0;
-			@include rem(max-width, 200px);
-			@include rem(line-height, 34px);
-			@include rem(text-indent, 10px);
+			margin: 0;
+			position: relative;
+			margin-bottom: 5px;
+			box-sizing: content-box;
+			text-indent: 10px;
 		}
 	}
 	
@@ -102,11 +125,13 @@
 		@include span-columns(1);
 
 		@include media($medium-screen-up) {
-			@include span-columns(3);
+			@include span-columns(3.5);
+			padding-top: 44px;
 		}
 
 		@include media($large-screen-up) {
 			@include span-columns(4);
+			padding-top: 0;
 		}
 
 		ul {
@@ -150,7 +175,15 @@
 			
 			h1 {
 				margin: 0;
-				@include rem(font-size, 42px);
+				@include rem(font-size, 20px);
+
+				@include media ($medium-screen-up) {
+					@include rem(font-size, 35px);
+				}
+
+				@include media ($large-screen-up) {
+					@include rem(font-size, 42px);
+				}
 			}
 		}
 

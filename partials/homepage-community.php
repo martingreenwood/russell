@@ -35,7 +35,7 @@
 				<div class="icon">
 					<a href="https://www.youtube.com/user/russellarmerla96ll" target="blank" rel="youtube">
 						<i class="fa fa-youtube" aria-hidden="true"></i>
-						<p>Check out our lastest videos</p>
+						<p>Check out our latest videos</p>
 					</a>
 				</div>
 			</div>
@@ -59,7 +59,7 @@
 				<div class="icon">
 					<a href="https://www.youtube.com/user/russellarmerla96ll" target="blank" rel="youtube">
 						<i class="fa fa-youtube" aria-hidden="true"></i>
-						<p>our lastest news</p>
+						<p>Our latest news</p>
 					</a>
 				</div>
 			</div>

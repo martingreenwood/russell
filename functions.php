@@ -43,6 +43,8 @@ function russell_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'cover1600', 1600, 450, true );
 	add_image_size( 'devfeat', 620, 300, true );
+	
+	add_image_size( 'grid-square', 0, 263 );
 	/*
 	 * Enable support for Logo in Customiser.
 	 *

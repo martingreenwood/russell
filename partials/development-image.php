@@ -19,7 +19,7 @@
 									//full : Full Res
 
 									if($imageSize == 'thumbnail'):
-										$the_image = '<img src="'.$image['sizes']['thumbnail'].'" alt="">';
+										$the_image = '<img src="'.$image['sizes']['grid-square'].'" alt="">';
 									elseif($imageSize == 'large'):
 										$the_image = '<img src="'.$image['sizes']['large'].'" alt="">';
 									elseif($imageSize == 'thumbnail'):

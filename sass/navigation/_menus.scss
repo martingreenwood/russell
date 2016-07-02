@@ -245,6 +245,7 @@
 					-webkit-column-count: 1;
 					-moz-column-count: 1;
 					column-count: 1;
+					margin-left: 0;
 
 					li {
 						white-space: normal;
@@ -303,6 +304,7 @@
 
 							ul {
 								background: transparent;
+								padding: 0;
 							}
 						}
 					}
