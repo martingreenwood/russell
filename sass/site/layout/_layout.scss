@@ -404,6 +404,11 @@
 			height: 100%;
 			width: inherit;
 			max-width: inherit;
+			
+			@include media ($large-screen-up) {
+				width: 100%;
+				height: auto;
+			}
 		}
 
 		.icon360 {
