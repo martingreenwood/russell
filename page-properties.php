@@ -151,7 +151,7 @@ get_header(); ?>
 			<main id="main" class="site-main" role="main">
 				<div class="title">
 					<p class="left">&nbsp;</p>
-					<p class="right">Sort by <span class="sort1">price (high to low)</span> <span class="sort2">price (high to low)</span></p>
+					<p class="right">Sort by <span class="sort1">price (low to high)</span> <span class="sort2">price (high to low)</span></p>
 					<div class="clear"></div>
 				</div>
 
