@@ -115,8 +115,7 @@
 		@include section-padding(50px, 50px);
 
 		.ledgend {
-			position: absolute;
-			top: 120px;			
+			display: none;		
 
 			@include media ($medium-screen-up) {
 				position: absolute;
@@ -152,9 +151,13 @@
 			position: relative;
 
 			.plan-download {
-				position: absolute;
-				right: 0;
-				top: 13px;
+				display: none;
+
+				@include media ($medium-screen-up) {
+					position: absolute;
+					right: 0;
+					top: 13px;
+				}
 
 				a {
 					background: #00527b;
@@ -166,10 +169,7 @@
 
 			.tab {
 				list-style: none;
-
-				@include media($tab-mode) {
-					display: inline;
-				}
+				display: inline-block;
 			}
 
 			.tab-link {
@@ -236,6 +236,7 @@
 					li[class^='plot-'] {
 						background-image: none;
 						@include span-columns(1);
+						margin-bottom: 20px;
 
 						// Most Tablets 
 						@include media ($medium-screen-up) {
@@ -487,10 +488,7 @@
 
 			.spec-tab {
 				list-style: none;
-
-				@include media($tab-mode) {
-					display: inline;
-				}
+				display: inline-block;
 			}
 
 			.spec-tab-link {
@@ -521,9 +519,6 @@
 				&.is-active {
 					color: $brand-primary;
 					opacity: 1;
-
-					@include media($tab-mode) {
-					}
 				}
 			}
 		}
@@ -536,8 +531,16 @@
 			.spec-tab-content {
 				display: none;
 				width: 100%;
-				column-count: 2;
-				column-gap: 20px;
+				-webkit-column-count: 1;
+				-moz-column-count: 1;
+				column-count: 1;
+
+
+				@include media($tab-mode) {				
+					-webkit-column-count: 2;
+					-moz-column-count: 2;
+					column-count: 2;
+				}
 
 
 				.items {
@@ -572,9 +575,6 @@
 				&.is-active {
 					color: $brand-primary;
 					display: block;
-
-					@include media($tab-mode) {
-					}
 				}
 
 				@include media($tab-mode) {
@@ -594,8 +594,16 @@
 		}
 
 		.intro {
-			column-count: 2;
-			column-gap: 20px;
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			column-count: 1;
+
+			@include media ($medium-screen-up) {
+				-webkit-column-count: 2;
+				-moz-column-count: 2;
+				column-count: 2;
+			}
+
 			padding-bottom: 50px;
 
 			p {
