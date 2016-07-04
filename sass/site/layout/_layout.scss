@@ -56,9 +56,19 @@
 	@include section-padding(0, 50px);
 
 	.column {
-		height: 229px;
+		height: 350px;
 		overflow: hidden;
 		position: relative;
+		margin-bottom: 20px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		@include media ($medium-screen-up) {
+			height: 229px;
+			margin-bottom: 0;
+		}
 
 		@include media ($large-screen-up) {
 			height: 263px;
