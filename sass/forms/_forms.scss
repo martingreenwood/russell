@@ -52,9 +52,14 @@
 			.gfield_checkbox {
 
 				li {
-					width: 49%;
+					width: 109%;
 					float: left;
-					margin-right: 1%;
+
+					@include media ($medium-screen-up) {
+						width: 49%;
+						float: left;
+						margin-right: 1%;
+					}
 
 					label {
 						font-weight: normal;
