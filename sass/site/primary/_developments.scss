@@ -657,7 +657,12 @@
 
 				li {
 					display: inline-block;
-					margin-right: 10px;
+					margin-bottom: 10px;
+					
+					@include media ($medium-screen-up) {
+						margin-right: 10px;
+						margin-bottom: 0;
+					}
 
 					img {
 						width: 24px;
