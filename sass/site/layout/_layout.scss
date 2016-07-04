@@ -223,7 +223,11 @@
 
 		.map {
 			width: 100%;
-			height: 229px;
+			height: 350px;
+
+			@include media ($medium-screen-up) {
+				height: 263px;
+			}
 
 			@include media ($large-screen-up) {
 				height: 263px;
@@ -243,10 +247,14 @@
 		padding: 20px;
 
 		h3 {
-			font-size: 16px;
+			font-size: 30px;
 			margin-bottom: 0;
 			line-height: 1.2;
 			color: $brand-primary;
+
+			@include media ($medium-screen-up) {
+				font-size: 16px;
+			}
 
 			@include media ($large-screen-up) {
 				font-size: 24px;
@@ -302,6 +310,7 @@
 	.feature-gallery {
 		background-size: cover;
 		background-position: center;
+		height: 100%;
 
 		.gallery {
 			margin: 0;
@@ -338,7 +347,19 @@
 				margin-right: 10px;
 				margin-left: 10px;
 				font-size: 22px;
-				padding: 8px 0;
+				padding: 0;
+
+				@include media ($large-screen-up) {
+					padding: 8px 0;
+				}
+			}
+
+			p {
+				margin: 0 10px 10px 10px;
+
+				@include media ($medium-screen-up) {
+					margin: 0;
+				}
 			}
 
 			svg {
@@ -411,10 +432,15 @@
 		height: 100%;
 
 		img {
-			height: 100%;
-			width: inherit;
-			max-width: inherit;
+			width: 100%;
+			height: auto;
 			
+			@include media ($medium-screen-up) {
+				height: 100%;
+				width: inherit;
+				max-width: inherit;
+			}
+
 			@include media ($large-screen-up) {
 				width: 100%;
 				height: auto;
