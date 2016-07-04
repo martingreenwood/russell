@@ -151,18 +151,16 @@ get_header(); ?>
 			<main id="main" class="site-main" role="main">
 				<div class="title">
 					<p class="left">&nbsp;</p>
-					<p class="right">Sort By:  Price (High to Low) Price (Low to High)</p>
+					<p class="right">Sort by <span class="sort1">price (high to low)</span> <span class="sort2">price (high to low)</span></p>
 					<div class="clear"></div>
 				</div>
 
-				<!--
-<?php if(isset($devlocation)): foreach($devlocation as $selected){
+				<!--<?php if(isset($devlocation)): foreach($devlocation as $selected){
 				echo "Location: " .$selected . " - " .get_id_by_slug($selected, 'developments'). "\r\n";
 				} endif;
 				echo "Bedrooms: " .$bedrooms ."\r\n";
 				echo "Min Price: " .$minprice ."\r\n";
-				echo "Max Price: " .$maxprice ."\r\n";
-				?>-->
+				echo "Max Price: " .$maxprice ."\r\n";?>-->
 
 				<div id="results" class="row">
 			
@@ -210,7 +208,7 @@ get_header(); ?>
 					elseif ($plot_price == 'TBC' || $plot_price == 'TBA'):
 						$plot_price_filter = "900000";
 					else:
-						$plot_price_filter = $plot_price;
+						$plot_price_filter = str_replace(",", "", $plot_price);
 					endif;
 
 					if (isset($plot->acf->special_offers)) {
@@ -344,7 +342,7 @@ get_header(); ?>
 					
 					<?php // dont show sold || not-released
 					if ($plot_availability != "sold" && $plot_availability != "not-released"): ?>
-					<div class="search-result">
+					<div class="search-result" data-availabiility="<?php echo $plot_availability; ?>" data-price="<?php echo $plot_price_filter; ?>" data-room="<?php echo $house_rooms; ?>" data-location="<?php echo $dev_location; ?>">
 						<?php if($special_offers): ?> 
 						<div class="feature">
 							<p><?php echo str_replace("-"," ",current($special_offers)); ?></p>
