@@ -43,15 +43,12 @@ get_header(); ?>
 		<?php get_sidebar('location'); ?>
 	</div>
 
+	<?php $image_ids = get_field('location_gallery', false, false); if ($image_ids): ?>
 	<div class="gallery container">
-		<?php $location_gallery = get_field('location_gallery'); if( $location_gallery ): ?>
-		<div class="pics">
-		<?php foreach( $location_gallery as $image ): ?>
-			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-		<?php endforeach; ?>
-		</div>
-		<?php endif; ?>
+		<?php $shortcode = '[gallery type="rectangular" link="file" size="large" ids="' . implode(',', $image_ids) . '"]';
+		echo do_shortcode( $shortcode ); ?>
 	</div>
+	<?php endif; ?>
 
 <?php
 get_footer();

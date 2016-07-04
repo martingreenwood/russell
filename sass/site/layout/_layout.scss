@@ -56,13 +56,9 @@
 	@include section-padding(0, 50px);
 
 	.column {
-		height: 263px;
+		height: 229px;
 		overflow: hidden;
 		position: relative;
-
-		@include media ($medium-screen-up) {
-			height: 228px;
-		}
 
 		@include media ($large-screen-up) {
 			height: 263px;
@@ -217,7 +213,11 @@
 
 		.map {
 			width: 100%;
-			height: 263px;
+			height: 229px;
+
+			@include media ($large-screen-up) {
+				height: 263px;
+			}
 		}
 
 		/* fixes potential theme css conflict */
@@ -234,18 +234,33 @@
 
 		h3 {
 			font-size: 16px;
+			margin-bottom: 0;
 			line-height: 1.2;
 			color: $brand-primary;
 
-			@include media ($medium-screen-up) {
+			@include media ($large-screen-up) {
 				font-size: 24px;
 			}
 		}
 
 		p {
-			margin: 20px 0 0 0;
+			margin: 15px 0 0 0;
 			line-height: 1.2;
 			color: $lightblue;
+
+			@include media ($large-screen-up) { 
+				margin: 20px 0 0 0;
+			}
+		}
+	}
+
+	.image {
+		height: 100%;
+		
+		img {
+			width: inherit;
+			max-width: inherit;
+			height: 100%;
 		}
 	}
 
@@ -257,13 +272,20 @@
 
 		.play-icon {
 			background-image: url(assets/play.svg);
-			width: 100px;
-			height: 100px;
+			width: 76px;
+			height: 76px;
 			position: absolute;
 			top: 50%;
-			margin-top: -50px;
+			margin-top: -38px;
 			left: 50%;
-			margin-left: -50px;
+			margin-left: -38px;
+
+			@include media ($large-screen-up) {
+				width: 100px;
+				height: 100px;
+				margin-top: -50px;
+				margin-left: -50px;
+			}
 		}
 	}
 
@@ -378,21 +400,30 @@
 		position: relative;
 		height: 100%;
 
+		img {
+			height: 100%;
+			width: inherit;
+			max-width: inherit;
+		}
+
 		.icon360 {
 			position: absolute;
-			width: 100px;
-			height: 100px;
+			width: 76px;
+			height: 76px;
 			background-image: url(assets/virtual-icon.svg);
 			background-position: center;
 			background-repeat: no-repeat;
 			right: 50%;
 			top: 50%;
-			margin-right: -30px;
-			margin-top: -50px;
-			background-color: rgba(255,255,255, 0.6);
-			border-radius: 50%;
-			padding: 10px;
-			background-size: 87%;
+			margin-right: -38px;
+			margin-top: -38px;
+
+			@include media ($large-screen-up) {
+				width: 100px;
+				height: 100px;
+				margin-top: -50px;
+				margin-left: -50px;
+			}
 		}
 
 		.close_popup {

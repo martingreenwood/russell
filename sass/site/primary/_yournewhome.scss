@@ -132,7 +132,11 @@
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: 50%;
-				min-height: 267px;
+				min-height: 278px;
+
+				@include media ($large-screen-up) {
+					min-height: 267px;
+				}
 			}
 
 			.left-link, .right-link { 

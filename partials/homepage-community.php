@@ -58,7 +58,9 @@
 
 				<div class="icon">
 					<a href="https://www.youtube.com/user/russellarmerla96ll" target="blank" rel="youtube">
-						<i class="fa fa-youtube" aria-hidden="true"></i>
+						<span class="fa">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/roof.svg" alt="">
+						</span>
 						<p>Our latest news</p>
 					</a>
 				</div>

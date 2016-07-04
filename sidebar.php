@@ -33,7 +33,11 @@
 	</div>
 	<?php endif; ?>
 
-	<?php if( is_home()) : ?>
+	<?php if( is_home() || is_archive() || is_singular( 'post' ) ): ?>
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<?php endif; ?>
+
+	<?php if( is_singular( 'casestudies' ) ): ?>
+	<?php dynamic_sidebar( 'sidebar-2' ); ?>
 	<?php endif; ?>
 </aside><!-- #secondary -->

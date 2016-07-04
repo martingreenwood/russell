@@ -115,7 +115,8 @@
 		@include section-padding(50px, 50px);
 
 		.ledgend {
-			display: none;
+			position: absolute;
+			top: 120px;			
 
 			@include media ($medium-screen-up) {
 				position: absolute;

@@ -277,8 +277,8 @@ get_header(); ?>
 							</div>
 
 							<div class="houseprice">
-								<p>£<?php echo $plot_price; ?></p>
-								<p><?php echo $house_rooms ?> Bedrooms</p>
+								<p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/price.svg" alt=""> £<?php echo $plot_price; ?></p>
+								<p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/bedrooms.svg" alt=""> <?php echo $house_rooms ?> Bedrooms</p>
 								<div class="clear"></div>
 							</div>
 
@@ -326,8 +326,8 @@ get_header(); ?>
 							</div>
 
 							<div class="houseprice">
-								<p>£<?php echo $plot_price; ?></p>
-								<p><?php echo $house_rooms ?> Bedrooms</p>
+								<p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/price.svg" alt=""> £<?php echo $plot_price; ?></p>
+								<p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/bedrooms.svg" alt=""> <?php echo $house_rooms ?> Bedrooms</p>
 								<div class="clear"></div>
 							</div>
 
@@ -369,8 +369,8 @@ get_header(); ?>
 						</div>
 
 						<div class="houseprice">
-							<p>£<?php echo $plot_price; ?></p>
-							<p><?php echo $house_rooms ?> Bedrooms</p>
+							<p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/price.svg" alt=""> £<?php echo $plot_price; ?></p>
+							<p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/bedrooms.svg" alt=""> <?php echo $house_rooms ?> Bedrooms</p>
 							<div class="clear"></div>
 						</div>
 
