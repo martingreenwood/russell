@@ -16,6 +16,15 @@
 			top: 20px;
 			right: 20px;
 			width: 195px;
+
+			img {
+				display: inline-block;
+				width: 100px;
+
+				@include media ($medium-screen-up) {
+					width: 195px;
+				}
+			}
 		}
 	}
 
