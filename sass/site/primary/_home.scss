@@ -16,8 +16,6 @@
 	.caption-wrap {
 		display: none;
 		background: none;
-		max-width: 1000px;
-		@include rem(padding, 0 20px);
 		width: 100%;
 		float: none;
 		position: absolute;
@@ -26,15 +24,14 @@
 		@include media ($iphones) {
 			display: block;
 			top: 13%;
-			margin: 0;
-			left: 0;
 		}
 
 		@include media ($medium-screen-up) {
 			display: block;
-			margin: 0 auto;
-			left: 50%;
-			margin-left: -500px;
+			top: 25%;	
+		}
+
+		@include media ($large-screen-up) {
 			top: 50%;
 		}
 
@@ -51,7 +48,7 @@
 			-o-text-shadow: 1px 1px 2px #333;
 
 			
-			@include media ($medium-screen-up) {
+			@include media ($large-screen-up) {
 				white-space: pre;
 				@include rem(font-size, 50px);
 			}
@@ -69,7 +66,7 @@
 			-webkit-text-shadow: 1px 1px 2px #333;
 			-o-text-shadow: 1px 1px 2px #333;
 
-			@include media ($medium-screen-up) {
+			@include media ($large-screen-up) {
 				white-space: pre;
 			}
 		}

@@ -6,8 +6,10 @@
 	                
 	                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 	                <div class="caption-wrap">
-	                	<h2><?php echo $image['caption']; ?></h2>
-	                	<p><?php echo $image['description']; ?></p>
+	                	<div class="container">
+	                		<h2><?php echo $image['caption']; ?></h2>
+	                		<p><?php echo $image['description']; ?></p>
+	                	</div>
 	                </div>
 
 	                <?php if ($sliderlink): ?></a><?php endif; ?>
