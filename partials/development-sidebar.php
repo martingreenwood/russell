@@ -1,9 +1,16 @@
-				<?php $dev_colour = get_field('development_colour'); ?>
+				<?php 
+					$dev_colour = get_field('development_colour'); 
+					if (get_field('starting_price')) {
+						$starting_price = number_format( get_field('starting_price') );
+					} else {
+						$starting_price = "TBC";
+					}
+				?>
 				<div class="intro">
 					<h2 style="color: <?php echo $dev_colour; ?>"><?php the_field('Town'); ?>, <?php the_field('county'); ?> <?php the_field('post_code'); ?></h2>
 					<br>
 					<h3 style="color: <?php echo $dev_colour; ?>"><?php the_field('bedroom_overview'); ?>
-					<br>starting from £<?php the_field('starting_price'); ?></h3>
+					<br>starting from £<?php echo $starting_price ?></h3>
 				</div>
 
 				<div class="quicklinks">
