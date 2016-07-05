@@ -15,11 +15,14 @@
 get_header(); ?>
 	<div id="search_results"></div>
 
-	<section id="slider">
-	<?php get_template_part( 'partials/homepage', 'slides' ); ?>
-	</section>
+	<div class="home-top">
+	
+		<section id="slider">
+		<?php get_template_part( 'partials/homepage', 'slides' ); ?>
+		</section>
 
-	<?php get_template_part( 'partials/homepage', 'search-bar' ); ?>
+		<?php get_template_part( 'partials/homepage', 'search-bar' ); ?>
+	</div>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main container" role="main">

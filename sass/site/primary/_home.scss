@@ -2,25 +2,42 @@
 =            Home            =
 ============================*/
 
+.home-top {
+	position: relative;
+}
+
 #slider {
+	height: calc(100vh - 104px);
+
+	@include media ($medium-screen-up) {
+		height: auto;
+	}
 
 	.caption-wrap {
+
+		top: 13%;
+		margin: 0;
+		left: 0;
+
 		background: none;
 		max-width: 960px;
 		@include rem(padding, 0 20px);
 		width: 100%;
-		margin: 0 auto;
 		float: none;
 		position: absolute;
-		left: 50%;
-		margin-left: -480px;
-		top: 50%;
 		opacity: 1;
 
+		@include media ($medium-screen-up) {
+			left: 50%;
+			margin-left: -480px;
+			top: 50%;
+			margin: 0 auto;
+		}
+
 		h2 {
-			@include rem(font-size, 50px);
+			@include rem(font-size, 30px);
 			line-height: 1;
-			white-space: pre;
+			
 			color: #ffffff;
 			font-style: normal;
 
@@ -28,11 +45,16 @@
 			-moz-text-shadow: 1px 1px 2px #333;
 			-webkit-text-shadow: 1px 1px 2px #333;
 			-o-text-shadow: 1px 1px 2px #333;
+
+			
+			@include media ($medium-screen-up) {
+				white-space: pre;
+				@include rem(font-size, 50px);
+			}
 		}
 
 		p {
 			color: #ffffff;
-			white-space: pre;
 			@include rem(font-size, 19px);
 			line-height: 1.2;
 			font-weight: 700;
@@ -42,13 +64,24 @@
 			-moz-text-shadow: 1px 1px 2px #333;
 			-webkit-text-shadow: 1px 1px 2px #333;
 			-o-text-shadow: 1px 1px 2px #333;
+
+			@include media ($medium-screen-up) {
+				white-space: pre;
+			}
 		}
 	}
 }
 
 #homesearch {
-	background-color: $light-gray;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(255,255,255,0.6);
 	@include rem(padding, 20px);
+
+	@include media ($medium-screen-up) {
+		position: relative;
+		background-color: $light-gray;
+	}
 
 	#quicksearch {
 		position: relative;
@@ -122,7 +155,7 @@
 	
 	.social {
 		text-align: right;
-		@include span-columns(1);
+		display: none;
 
 		@include media($medium-screen-up) {
 			@include span-columns(3.5);
@@ -503,8 +536,12 @@
 
 			.devs {
 				@include rem(margin-bottom, 20px);
-				width: 50%;
+				width: 100%;
 				float: left;
+
+				@include media($medium-screen-up) {
+					width: 50%;	
+				}
 
 				h3 {
 					color: #666666;
