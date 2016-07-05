@@ -16,7 +16,7 @@
 	.caption-wrap {
 		display: none;
 		background: none;
-		max-width: 960px;
+		max-width: 1000px;
 		@include rem(padding, 0 20px);
 		width: 100%;
 		float: none;
@@ -34,7 +34,7 @@
 			display: block;
 			margin: 0 auto;
 			left: 50%;
-			margin-left: -480px;
+			margin-left: -500px;
 			top: 50%;
 		}
 
