@@ -496,9 +496,9 @@
 					}
 
 					.develeopment_location {
-						@include rem(font-size, 20px);
+						@include rem(font-size, 18px);
 						color: #ffffff;
-						margin: 0;
+						margin: 15px 0 0 0;
 						line-height: 1;
 					}
 				}
