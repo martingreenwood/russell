@@ -42,10 +42,10 @@
 						$starting_price = "TBC";
 					}
 					?>
-					<div class="box">
+					<div class="box <?php echo str_replace(' ', '-', strtolower( get_the_title() )); ?>">
 						<div class="table">
 							<div class="cell middle">
-								<div class="map_popup clear <?php echo str_replace(' ', '-', strtolower( get_the_title() )); ?>">
+								<div class="map_popup clear">
 
 									<div class="popup_content clear">
 										
@@ -60,12 +60,11 @@
 											<div class="development_text">
 												<h3><?php the_field('bedroom_overview'); ?>
 												<br>starting from £<?php echo $starting_price ?></h3>
-												<?php //$theexcerpt = explode(".", get_the_excerpt()); echo current($theexcerpt)."..."; ?>
 											</div>
-											<div class="development_view"> <a href="<?php the_permalink(); ?>">View development</a></div>
+											<div class="development_view"> <a href="<?php echo get_the_permalink($dev_id); ?>">View development</a></div>
 										</div>
 									</div>
-									<a href="#" class="close_popup" rel="cambridge-drive">&nbsp;</a>
+									<a href="#" class="close_popup">&nbsp;</a>
 								</div>
 							</div>
 						</div>

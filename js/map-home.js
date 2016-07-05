@@ -117,10 +117,10 @@ function add_marker( $marker, map ) {
 function markerClick(markerKey){
 	var markerKey = markerKey;
 	$('#map_popups').removeClass('show');
-	$('.map_popup').removeClass('show');
+	$('.box').removeClass('show');
 
 	$('#map_popups').addClass('show');
-	$('.map_popup.'+ markerKey).addClass('show');
+	$('.box.'+ markerKey).addClass('show');
 
 	//$('.development_gallery').flexslider({
 	//	animation: "slide",
