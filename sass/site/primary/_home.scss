@@ -105,8 +105,12 @@
 		}
 
 		h3 {
-			@include rem(font-size, 24px);
+			@include rem(font-size, 20px);
 			margin: 0 0 10px 0;
+
+			@include media($medium-screen-up) {
+				@include rem(font-size, 24px);
+			}
 		}
 
 		fieldset, select, input {
