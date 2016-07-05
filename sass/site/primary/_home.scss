@@ -340,13 +340,15 @@
 
 		.text {
 			@include span-columns(1);
+			margin-bottom: 20px;
 
 			@include media ($medium-screen-up) {
-				@include span-columns(3);
+				@include span-columns(4);
+				margin-bottom: 30px;
 			}
 
 			@include media ($large-screen-up) {
-				@include span-columns(3);
+				@include span-columns(4);
 			}
 		}
 		
@@ -526,12 +528,10 @@
 
 			@include media ($medium-screen-up) {
 				@include span-columns(5);
-				@include shift(1);
 			}
 
 			@include media ($large-screen-up) {
 				@include span-columns(8);
-				@include shift(1);
 			}
 
 			.devs {
