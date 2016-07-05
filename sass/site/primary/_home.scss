@@ -14,11 +14,7 @@
 	}
 
 	.caption-wrap {
-
-		top: 13%;
-		margin: 0;
-		left: 0;
-
+		display: none;
 		background: none;
 		max-width: 960px;
 		@include rem(padding, 0 20px);
@@ -27,7 +23,15 @@
 		position: absolute;
 		opacity: 1;
 
+		@include media ($iphones) {
+			display: block;
+			top: 13%;
+			margin: 0;
+			left: 0;
+		}
+
 		@include media ($medium-screen-up) {
+			display: block;
 			left: 50%;
 			margin-left: -480px;
 			top: 50%;
@@ -343,12 +347,12 @@
 			margin-bottom: 20px;
 
 			@include media ($medium-screen-up) {
-				@include span-columns(4);
+				@include span-columns(3.5);
 				margin-bottom: 30px;
 			}
 
 			@include media ($large-screen-up) {
-				@include span-columns(4);
+				@include span-columns(3.5);
 			}
 		}
 		
@@ -528,10 +532,12 @@
 
 			@include media ($medium-screen-up) {
 				@include span-columns(5);
+				@include shift(0.5);
 			}
 
 			@include media ($large-screen-up) {
 				@include span-columns(8);
+				@include shift(0.5);
 			}
 
 			.devs {
