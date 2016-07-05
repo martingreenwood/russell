@@ -55,7 +55,7 @@
 										<div class="popup_info">
 											<div class="top_text">
 												<h3><?php the_title(); ?></h3>
-												<p class="develeopment_location"><?php the_field('Town'); ?>, <?php the_field('county'); ?>, <?php the_field('post-code'); ?></p>
+												<p class="develeopment_location"><?php the_field('Town'); ?>, <?php the_field('county'); ?>, <?php the_field('post_code'); ?></p>
 											</div>
 											<div class="development_text">
 												<h3><?php the_field('bedroom_overview'); ?>
