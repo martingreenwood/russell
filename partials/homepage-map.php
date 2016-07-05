@@ -35,7 +35,13 @@
 					));
 
 					while ( $available_developments->have_posts() ) : $available_developments->the_post(); 
-					$location = get_field('development_map'); $dev_id = $available_developments->post->ID; ?>
+					$location = get_field('development_map'); $dev_id = $available_developments->post->ID; 
+					if (get_field('starting_price')) {
+						$starting_price = number_format( get_field('starting_price'), 0 );
+					} else {
+						$starting_price = "TBC";
+					}
+					?>
 					<div class="box">
 						<div class="table">
 							<div class="cell middle">
@@ -52,7 +58,9 @@
 												<p class="develeopment_location"><?php the_field('Town'); ?>, <?php the_field('county'); ?>, <?php the_field('post-code'); ?></p>
 											</div>
 											<div class="development_text">
-												<p><?php $theexcerpt = explode(".", get_the_excerpt()); echo current($theexcerpt)."..."; ?></p>
+												<h3><?php the_field('bedroom_overview'); ?>
+												<br>starting from £<?php echo $starting_price ?></h3>
+												<?php //$theexcerpt = explode(".", get_the_excerpt()); echo current($theexcerpt)."..."; ?>
 											</div>
 											<div class="development_view"> <a href="<?php the_permalink(); ?>">View development</a></div>
 										</div>
