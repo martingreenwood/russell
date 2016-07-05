@@ -32,10 +32,10 @@
 
 		@include media ($medium-screen-up) {
 			display: block;
+			margin: 0 auto;
 			left: 50%;
 			margin-left: -480px;
 			top: 50%;
-			margin: 0 auto;
 		}
 
 		h2 {
