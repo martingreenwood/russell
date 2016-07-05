@@ -1,7 +1,7 @@
 				<?php 
 					$dev_colour = get_field('development_colour'); 
 					if (get_field('starting_price')) {
-						$starting_price = number_format( get_field('starting_price') );
+						$starting_price = number_format( get_field('starting_price'), 0 );
 					} else {
 						$starting_price = "TBC";
 					}
