@@ -439,7 +439,7 @@
 			background: $brand-primary;
 			@include rem(padding, 20px);
 			opacity: 0;
-			visibility: hidden;		
+			//visibility: hidden;		
 			width: 55.537%;
 			margin: 0 auto;
 			transition: $base-transition;

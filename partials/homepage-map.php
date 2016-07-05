@@ -41,10 +41,10 @@
 							<div class="cell middle">
 								<div class="map_popup clear <?php echo str_replace(' ', '-', strtolower( get_the_title() )); ?>">
 
-									<div class="popup_content">
+									<div class="popup_content clear">
 										
 										<div class="popup_gallery">
-											<img src="//placehold.it/500x500">
+											<?php the_post_thumbnail( 'thumbnail' ); ?>
 										</div>
 										<div class="popup_info">
 											<div class="top_text">
