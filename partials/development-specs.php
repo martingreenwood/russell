@@ -123,7 +123,7 @@
 								<?php if($optional): ?>
 									<i class="fa fa-plus-circle" aria-hidden="true"></i>
 								<?php else: ?>
-									<i class="fa fa-check-circle" aria-hidden="true"></i>
+									<i style="color: <?php echo $dev_colour; ?>" class="fa fa-check-circle" aria-hidden="true"></i>
 								<?php endif; ?>
 									<span><?php echo $item; ?></span>
 								</li>
@@ -134,7 +134,7 @@
 						</div>
 
 						<div class="kitchen-items items">
-							<h3>Kitchen</h3>
+							<h3 style="color: <?php echo $dev_colour; ?>">Kitchen</h3>
 							<ul>
 							<?php 
 							if( have_rows('affordable_kitchen_items') ): while ( have_rows('affordable_kitchen_items') ) : the_row();
@@ -144,7 +144,7 @@
 								<?php if($optional): ?>
 									<i class="fa fa-plus-circle" aria-hidden="true"></i>
 								<?php else: ?>
-									<i class="fa fa-check-circle" aria-hidden="true"></i>
+									<i style="color: <?php echo $dev_colour; ?>" class="fa fa-check-circle" aria-hidden="true"></i>
 								<?php endif; ?>
 									<span><?php echo $item; ?></span>
 								</li>
@@ -155,7 +155,7 @@
 						</div>
 
 						<div class="bathroom-items items">
-							<h3>Bathroom</h3>
+							<h3 style="color: <?php echo $dev_colour; ?>">Bathroom</h3>
 							<ul>
 							<?php 
 							if( have_rows('affordable_bathroom_items') ): while ( have_rows('affordable_bathroom_items') ) : the_row();
@@ -165,7 +165,7 @@
 								<?php if($optional): ?>
 									<i class="fa fa-plus-circle" aria-hidden="true"></i>
 								<?php else: ?>
-									<i class="fa fa-check-circle" aria-hidden="true"></i>
+									<i style="color: <?php echo $dev_colour; ?>" class="fa fa-check-circle" aria-hidden="true"></i>
 								<?php endif; ?>
 									<span><?php echo $item; ?></span>
 								</li>
