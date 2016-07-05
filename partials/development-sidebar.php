@@ -3,7 +3,7 @@
 					<h2 style="color: <?php echo $dev_colour; ?>"><?php the_field('Town'); ?>, <?php the_field('county'); ?> <?php the_field('post_code'); ?></h2>
 					<br>
 					<h3 style="color: <?php echo $dev_colour; ?>"><?php the_field('bedroom_overview'); ?>
-					<br>starting from £<span class="price"><?php the_field('starting_price'); ?></span></h3>
+					<br>starting from £<?php the_field('starting_price'); ?></h3>
 				</div>
 
 				<div class="quicklinks">
