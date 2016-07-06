@@ -224,6 +224,23 @@
 
 .home {
 
+	.grid {
+		.column {
+			height: auto;
+
+			&.image {
+				display: block;
+				height: auto;
+
+				img {
+					width: inherit;
+					max-width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+
 	#main {
 		@include section-padding(50px, 0);
 
