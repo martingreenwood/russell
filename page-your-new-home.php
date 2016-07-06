@@ -52,7 +52,7 @@ get_header(); ?>
 					<?php if( $top_page_link ): $post = $top_page_link; setup_postdata( $post ); ?>
 						<h3><?php the_title(); ?></h3>
 						<?php the_excerpt(); ?>
-						<p><a href="<?php the_permalink(); ?>">Find fout more...</a></p>
+						<p><a href="<?php the_permalink(); ?>">Find our more...</a></p>
 					<?php wp_reset_postdata(); endif; ?>
 					</div>
 
@@ -60,7 +60,7 @@ get_header(); ?>
 					<?php if( $bottom_page_link ): $post = $bottom_page_link; setup_postdata( $post ); ?>
 						<h3><?php the_title(); ?></h3>
 						<?php the_excerpt(); ?>
-						<p><a href="<?php the_permalink(); ?>">Find fout more...</a></p>
+						<p><a href="<?php the_permalink(); ?>">Find out more...</a></p>
 					<?php wp_reset_postdata(); endif; ?>
 					</div>
 					
@@ -87,7 +87,7 @@ get_header(); ?>
 					<?php if( $bottom_right_page_link ): $post = $bottom_right_page_link; setup_postdata( $post ); ?>
 						<h3><?php the_title(); ?></h3>
 						<?php the_excerpt(); ?>
-						<p><a href="<?php the_permalink(); ?>">Find fout more...</a></p>
+						<p><a href="<?php the_permalink(); ?>">Find out more...</a></p>
 					<?php wp_reset_postdata(); endif; ?>
 					</div>
 				</div>
@@ -97,7 +97,7 @@ get_header(); ?>
 					<?php if( $bottom_left_page_link ): $post = $bottom_left_page_link; setup_postdata( $post ); ?>
 						<h3><?php the_title(); ?></h3>
 						<?php the_excerpt(); ?>
-						<p><a href="<?php the_permalink(); ?>">Find fout more...</a></p>
+						<p><a href="<?php the_permalink(); ?>">Find out more...</a></p>
 					<?php wp_reset_postdata(); endif; ?>
 					</div>					
 					<div class="right-img column" style="background-image: url(<?php echo $bottom_right_image['url']; ?>)">
