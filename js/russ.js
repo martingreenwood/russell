@@ -296,6 +296,10 @@ var windowWidth = $(window).width();
 
 if ($(window).width() < 767) {
 
+	$('#menu-item-135 > a').click(function(event) {
+		event.preventDefault();
+	});
+
 	window.addEventListener("orientationchange", function() {
 
 		// Announce the new orientation number
