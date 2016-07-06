@@ -32,10 +32,16 @@
 
 			li {
 				float: left;
-				border-right: 1px solid white;
-				margin-right: 8px;
-				padding-right: 8px;
-				line-height: 1;
+				width: 50%;
+				line-height: 1.5;
+
+				@include media ($medium-screen-up) {
+					border-right: 1px solid white;
+					margin-right: 8px;
+					padding-right: 8px;
+					width: auto;
+					line-height: 1;
+				}
 
 				&:last-of-type {
 					margin: 0;;
@@ -47,8 +53,20 @@
 	}
 
 	.copyright {
+
+		width: 100%;
+		text-align: center;
+		margin-top: 20px;
+
 		float: right;
 		line-height: 1;
+
+		@include media ($medium-screen-up) {
+			margin: 0;
+			text-align: right;
+			width: auto;
+		}
+
 	}
 
 	.column {
