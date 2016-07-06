@@ -54,14 +54,12 @@ $dev_colour = get_field('development_colour');
 			    while ( have_rows('columns') ) : the_row(); 
 				$column_width = get_sub_field('width');
 				$column_content = get_sub_field('content');
-				?>
 
-				<div class="column <?php echo $column_width; ?>">
-
-				<?php
 				if( have_rows('content') ):
-				    while ( have_rows('content') ) : the_row();
+				    while ( have_rows('content') ) : the_row(); ?>
+					<div class="column <?php echo $column_width; ?> <?php echo get_row_layout(); ?>">
 
+				        <?php 
 				        if( get_row_layout() == 'image' ):
 				        	get_template_part( 'partials/development', 'image' );
 
@@ -84,14 +82,13 @@ $dev_colour = get_field('development_colour');
 							get_template_part( 'partials/development', 'mini-map' );
 
 				        endif;
-
-				    endwhile;
+				        ?>
+					</div>
+			       <?php
+				   endwhile;
 				endif;
-				?>
-					
-				</div>
 
-			    <?php endwhile;
+			    endwhile;
 			endif;
 			?>
 
