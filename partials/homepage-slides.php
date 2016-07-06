@@ -17,3 +17,7 @@
 	        <?php endforeach; ?>
 	    </div>
 	<?php endif; ?>
+
+	<?php if (get_field('mobile_fallback_image')): ?>
+	<div class="mobileimage" style="background-image: url(<?php echo get_field('mobile_fallback_image'); ?>);"></div>
+	<?php endif; ?>

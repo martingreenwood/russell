@@ -1,4 +1,4 @@
-							<div class="image">
+							<div class="inner-image">
 								<?php 
 								$image_link = get_sub_field('image_link');
 

@@ -5,7 +5,7 @@
 				$quote_text_colour = get_sub_field('quote_text_colour');
 				$quote_name_colour = get_sub_field('quote_name_colour');
 			?>
-			<div class="quote">
+			<div class="big-quote">
 
 				<?php //print_r($feat_quote); ?>
 

@@ -1,4 +1,4 @@
-			<div class="video youtube">
+			<div class="youtube">
 				<a href="#dev_video">
 					<?php $feature_video_image = get_sub_field('video_thumbnail'); ?>
 					<img src="<?php echo $feature_video_image['sizes']['thumbnail']; ?>">
