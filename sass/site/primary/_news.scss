@@ -19,7 +19,7 @@
 		@include media($large-screen-up) {
 			@include span-columns(3.5);
 			@include shift(0.5);
-		}		
+		}
 	}
 
 	.default-page {
