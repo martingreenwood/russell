@@ -312,9 +312,12 @@
 		}
 
 		&.gallery {
-			background-size: cover;
-			background-position: center;
-			height: 100%;
+
+			.feature-gallery {
+				background-size: cover;
+				background-position: center;
+				height: 100%;
+			}
 
 			.gallery {
 				margin: 0;
