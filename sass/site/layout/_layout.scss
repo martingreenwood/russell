@@ -220,7 +220,7 @@
 
 		&.map {
 
-			.map {
+			.mini-map {
 				width: 100%;
 				height: 350px;
 
@@ -234,7 +234,7 @@
 			}
 
 			/* fixes potential theme css conflict */
-			.map img {
+			.mini-map img {
 			   max-width: inherit !important;
 			}
 		}
