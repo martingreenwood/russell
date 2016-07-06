@@ -372,6 +372,7 @@
 							@include media ($large-screen-up) {
 								display: block;
 							}
+							
 							@media screen and (min-width: 1000px) {
 								background-image: url(assets/sold.svg);
 							}
