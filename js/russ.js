@@ -291,13 +291,8 @@ $(document).on('click', '.sort2', function() {
 });
 
 
-// watch for landscape
-
-if (window.matchMedia("(orientation: portrait)").matches) {
-   // you're in PORTRAIT mode
-}
-
-if (window.matchMedia("(orientation: landscape)").matches) {
-   // you're in LANDSCAPE mode
-   alert('please turn device back around!');
-}
+// Listen for orientation changes
+window.addEventListener("orientationchange", function() {
+  // Announce the new orientation number
+  alert(window.orientation);
+}, false);
