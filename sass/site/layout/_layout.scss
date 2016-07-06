@@ -240,33 +240,54 @@
 						padding: 20px;
 
 						h2 {
-							font-size: 24px;
-							margin: 0 0 12px 0;
+							font-size: 18px;
+							margin: 0;
 							color: white;
+
+							@include media ($large-screen-up) {
+								font-size: 24px;
+								margin: 0 0 12px 0;
+							}
 						}
 
 						p {
-							font-size: 14px;
+							font-size: 12px;
 							margin: 0;
 							color: white;
 
 							&:first-of-type {
 								font-weight: 700;
 							}
+
+							@include media ($large-screen-up) {
+								font-size: 14px;
+							}
 						}
 
 						h3 {
-							font-size: 22px;
-							margin: 12px 0 0 0;
+							font-size: 16px;
+							margin: 0;
 							color: white;
+
+							@include media ($large-screen-up) {
+								font-size: 22px;
+								margin: 12px 0 0 0;
+							}
 						}
 
 						span {
 							background: $lightblue;
+							font-size: 12px;
 							padding: 5px 12px;
 							font-weight: 700;
-							margin: 12px 0 0 0;
+							margin: 15px 0 0 0;
 							display: inline-block;
+
+							@include media ($large-screen-up) {
+								font-size: 14px;
+								padding: 5px 12px;
+								margin: 12px 0 0 0;
+							}
 						}
 					}
 				}
@@ -296,7 +317,6 @@
 
 		&.quote {
 			background-color: #D3ECEA;
-			height: 100%;
 			@include house-icon();
 			padding: 20px;
 
