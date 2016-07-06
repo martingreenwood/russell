@@ -57,7 +57,7 @@ get_header(); ?>
 
 				if( have_rows('content') ):
 				    while ( have_rows('content') ) : the_row(); ?>
-						<div class="column <?php echo $column_width; ?> <?php echo get_row_layout(); ?>">
+						<div class="column eq-height <?php echo $column_width; ?> <?php echo get_row_layout(); ?>">
 
 				        <?php 
 				        if( get_row_layout() == 'image' ):
@@ -68,6 +68,9 @@ get_header(); ?>
 
 				        elseif( get_row_layout() == 'video' ): 
 				        	get_template_part( 'partials/development', 'feature-vid' );
+
+				        elseif( get_row_layout() == 'feature_property' ): 
+				        	get_template_part( 'partials/development', 'feature-property' );
 
 				        elseif( get_row_layout() == 'virtual_360' ): 
 				        	get_template_part( 'partials/development', '360' );

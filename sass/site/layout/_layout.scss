@@ -220,6 +220,57 @@
 		
 		&.feature_property {
 
+			.prop {
+				height: 100%;
+
+				div {
+					height: 100%;
+					width: 50%;
+					float: left;
+
+					&.prop-img {
+						background-size: cover;
+						background-position: center;
+						background-repeat: no-repeat;
+					}
+
+					&.prop-deets {
+						background: $brand-primary;
+						color: white;
+						padding: 20px;
+
+						h2 {
+							font-size: 24px;
+							margin: 0 0 12px 0;
+							color: white;
+						}
+
+						p {
+							font-size: 14px;
+							margin: 0;
+							color: white;
+
+							&:first-of-type {
+								font-weight: 700;
+							}
+						}
+
+						h3 {
+							font-size: 22px;
+							margin: 12px 0 0 0;
+							color: white;
+						}
+
+						span {
+							background: $lightblue;
+							padding: 5px 12px;
+							font-weight: 700;
+							margin: 12px 0 0 0;
+							display: inline-block;
+						}
+					}
+				}
+			}
 		}
 
 		&.map {

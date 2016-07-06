@@ -160,9 +160,7 @@
                                                 "large": "Large (1024 x 1024)",
                                                 "full": "Full Res"
                                             },
-                                            "default_value": [
-
-                                            ],
+                                            "default_value": [],
                                             "allow_null": 0,
                                             "multiple": 0,
                                             "ui": 0,
@@ -223,9 +221,7 @@
                                                 "developments",
                                                 "plots"
                                             ],
-                                            "taxonomy": [
-
-                                            ],
+                                            "taxonomy": [],
                                             "allow_null": 1,
                                             "multiple": 1
                                         },
@@ -282,9 +278,7 @@
                                             "post_type": [
                                                 "galleries"
                                             ],
-                                            "taxonomy": [
-
-                                            ],
+                                            "taxonomy": [],
                                             "allow_null": 1,
                                             "multiple": 1,
                                             "return_format": "object",
@@ -465,9 +459,7 @@
                                                 "developments",
                                                 "locations"
                                             ],
-                                            "taxonomy": [
-
-                                            ],
+                                            "taxonomy": [],
                                             "allow_null": "",
                                             "multiple": ""
                                         },
@@ -527,9 +519,7 @@
                                             "post_type": [
                                                 "testimonials"
                                             ],
-                                            "taxonomy": [
-
-                                            ],
+                                            "taxonomy": [],
                                             "allow_null": 1,
                                             "multiple": 1,
                                             "return_format": "object",
@@ -610,6 +600,62 @@
                                     ],
                                     "min": "",
                                     "max": ""
+                                },
+                                {
+                                    "key": "577ceab73580b",
+                                    "name": "feature_property",
+                                    "label": "Featur Property",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_577ceacb3580c",
+                                            "label": "Feature Property Image",
+                                            "name": "feature_property_image",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array",
+                                            "preview_size": "thumbnail",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": ""
+                                        },
+                                        {
+                                            "key": "field_577ceada3580d",
+                                            "label": "Feature Property Link",
+                                            "name": "feature_property_link",
+                                            "type": "post_object",
+                                            "instructions": "",
+                                            "required": "",
+                                            "conditional_logic": "",
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "post_type": [
+                                                "plots"
+                                            ],
+                                            "taxonomy": [],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "return_format": "object",
+                                            "ui": 1
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
                                 }
                             ]
                         }
@@ -639,13 +685,6 @@
                 "operator": "==",
                 "value": "front_page"
             }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "locations"
-            }
         ]
     ],
     "menu_order": 1,
@@ -656,5 +695,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1467124171
+    "modified": 1467806956
 }
