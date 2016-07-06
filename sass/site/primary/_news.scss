@@ -4,6 +4,11 @@
 
 .news, .single-post, .archive, .blog, .category {
 
+	.feature-image {
+		height: 400px;
+		overflow: hidden;
+	}
+
 	#secondary {
 		@include span-columns(1);
 
