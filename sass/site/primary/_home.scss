@@ -6,11 +6,30 @@
 	position: relative;
 }
 
+.mobileimage {
+	width: 100%;
+	height: calc(100vh - 104px);
+	background-size: cover;
+	background-position: center;
+
+	@include media ($medium-screen-up) {
+		display: none;
+	}
+}
+
 #slider {
 	height: calc(100vh - 104px);
 
 	@include media ($medium-screen-up) {
 		height: auto;
+	}
+
+	.slick-slider {
+		display: none;
+
+		@include media ($medium-screen-up) {
+			display: block;
+		}
 	}
 
 	.caption-wrap {
