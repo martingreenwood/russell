@@ -68,7 +68,7 @@ $dev_colour = get_field('development_colour');
 
 				        elseif( get_row_layout() == 'video' ): 
 				        	get_template_part( 'partials/development', 'feature-vid' );
-
+ 
 				        elseif( get_row_layout() == 'feature_property' ): 
 				        	get_template_part( 'partials/development', 'feature-property' );
 
