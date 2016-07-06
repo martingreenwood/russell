@@ -289,3 +289,15 @@ $(document).on('click', '.sort1', function() {
 $(document).on('click', '.sort2', function() {
 	sortMeBy('data-price', '#results', '.search-result', 'desc');
 });
+
+
+// watch for landscape
+
+if (window.matchMedia("(orientation: portrait)").matches) {
+   // you're in PORTRAIT mode
+}
+
+if (window.matchMedia("(orientation: landscape)").matches) {
+   // you're in LANDSCAPE mode
+   alert('please turn device back around!');
+}
