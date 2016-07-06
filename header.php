@@ -31,6 +31,15 @@
 	</div>
 </div>
 
+<div class="turnme">
+	<div class="table">
+		<div class="cell middle">
+			<i class="fa fa-mobile" aria-hidden="true"></i>
+			<h3>Please use portrait mode</h3>
+		</div>
+	</div>
+</div>
+
 <div id="page" class="site <?php echo str_replace(" ", "-", strtolower(get_the_title())); ?>">
 
 	<header id="masthead" class="site-header" role="banner">

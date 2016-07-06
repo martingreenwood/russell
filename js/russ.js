@@ -291,8 +291,22 @@ $(document).on('click', '.sort2', function() {
 });
 
 
-// Listen for orientation changes
-window.addEventListener("orientationchange", function() {
-  // Announce the new orientation number
-  alert(window.orientation);
-}, false);
+// Listen for orientation changes under tablet
+var windowWidth = $(window).width();
+
+if ($(window).width() < 767) {
+
+	window.addEventListener("orientationchange", function() {
+
+		// Announce the new orientation number
+		if(window.orientation > 0) {
+			$('.turnme').show('fast')
+			$(body).addClass('disablescroll')
+		} else {
+			$('.turnme').hide()
+			$(body).removeClass('disablescroll')
+		}
+
+	}, false);
+
+}
