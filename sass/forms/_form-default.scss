@@ -1,5 +1,5 @@
 label {
-	color: $input-label;
+	color: $text-color;
 	font-weight: 700;
 }
 
@@ -15,7 +15,7 @@ textarea,
 select {
 	@include form-spacing(padding, $form-space);
 	background-color: $input-bg;
-	color: $input-color;
+	color: $text-color;
 	border: 1px solid $input-border;
 	line-height: normal;
 	display: block;
@@ -83,8 +83,6 @@ input[type="reset"],
 input[type="button"],
 button {
 	&:focus {
-		outline: thin dotted;
-		outline: 5px auto -webkit-focus-ring-color;
-		outline-offset: -2px;
+		outline: none;;
 	}
 }
