@@ -526,6 +526,7 @@
 			.popup_gallery {
 				float: left;
 				width: 100%;
+				background: black;
 
 				@include media ($medium-screen-up) {
 					width: 50%;
@@ -533,6 +534,11 @@
 
 				img {
 					display: block;
+					opacity: 0.5;
+
+					@include media ($medium-screen-up) {
+						opacity: 1;
+					}
 				}
 			}
 
@@ -541,10 +547,6 @@
 				width: auto;
 				padding: 2rem;
 				bottom: 20px;
-				right: 20px;
-				left: 20px;
-				padding-top: 123px;
-				background: rgba(0,0,0,0.3);
 
 				@include media ($medium-screen-up) {
 					position: relative;
