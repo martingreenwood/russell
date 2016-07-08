@@ -10,7 +10,7 @@
 					<h2 style="color: <?php echo $dev_colour; ?>"><?php the_field('Town'); ?>, <?php the_field('county'); ?> <?php the_field('post_code'); ?></h2>
 					<br>
 					<h3 style="color: <?php echo $dev_colour; ?>"><?php the_field('bedroom_overview'); ?>
-					<br>starting from £<?php echo $starting_price ?></h3>
+					<br>Currently from £<?php echo $starting_price ?></h3>
 				</div>
 
 				<div class="quicklinks">
@@ -25,7 +25,7 @@
 								<input id="minprice" name="minprice" type="hidden" value="100000">
 								<input id="maxprice" name="maxprice" type="hidden" value="900000">
 								<input id="bedrooms" name="bedrooms" type="hidden" value="1">
-								<input style="background-color: <?php echo $dev_colour; ?>" type="submit" value="Search for homes at Cragg Close">
+								<input style="background-color: <?php echo $dev_colour; ?>" type="submit" value="Search for homes at <?php echo get_the_title(); ?>">
 							</form>
 						</li>
 

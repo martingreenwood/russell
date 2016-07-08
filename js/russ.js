@@ -103,7 +103,7 @@ $(function() {
 		event.preventDefault();
 		var target = $(this).attr('href');
 		$(target).toggleClass('show');
-		$('body').toggleClass('disablescroll');
+		//$('body').toggleClass('disablescroll');
 	});
 });
 

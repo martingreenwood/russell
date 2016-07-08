@@ -57,7 +57,7 @@
 				<?php endwhile; wp_reset_postdata(); ?>
 
 				<div class="icon">
-					<a href="https://www.youtube.com/user/russellarmerla96ll" target="blank" rel="youtube">
+					<a href="<?php echo home_url( '/news' ); ?>" rel="news">
 						<span class="fa">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/roof.svg" alt="">
 						</span>

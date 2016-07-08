@@ -6,7 +6,7 @@
 				<div class="intro">
 					<?php $local_link = get_field('local_area_link'); ?>
 					<?php the_field('intro_content'); ?>
-					<p><a style="background-color: <?php echo $dev_colour; ?>" href="<?php echo $local_link; ?>">Read More about the local area</a>
+					<p><a style="background-color: <?php echo $dev_colour; ?>" href="<?php echo $local_link; ?>">Read more about the local area</a>
 				</div>
 				
 				<div class="legend">

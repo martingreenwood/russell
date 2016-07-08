@@ -59,7 +59,7 @@
 											</div>
 											<div class="development_text">
 												<h3><?php the_field('bedroom_overview'); ?>
-												<br>starting from £<?php echo $starting_price ?></h3>
+												<br>Currently from £<?php echo $starting_price ?></h3>
 											</div>
 											<div class="development_view"> <a href="<?php echo get_the_permalink($dev_id); ?>">View development</a></div>
 										</div>
