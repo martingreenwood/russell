@@ -71,8 +71,8 @@
 					}
 
 					input:checked + label:before {
-					    background: $brand-primary;
-					    border-color: $brand-primary;
+					    background: $lightblue;
+					    border-color: $lightblue;
 					    outline: 0;
 					    content: "\f00c";
 					}
@@ -82,7 +82,7 @@
 					}
 
 					input:hover + label::before {
-						border-color: $brand-primary;
+						border-color: $lightblue;
 					}
 
 					input {
