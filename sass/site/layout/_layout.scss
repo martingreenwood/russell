@@ -621,6 +621,10 @@
 					width: 125px;
 					margin-bottom: 10px;
 
+					@include media ($medium-screen-up) {
+						width: 75px;
+					}
+
 					@include media ($large-screen-up) {
 						width: 83px;
 					}
