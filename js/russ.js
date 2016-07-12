@@ -314,3 +314,12 @@ if ($(window).width() < 767) {
 	}, false);
 
 }
+
+// empty search div...
+
+$(function($) {
+	if( !$.trim( $('#results').html() ).length ) {
+		$('.view-all-properties .title').hide();
+		$('#results').html('<h4 class="countresults">Sorry, there was nothing that matched your query. <br>please refine your search or <a href="//www.russell-armer.co.uk/sign-up/">register your interest</a> in one of our developments.</h4>');
+	}
+});
