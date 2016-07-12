@@ -34,7 +34,7 @@ $cpts = array(
 		'Gallery',
 		'Galleries',
 		'dashicons-format-gallery',
-		array('title', 'editor'),
+		array('title', 'editor', 'thumbnail'),
 		false,
 	),
 
