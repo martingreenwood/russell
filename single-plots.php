@@ -148,5 +148,16 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 	</div>
 	<?php endif; ?>
 
+	<div id="reginterest">
+		<div class="container">
+			<div class="table">
+				<div class="cell middle">
+					<a id="closeme" href="#"></a>
+					<?php echo do_shortcode( '[gravityform id="1" title="false" description="false"]' ); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <?php
 get_footer();
