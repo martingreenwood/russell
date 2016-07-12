@@ -323,3 +323,9 @@ $(function($) {
 		$('#results').html('<h4 class="countresults">Sorry, there was nothing that matched your query. <br>please refine your search or <a href="//www.russell-armer.co.uk/sign-up/">register your interest</a> in one of our developments.</h4>');
 	}
 });
+
+$(function(){ 
+	$("#selectall").change(function(){
+		$(".location-checkbox").prop('checked', $(this).prop("checked"));
+	});
+});

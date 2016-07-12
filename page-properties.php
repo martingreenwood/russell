@@ -75,6 +75,7 @@ get_header(); ?>
 				
 				<fieldset class="location-box">
 					<legend>Location</legend>
+					<p><input type="checkbox" id="selectall"><label>Select All</label></p>
 					<?php
 					$all_developments = new WP_Query(array( 
 						'post_type' 		=> 'developments', 
@@ -105,7 +106,7 @@ get_header(); ?>
 							}
 						}
 
-						echo "<p><input name='devlocation[]' type='checkbox' ".$checked." data-id='".$dev_id."' data-location='".strtolower($development_location)."' value='".$dev_search_name."'><label>".get_the_title().", ".$development_location."</label></p>";
+						echo "<p><input class='location-checkbox' name='devlocation[]' type='checkbox' ".$checked." data-id='".$dev_id."' data-location='".strtolower($development_location)."' value='".$dev_search_name."'><label>".get_the_title().", ".$development_location."</label></p>";
 					endwhile; wp_reset_query();
 					?>
 				</fieldset>
