@@ -21,7 +21,7 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 
 		<div>
 			<div id="dev-title">
-				<h1 style="color: <?php echo $dev_colour; ?>"><?php echo get_the_title($developmentID[0]); ?></h1>
+				<span style="color: <?php echo $dev_colour; ?>"><?php echo get_the_title($developmentID[0]); ?></span>
 			</div>
 		</div>
 
@@ -49,7 +49,7 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 
 							$plot_price = get_field('plot_price');
 							if (is_numeric($plot_price)):
-								$plot_price = '<span class="price">' . $plot_price .'</span>';
+								$plot_price = number_format($plot_price, 0);
 							else:
 								$plot_price =  "TBC";
 							endif;
@@ -60,7 +60,7 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 							</h2>
 						</header>
 						<header class="sub">
-							<?php echo '<h3>' . get_field('big_title'). '</h3>'; ?>
+							<h1><?php the_field('big_title'); ?></h1>
 						</header>
 						<?php get_template_part( 'template-parts/content', 'page' ); ?>
 						<?php if($enable_opposite_hand): ?>

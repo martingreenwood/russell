@@ -16,9 +16,9 @@ $dev_colour = get_field('development_colour');
 
 	<div class="container">
 
-		<div class="row">
+		<div class="row" style="margin: 0;">
 			<div id="dev-title">
-				<h1 style="color: <?php echo $dev_colour; ?>"><?php the_title(); ?></h1>
+				<span style="color: <?php echo $dev_colour; ?>"><?php the_title(); ?></span>
 			</div>
 		</div>
 

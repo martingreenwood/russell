@@ -40,8 +40,12 @@
 			@include span-columns(12); 
 		}
 
-		h1 {
+		span {
 			margin: 0;
+			font-size: 38px;
+			font-weight: 700;
+			color: $brand-primary;
+			font-family: $heading-font-family;
 		}
 	}
 
@@ -115,6 +119,11 @@
 
 		@include media ($large-screen-up) {
 			@include span-columns(8); 
+		}
+
+		.entry-content h1 {
+			color: $text-color;
+			font-size: 16px;
 		}
 	}
 	
