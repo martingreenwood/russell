@@ -37,7 +37,46 @@ get_header(); ?>
 				endwhile; // End of the loop. ?>
 				
 				<div class="galleries">
-				<?php $args = array( 'post_type' => 'galleries', 'posts_per_page' => -1 );
+				<h2>Current Developments</h2>
+				<?php $args = array( 
+					'post_type' => 'galleries', 
+					'posts_per_page' => -1, 
+					'meta_query' => array(
+							array(
+								'key'     => 'current_or_past_development',
+								'value'   => 'current',
+								'compare' => 'IN',
+							),
+						), 
+					);
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) : $loop->the_post(); ?>
+					<div class="gallery">
+						<a href="<?php the_permalink(); ?>">
+							<?php 						
+							$development_gallery = get_field('development_gallery');
+							$development_gallery_img = current($development_gallery);
+							?>
+							<img src="<?php echo $development_gallery_img['sizes']['thumbnail']; ?>" alt="<?php the_title(); ?>">
+							<span><?php the_title(); ?></span>
+						</a>
+					</div>
+					<?php endwhile; ?>
+				</div>
+
+				<div class="galleries">
+				<h2>Previous Developments</h2>
+				<?php $args = array(
+					'post_type' => 'galleries', 
+					'posts_per_page' => -1, 
+					'meta_query' => array(
+							array(
+								'key'     => 'current_or_past_development',
+								'value'   => 'past',
+								'compare' => 'IN',
+							),
+						), 
+					);
 					$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<div class="gallery">
