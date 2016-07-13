@@ -243,7 +243,7 @@ get_header(); ?>
 					if(isset($_GET['devlocation'])):
 						
 						// dont show sold || not-released
-						if ($plot_availability != "sold" && $plot_availability != "not-released" && $plot_availability != "reserved" ):
+						if ($plot_availability != "sold" && $plot_availability != "reserved" ):
 						
 						if ( in_array($dev_title_filter, $devlocation) && $house_rooms >= $bedrooms && $plot_price_filter >= $minprice && $plot_price_filter <= $maxprice ):
 						
@@ -335,7 +335,7 @@ get_header(); ?>
 						else: // dev has not been set so show everyrhing
 					
 					// dont show sold || not-released
-					if ($plot_availability != "sold" && $plot_availability != "not-released" && $plot_availability != "reserved" ): ?>
+					if ($plot_availability != "sold" && $plot_availability != "reserved" ): ?>
 					<div class="search-result" data-availabiility="<?php echo $plot_availability; ?>" data-price="<?php echo $plot_price_filter; ?>" data-room="<?php echo $house_rooms; ?>" data-location="<?php echo $dev_location; ?>">
 						<?php if($special_offers): ?> 
 						<div class="feature">
