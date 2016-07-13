@@ -38,8 +38,6 @@
 					$location = get_field('development_map'); $dev_id = $available_developments->post->ID; 
 					if (get_field('starting_price')) {
 						$starting_price = number_format( get_field('starting_price'), 0 );
-					} else {
-						$starting_price = "TBC";
 					}
 					?>
 					<div class="box <?php echo str_replace(' ', '-', strtolower( get_the_title() )); ?>">
@@ -59,7 +57,7 @@
 											</div>
 											<div class="development_text">
 												<h3><?php the_field('bedroom_overview'); ?>
-												<br>Currently from £<?php echo $starting_price ?></h3>
+												<?php if(get_field('starting_price') > 10): ?><br>Currently from £<?php echo $starting_price; endif; ?></h3>
 											</div>
 											<div class="development_view"> <a href="<?php echo get_the_permalink($dev_id); ?>">View development</a></div>
 										</div>
