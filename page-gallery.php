@@ -36,8 +36,8 @@ get_header(); ?>
 
 				endwhile; // End of the loop. ?>
 				
-				<div class="galleries">
 				<h2>Current Developments</h2>
+				<div class="galleries">
 				<?php $args = array( 
 					'post_type' => 'galleries', 
 					'posts_per_page' => -1, 
@@ -63,9 +63,9 @@ get_header(); ?>
 					</div>
 					<?php endwhile; ?>
 				</div>
-
-				<div class="galleries">
+				
 				<h2>Previous Developments</h2>
+				<div class="galleries">
 				<?php $args = array(
 					'post_type' => 'galleries', 
 					'posts_per_page' => -1, 
