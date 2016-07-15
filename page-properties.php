@@ -185,7 +185,7 @@ get_header(); ?>
 
 					$data = json_decode($head); ?>
 
-					<pre sryle="display:none;"><?php print_r($data); ?></pre>
+					<pre style="display:none"><?php print_r($head); ?></pre>
 
 					<?php if ($err) {
 					  echo "cURL Error #:" . $err;
