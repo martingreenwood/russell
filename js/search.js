@@ -5,7 +5,7 @@ $j=jQuery;
 =======================================*/
 
 $j('#search_developments').click(function(e) {
-	e.preventDefault();
+	//e.preventDefault();
 	
     $j('html, body').animate({
         scrollTop: $j("#results").offset().top - 120
