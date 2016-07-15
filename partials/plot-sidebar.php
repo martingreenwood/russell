@@ -12,7 +12,13 @@
 					<?php
 					$plot_brochure = get_field('brochure_link'); 
 					$plot_epc = get_field('epc_link'); 
-					$plot_pdf = get_field('plot_plan_pdf'); 
+					if(get_field('plot_plan_pdf')) {
+						$plot_pdf = get_field('plot_plan_pdf');
+					}
+					else {
+						$plot_pdf = get_field('house_type_plan_pdf', $house_typeID[0]);
+					}
+
 					?>
 					<ul>
 						<li><a style="background-color: <?php echo $dev_colour; ?>" href="<?php echo get_permalink( $developmentID[0] ); ?>">Development Overview</a></li>
