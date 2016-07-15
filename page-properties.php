@@ -156,12 +156,12 @@ get_header(); ?>
 					<div class="clear"></div>
 				</div>
 
-				<!--<?php if(isset($devlocation)): foreach($devlocation as $selected){
+				<?php /* <!--<?php if(isset($devlocation)): foreach($devlocation as $selected){
 				echo "Location: " .$selected . " - " .get_id_by_slug($selected, 'developments'). "\r\n";
 				} endif;
 				echo "Bedrooms: " .$bedrooms ."\r\n";
 				echo "Min Price: " .$minprice ."\r\n";
-				echo "Max Price: " .$maxprice ."\r\n";?>-->
+				echo "Max Price: " .$maxprice ."\r\n";?>--> */ ?>
 
 				<div id="results"><?php
 					$curl = curl_init();
@@ -184,6 +184,8 @@ get_header(); ?>
 					curl_close($curl);
 
 					$data = json_decode($head);
+					
+					echo "<!--" . $head . "-->"
 
 					if ($err) {
 					  echo "cURL Error #:" . $err;
