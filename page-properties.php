@@ -163,7 +163,7 @@ get_header(); ?>
 				echo "Min Price: " .$minprice ."\r\n";
 				echo "Max Price: " .$maxprice ."\r\n";?>--> */ ?>
 
-				<div id="results"><?php
+				<?php
 					$curl = curl_init();
 
 					curl_setopt_array($curl, array(
@@ -189,8 +189,10 @@ get_header(); ?>
 
 					if ($err) {
 					  echo "cURL Error #:" . $err;
-					}
-
+					} ?>
+					
+					<div id="results">
+					<?php
 					foreach ($data as $plot): 
 
 					$big_title 			= $plot->acf->big_title;
