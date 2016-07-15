@@ -43,30 +43,10 @@ function russell_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'cover1600', 1600, 450, true );
 	add_image_size( 'devfeat', 620, 300, true );
+
+	add_theme_support( 'custom-logo' );
 	
 	add_image_size( 'grid-square', 0, 263 );
-	/*
-	 * Enable support for Logo in Customiser.
-	 *
-	 * @link https://make.wordpress.org/core/tag/4-5/
-	 */
-	add_theme_support( 'site-logo' );
-
-	function russell_theme_customizer( $wp_customize ) {
-		$wp_customize->add_section( 'russell_logo_section' , array(
-			'title'       => __( 'Logo', 'themeslug' ),
-			'priority'    => 30,
-			'description' => 'Upload a logo to replace the default site name and description in the header',
-		) );
-		$wp_customize->add_setting( 'russell_logo' );
-		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo', array(
-				'label'    => __( 'Logo', 'themeslug' ),
-				'section'  => 'russell_logo_section',
-				'settings' => 'russell_logo',
-		) ) );
-
-	}
-	add_action( 'customize_register', 'russell_theme_customizer' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

@@ -46,9 +46,9 @@
 		<div class="container">
 
 			<div class="site-branding">
-			<?php if ( get_theme_mod( 'russell_logo' ) ) : ?>
+			<?php if ( function_exists( 'the_custom_logo' ) ) : ?>
 			    <div class='site-logo'>
-			        <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'russell_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+				  <?php the_custom_logo(); ?>
 			    </div>
 			<?php else : ?>
 			    <hgroup>
