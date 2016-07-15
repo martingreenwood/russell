@@ -183,11 +183,9 @@ get_header(); ?>
 					$err = curl_error($curl);
 					curl_close($curl);
 
-					$data = json_decode($head); ?>
+					$data = json_decode($head);
 
-					<pre style="display:none"><?php print_r($head); ?></pre>
-
-					<?php if ($err) {
+					if ($err) {
 					  echo "cURL Error #:" . $err;
 					}
 
