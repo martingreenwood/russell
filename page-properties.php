@@ -185,7 +185,7 @@ get_header(); ?>
 
 					$data = json_decode($head);
 					
-					echo "<!--" . $head . "-->"
+					echo "<!--" . $head . "-->";
 
 					if ($err) {
 					  echo "cURL Error #:" . $err;
