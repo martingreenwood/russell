@@ -3,7 +3,12 @@
 				$house_typeID  = get_field('choose_house_type');
 				$dev_colour = get_field('development_colour', $developmentID[0]); 
 				$plot_epc = get_field('epc_link'); 
-				$plot_pdf = get_field('plot_plan_pdf'); 
+				if(get_field('plot_plan_pdf')) {
+					$plot_pdf = get_field('plot_plan_pdf');
+				}
+				else {
+					$plot_pdf = get_field('house_type_plan_pdf', $house_typeID[0]);
+				}
 				?>
 
 				<div class="row titlea">
