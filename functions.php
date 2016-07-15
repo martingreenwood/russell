@@ -139,6 +139,7 @@ function russell_scripts() {
 	wp_enqueue_style( 'russell-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'russ-js', get_template_directory_uri() . '/js/russ.js', '', '1', true );
+	wp_enqueue_script( 'russ-search', get_template_directory_uri() . '/js/search.js', '', '1', true );
 	wp_enqueue_script( 'russ-fa', '//use.fontawesome.com/1933b7f144.js', '', '1', true );
 
 	if (is_front_page() || is_singular( 'planning' ) || is_singular( 'developments' )) {
