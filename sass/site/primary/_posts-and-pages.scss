@@ -193,3 +193,26 @@
 		}
 	}
 }
+
+
+/*===========================
+=            404            =
+===========================*/
+
+.error404 {
+	
+	.search-form {
+
+		label {
+			float: left;
+			margin-bottom: 80px;
+		}
+
+		input[type="submit"], input[type="reset"], input[type="button"], button {
+			line-height: 25px;
+			margin-left: 20px;
+		}
+	}
+}
+
+

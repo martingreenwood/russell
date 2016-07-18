@@ -9,40 +9,55 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="feature-image">
+		<?php if (has_post_thumbnail()) :
+			the_post_thumbnail('cover1600');
+		else: ?>
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/default.jpg" alt="Russell Armer Homes">
+		<?php endif; ?>
+	</div>
 
-		<?php
-		if ( have_posts() ) : ?>
+	<div class="container">
+		<div class="page-title">
+			<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'russell' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		</div>
+	</div>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'russell' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+	<div class="container">
+
+		<div id="primary" class="content-area">
+
+			<main id="main" class="site-main" role="main">
 
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			if ( have_posts() ) : ?>
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) : the_post();
 
-			endwhile;
+					/**
+					 * Run the loop for the search to output the results.
+					 * If you want to overload this in a child theme then include a file
+					 * called content-search.php and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', 'search' );
 
-			the_posts_navigation();
+				endwhile;
 
-		else :
+				the_posts_navigation();
 
-			get_template_part( 'template-parts/content', 'none' );
+			else :
 
-		endif; ?>
+				get_template_part( 'template-parts/content', 'none' );
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+			endif; ?>
+
+			</main>
+
+		</div><!-- #primary -->
+
+	</div>
 
 <?php
-get_sidebar();
 get_footer();

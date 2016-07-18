@@ -9,56 +9,27 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="container">
+		<div class="page-title">
+			<h1>Sorry, nothing to see here...</h1>
+		</div>
+	</div>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'russell' ); ?></h1>
-				</header><!-- .page-header -->
+	<div class="container">
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'russell' ); ?></p>
+		<div id="primary" class="content-area">
 
-					<?php
-						get_search_form();
+			<main id="main" class="site-main" role="main">
 
-						the_widget( 'WP_Widget_Recent_Posts' );
+				<h3>Looks like the page you are trying to access no longer exists</h3>
+				<p>This page may have moved, try searching for it or using the manu to look for it.</p> 
+				<?php get_search_form(); ?>
 
-						// Only show the widget if site has multiple categories.
-						if ( russell_categorized_blog() ) :
-					?>
+			</main>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'russell' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
+		</div><!-- #primary -->
 
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'russell' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div>
 
 <?php
 get_footer();
