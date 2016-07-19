@@ -200,6 +200,10 @@
 ===========================*/
 
 .error404 {
+
+	#main {
+		margin-bottom: 40px;
+	}
 	
 	.search-form {
 
@@ -211,6 +215,65 @@
 		input[type="submit"], input[type="reset"], input[type="button"], button {
 			line-height: 25px;
 			margin-left: 20px;
+		}
+	}
+
+	.latest-properties {
+		padding: 40px 0;
+		background: #f9f9f9;
+		display: block;
+
+		h2 {
+			font-size: 24px;
+			margin-bottom: 20px;
+
+			a {
+				float: right;
+				background: $lightblue;
+				color: white;
+				font-size: 14px;
+				padding: 0px 10px;
+				line-height: 39px;
+			}
+		}
+
+		.plots {
+
+			.plot {
+				@include span-columns(1);
+				margin-bottom: 20px;
+
+				@include media($medium-screen-up) {
+					@include span-columns(3);
+					@include omega(3n);
+				}
+
+				@include media($large-screen-up) {
+					@include span-columns(4);
+				}
+
+				img {
+					margin-bottom: 10px;
+				}
+
+				p {
+					margin: 0;
+
+					&.btn {
+						background: $lightblue;
+						display: block;
+						margin-top: 20px !important;
+						padding: 5px;
+						text-align: center;
+						color: white;
+						font-weight: 600;
+					}
+				}
+
+				h3 {
+					color: $text-color;
+				}
+			}
 		}
 	}
 }
