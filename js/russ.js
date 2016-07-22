@@ -235,12 +235,12 @@ $(window).resize(function() {
 	equalheight('.your-new-home .top-half .column');
 });
 
-$(window).load(function() {
+/*$(window).load(function() {
 	$('#loading-page').addClass('hide');
 	setTimeout(function() {
 		$('#loading-page').remove();
 	}, 600)
-});
+});*/
 
 // form validation
 $(function () {

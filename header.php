@@ -33,14 +33,14 @@
 
 <body <?php body_class(); ?>>
 
-<div id="loading-page">
+<?php /* ?> <div id="loading-page">
 	<div class="table">
 		<div class="cell middle">
 			<img id="loading-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/Preloader_1.gif" width="90" alt="Loading..." />
 			<h3>loading page...</h3>
 		</div>
 	</div>
-</div>
+</div> <?php */ ?>
 
 <div class="turnme">
 	<div class="table">
