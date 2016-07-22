@@ -98,12 +98,22 @@ $(function() {
 });
 
 // Youtube popup Link
+//hompage
 $(function() {
-	$('.youtube a').on('click', function(event) {
+	$('.box a').on('click', function(event) {
 		event.preventDefault();
 		var target = $(this).attr('href');
 		$(target).toggleClass('show');
 		//$('body').toggleClass('disablescroll');
+	});
+});
+//devs
+$(function() {
+	$('.video a').on('click', function(event) {
+		event.preventDefault();
+		var target = $(this).attr('href');
+		$(target).toggleClass('show');
+		$('body').toggleClass('disablescroll');
 	});
 });
 
