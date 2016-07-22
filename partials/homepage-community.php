@@ -9,7 +9,7 @@
 				</div>
 
 				<div id="video-box">
-					<a class="close_map" href="#video-box"></a>
+					<a class="close_map close_popup" href="#video-box"></a>
 					<div class="table"><div class="cell middle">
 					<div class="embed-container">
 						<?php $iframe = get_field('feature_video');

@@ -94,6 +94,7 @@ $(function() {
 		e.preventDefault();
 		$('.map_popup').removeClass('show');
 		$("#map_popups").removeClass('show');
+		$("#video-box").removeClass('show');
 	});
 });
 
