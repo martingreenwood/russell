@@ -60,6 +60,8 @@
 								$development_stage = get_field('development_stage', $plot->ID);
 
 								$plot_availability = get_field('plot_availability', $plot->ID);
+								
+								$enable_info_popup = get_field('enable_info_popup', $plot->ID);
 
 								$house_type_id = get_field('choose_house_type', $plot->ID); //array
 								$house_type_name = get_the_title( $house_type_id[0] );
@@ -82,6 +84,7 @@
 								if(!$plot_title) $plot_title = "Newly built family home";
 							?>
 							<li class="plot-<?php echo $plot_num; ?> <?php echo $plot_availability; ?> <?php echo $development_stage; ?>">
+								<?php if ($enable_info_popup): ?>
 								<div class="plot-popup">
 									<div class="tri"></div>
 									<?php if($plot_availability == 'sold'): ?>
@@ -107,6 +110,7 @@
 
 									<?php endif; ?>
 								</div>
+								<?php endif; ?>
 							</li>
 							<?php endforeach;
 						}
