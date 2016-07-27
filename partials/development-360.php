@@ -10,7 +10,7 @@
 										<div class="cell middle">
 											<iframe 
 												name="Development 360" 
-												src="<?php the_sub_field('virtual_360'); ?>" 
+												src="<?php echo str_replace("http:","", get_sub_field('virtual_360')); ?>" 
 												align="middle" 
 												frameborder="0"
 												height="480"
