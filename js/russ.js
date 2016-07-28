@@ -101,7 +101,7 @@ $(function() {
 // Youtube popup Link
 //hompage
 $(function() {
-	$('.box a').on('click', function(event) {
+	$('#community .box a').on('click', function(event) {
 		event.preventDefault();
 		var target = $(this).attr('href');
 		$(target).toggleClass('show');
