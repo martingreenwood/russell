@@ -211,29 +211,37 @@ function jptweak_remove_share() {
 add_action( 'loop_start', 'jptweak_remove_share' );
 
 
+/*==================================
+=            ACF FILTER            =
+==================================*/
 
+add_filter( 'json_query_vars', 'filterJsonQueryVars' );
+function filterJsonQueryVars( $vars ) {
+	$vars[] = 'meta_value';
+	return $vars;
+}
 
-add_filter( 'rest_query_vars', function ( $valid_vars ) {
-    return array_merge( $valid_vars, array( 'choose_development', 'meta_query' ) );
-} );
+add_action( 'rest_api_init', 'russell_post_meta_register' );
+function russell_post_meta_register() {
+	register_api_field( 'post',
+		'testing',
+		array(
+			'get_callback'    => 'russell_get_post_meta',
+			'update_callback' => null,
+			'schema'          => null,
+		)
+	);
+}
 
-add_filter( 'rest_post_query', function( $args, $request ) {
-    $key   = $request->get_param( 'meta_key' );
-    $value = $request->get_param( 'meta_value' );
+function russell_get_post_meta( $object, $field_name, $request ) {
+	return get_post_meta( $object[ 'id' ], $field_name, true );
+}
 
-    if ( 'choose_development' == $key && ! empty( $value ) ) {
-        $args['meta_query'] = array(
-            array(
-                'key'     => $key,
-                'value'   => $value,
-                'compare' => '=',
-            )
-        );      
-    }
-
-    return $args;
-}, 10, 2 );
-
+add_filter( 'rest_query_vars', 'russell_allow_meta' );
+function russell_allow_meta( $valid_vars ) {
+	$valid_vars = array_merge( $valid_vars, array( 'meta_key', 'meta_value' ) );
+	return $valid_vars;
+}
 
 /**
  * Setup custom post types.
