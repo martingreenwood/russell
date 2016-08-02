@@ -113,7 +113,7 @@ get_header(); ?>
 
 				<fieldset class="bedroom-box">
 					<legend>Min Bedrooms</legend>
-					<select id="bedrooms" required="" data-parsley-error-message="<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>" name="bedrooms">
+					<select id="bedrooms" required="" data-parsley-error-message="This field is required..," name="bedrooms">
 						<option value="">Select Min Bedrooms</option>
 						<?php 
 						foreach (range(1,5) as $b): ?>
@@ -124,7 +124,7 @@ get_header(); ?>
 
 				<fieldset class="price-box">
 					<legend>Price Range (£)</legend>
-					<select id="minprice" required="" data-parsley-error-message="<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>" name="minprice">
+					<select id="minprice" required="" data-parsley-error-message="This field is required..," name="minprice">
 						<option value="">Select Min Price</option>
 						<?php 
 						foreach (range(100000,900000,10000) as $min_p): ?>
@@ -132,7 +132,7 @@ get_header(); ?>
 						<?php endforeach; ?>
 					</select>
 
-					<select id="maxprice" required="" data-parsley-error-message="<i class='fa fa-exclamation-triangle' aria-hidden='true'></i>" name="maxprice">
+					<select id="maxprice" required="" data-parsley-error-message="This field is required..," name="maxprice">
 						<option value="">Select Max Price</option>
 						<?php 
 						foreach (range(100000,900000,10000) as $max_p): ?>
