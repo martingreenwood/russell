@@ -6,8 +6,8 @@
             "key": "field_5739e6da992ab",
             "label": "",
             "name": "special_offers",
-            "type": "checkbox",
-            "instructions": "Tick which special offers should be visable on the search page.",
+            "type": "radio",
+            "instructions": "Select a special offer - this will appear on the search bar and the plot page banner.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,15 +16,57 @@
                 "id": ""
             },
             "choices": {
-                "help-to-buy": "Help to Buy",
-                "free-carpets": "Free Carpets",
-                "stamp-duty-paid": "Stanp Duty Paid"
+                "carpets-included": "Carpets Included",
+                "stamp-duty-paid": "Stamp Duty Paid",
+                "part-exchange": "Part Exchange"
             },
-            "default_value": [
+            "allow_null": 1,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_57adb96696814",
+            "label": "Special Offer Text",
+            "name": "special_offer_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_57adb9a096817",
+            "label": "Special Offer Link",
+            "name": "special_offer_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [
 
             ],
-            "layout": "vertical",
-            "toggle": 0
+            "allow_null": 0,
+            "allow_archives": 0,
+            "multiple": 0
         }
     ],
     "location": [
@@ -44,5 +86,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1463412535
+    "modified": 1471003403
 }

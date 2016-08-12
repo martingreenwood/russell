@@ -277,15 +277,15 @@
 
 						span {
 							background: $lightblue;
-							font-size: 12px;
-							padding: 5px 12px;
+							padding: 10px 12px;
 							font-weight: 700;
 							margin: 15px 0 0 0;
 							display: inline-block;
+							line-height: 1;
+							@include rem(font-size, 14px);
+							font-weight: 600;
 
 							@include media ($large-screen-up) {
-								font-size: 14px;
-								padding: 5px 12px;
 								margin: 12px 0 0 0;
 							}
 						}
@@ -610,6 +610,10 @@
 			&.inner-text {
 				height: 100%;
 			}
+
+			.inner-text {
+				height: inherit;
+			}
 			
 			a {
 				padding: 20px;
@@ -633,7 +637,18 @@
 				p {
 					color: white;
 					margin: 0;
-					font-size: 16px;
+					font-size: 14px;
+					font-weight: 600;
+					line-height: 1.3;
+				}
+
+				.btn {
+					padding: 10px 12px;
+					background: white;
+					display: inline-block;
+					margin-top: 15px;
+					line-height: 1;
+					font-weight: 600;
 				}
 			}
 		}

@@ -7,5 +7,6 @@
 				<a href="<?php the_sub_field('link'); ?>">
 					<img src="<?php echo $block_logo['url']; ?>" alt="">
 					<p><?php the_sub_field('text'); ?></p>
+					<span style="color: <?php echo $text_bg_colour; ?>" class="btn">Find out More</span>
 				</a>
 			</div>

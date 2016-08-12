@@ -137,6 +137,64 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 	</div>
 	<?php endif; ?>
 
+	<div id="htb-banner">
+		<div class="container">
+			<div class="row">
+				<div class="icon eq-height">
+					<div class="table">
+						<div class="cell middle">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/htb_logo.svg" alt="" scale="0">
+						</div>
+					</div>
+				</div>
+				<div class="text eq-height">
+					<div class="table">
+						<div class="cell middle">
+							<h3>Help to Buy</h3>
+							<p>We can help you move with a 5% deposit and a 20% government-backed equity loan.</p>
+						</div>
+					</div>
+				</div>
+				<div class="btn eq-height">
+					<div class="table">
+						<div class="cell middle">
+							<a href="<?php echo home_url( 'your-new-home/help-to-buy/' ); ?>">Find out More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<?php if (get_field('special_offers')): ?>
+	<div id="special_offers" style="background-color: <?php echo $dev_colour; ?>">
+		<div class="container">
+			<div class="row">
+				<div class="icon eq-height">
+					<div class="table">
+						<div class="cell middle">
+							<h3><?php echo str_replace("-"," ", get_field('special_offers')); ?></h3>
+						</div>
+					</div>
+				</div>
+				<div class="text eq-height">
+					<div class="table">
+						<div class="cell middle">
+							<p><?php the_field('special_offer_text'); ?></p>
+						</div>
+					</div>
+				</div>
+				<div class="btn eq-height">
+					<div class="table">
+						<div class="cell middle">
+							<a href="<?php the_field('special_offer_link'); ?>">Find out More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php endif; ?>
 
 	<?php if( have_rows('floor_plan', $house_typeID[0]) ): ?>
 	<div id="plans">

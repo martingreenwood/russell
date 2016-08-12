@@ -128,9 +128,9 @@ add_action( 'widgets_init', 'russell_widgets_init' );
 
 if (!is_admin()) add_action("wp_enqueue_scripts", "russell_jquery_enqueue", 11);
 function russell_jquery_enqueue() {
-   wp_deregister_script('jquery');
-   wp_register_script('jquery', "//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js", false, null);
-   wp_enqueue_script('jquery');
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', "//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js", false, null);
+	wp_enqueue_script('jquery');
 }
 
 function russell_scripts() {

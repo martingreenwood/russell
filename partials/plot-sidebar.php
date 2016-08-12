@@ -1,4 +1,5 @@
 				<?php 
+				$house_typeID = get_field('choose_house_type');
 				$developmentID  = get_field('choose_development');
 				$dev_colour = get_field('development_colour', $developmentID[0]); 
 				?>
@@ -33,6 +34,10 @@
 						<?php endif; ?>
 						<li><a style="background-color: <?php echo $dev_colour; ?>" href="#reginterest">Register your interest</a></li>
 					</ul>
+				</div>
+
+				<div class="showhome">
+					<h3 style="color: <?php echo $dev_colour; ?>"><?php the_field('visitor_opening_times', $developmentID[0]); ?></h3>
 				</div>
 
 				<div class="shareme" style="color: <?php echo $dev_colour; ?>" >

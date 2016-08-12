@@ -339,11 +339,13 @@ get_header(); ?>
 
 								<?php if($special_offers): ?> 
 								<div class="feature">
-									<p><?php echo str_replace("-"," ",current($special_offers)); ?></p>
+									<p><?php echo str_replace("-"," ", $special_offers); ?></p>
 								</div>
 								<?php endif; ?>
 
 								<?php echo $house_image; ?>
+
+								<span class="htb-logo"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/htb_logo.svg"></span>
 
 								<div class="sub-title">
 									<small><?php echo $dev_title; ?> - Plot <?php echo current($plot_number); ?></small>
@@ -385,11 +387,13 @@ get_header(); ?>
 
 								<?php if($special_offers): ?> 
 								<div class="feature">
-									<p><?php echo str_replace("-"," ",current($special_offers)); ?></p>
+									<p><?php echo str_replace("-"," ", $special_offers); ?></p>
 								</div>
 								<?php endif; ?>
 
 								<?php echo $house_image; ?>
+
+								<span class="htb-logo"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/htb_logo.svg"></span>
 
 								<div class="sub-title">
 									<small><?php echo $dev_title; ?> - Plot <?php echo current($plot_number); ?></small>
@@ -482,11 +486,13 @@ get_header(); ?>
 
 							<?php if($special_offers): ?> 
 							<div class="feature">
-								<p><?php echo str_replace("-"," ",current($special_offers)); ?></p>
+								<p><?php echo str_replace("-"," ", $special_offers); ?></p>
 							</div>
 							<?php endif; ?>
 
 							<?php echo $house_image; ?>
+
+							<span class="htb-logo"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/htb_logo.svg"></span>
 
 							<div class="sub-title">
 								<small><?php echo $dev_title; ?> - Plot <?php echo current($plot_number); ?></small>

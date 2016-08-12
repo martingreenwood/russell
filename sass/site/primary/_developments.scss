@@ -126,6 +126,83 @@
 			font-size: 16px;
 		}
 	}
+
+	#htb-banner {
+		background: #1b9697;
+		padding: 20px 0;
+
+		.icon {
+			@include span-columns(1);
+
+			img {
+				width: 100px;
+				margin-bottom: 20px;
+				display: block
+			}
+
+			@include media ($medium-screen-up) {
+				@include span-columns(1.5);
+
+				img {
+					margin-bottom: 0;
+					width: auto;
+				}
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(1.5);
+			}
+		}
+
+		.text {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+				@include shift(1.5);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4);
+				@include shift(2.5);
+			}
+
+			h3 {
+				color: white;
+				font-size: 22px;
+				margin-bottom: 10px;
+			}
+
+			p {
+				font-size: 14px;
+				color: white;
+				font-weight: 600;
+				margin: 0;
+			}
+		}
+
+		.btn {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(2);
+				text-align: right;
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4);
+			}
+
+			a {
+				padding: 10px 12px;
+				line-height: 1;
+				background: white;
+				font-weight: 600;
+				display: inline-block;
+			}
+		}
+
+	}
 	
 	#siteplan {
 		background: #eeeeee;

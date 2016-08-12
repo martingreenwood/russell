@@ -102,6 +102,35 @@ $dev_colour = get_field('development_colour');
 	</div>
 	<?php endif; ?>
 
+	<div id="htb-banner">
+		<div class="container">
+			<div class="row">
+				<div class="icon eq-height">
+					<div class="table">
+						<div class="cell middle">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/htb_logo.svg" alt="" scale="0">
+						</div>
+					</div>
+				</div>
+				<div class="text eq-height">
+					<div class="table">
+						<div class="cell middle">
+							<h3>Help to Buy</h3>
+							<p>We can help you move with a 5% deposit and a 20% government-backed equity loan.</p>
+						</div>
+					</div>
+				</div>
+				<div class="btn eq-height">
+					<div class="table">
+						<div class="cell middle">
+							<a href="<?php echo home_url( 'your-new-home/help-to-buy/' ); ?>">Find out More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<?php if( have_rows('add_your_site_plans') ): ?>
 	<div id="siteplan">
 		<div class="container">
