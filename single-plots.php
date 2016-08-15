@@ -173,21 +173,36 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 				<div class="icon eq-height">
 					<div class="table">
 						<div class="cell middle">
-							<h3><?php echo str_replace("-"," ", get_field('special_offers')); ?></h3>
+							<h3><?php echo str_replace("-"," ", get_field('special_offers')); ?><?php if (get_field('special_offers') == 'carpets-included' || get_field('special_offers') == 'stamp-duty-paid'): ?>*<?php endif; ?></h3>
 						</div>
 					</div>
 				</div>
+
 				<div class="text eq-height">
 					<div class="table">
 						<div class="cell middle">
-							<p><?php the_field('special_offer_text'); ?></p>
+							<?php if (get_field('special_offers') == 'part-exchange'): ?>
+							<p><strong>Do you have a property to sell?</strong> Ask about our Park Exchange Scheme.<br>
+							Make your move a simple and stress-free experience.</p>
+
+							<?php elseif (get_field('special_offers') == 'carpets-included'): ?>
+							<p>Free flooring from our supplier. Details available from our sales advisor.<br>
+							<small><a href="https://www.russell-armer.co.uk/help/terms-conditions/">* Terms &amp; Conditions apply</small></a></p>
+
+							<?php elseif (get_field('special_offers') == 'stamp-duty-paid'): ?>
+							<p>give you a helping hand the Stamp Duty, on the basis that it is your sole home.<br>
+							<small><a href="https://www.russell-armer.co.uk/help/terms-conditions/">* Terms &amp; Conditions apply</small></a></p>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
+
 				<div class="btn eq-height">
 					<div class="table">
 						<div class="cell middle">
+							<?php if (get_field('special_offers') == 'part-exchange'): ?>
 							<a href="<?php the_field('special_offer_link'); ?>">Find out More</a>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
