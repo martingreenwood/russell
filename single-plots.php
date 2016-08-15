@@ -143,7 +143,7 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 				<div class="icon eq-height">
 					<div class="table">
 						<div class="cell middle">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/htb_logo.svg" alt="" scale="0">
+							<img width="100" height="100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/htb_logo.svg" alt="" scale="0">
 						</div>
 					</div>
 				</div>
