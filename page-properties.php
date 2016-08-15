@@ -300,7 +300,11 @@ get_header(); ?>
 
 
 						if (isset($plot->acf->special_offers)) {
+							if($plot->acf->special_offers != "help-to-buy") :
 							$special_offers 	= $plot->acf->special_offers;
+							else:
+								$special_offers = null;
+							endif;
 						}
 
 						if (isset($plot->acf->plot_features)) {
@@ -453,7 +457,11 @@ get_header(); ?>
 						endif;
 
 						if (isset($plot->acf->special_offers)) {
+							if($plot->acf->special_offers != "help-to-buy") :
 							$special_offers 	= $plot->acf->special_offers;
+							else:
+								$special_offers = null;
+							endif;
 						}
 
 						if (isset($plot->acf->plot_features)) {
