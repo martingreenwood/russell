@@ -201,7 +201,7 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 					<div class="table">
 						<div class="cell middle">
 							<?php if (get_field('special_offers') == 'part-exchange'): ?>
-							<a href="https://www.russell-armer.co.uk/part-exchange-scheme/">Find out More</a>
+							<a style="color: <?php echo $dev_colour; ?>" href="https://www.russell-armer.co.uk/part-exchange-scheme/">Find out More</a>
 							<?php endif; ?>
 						</div>
 					</div>
