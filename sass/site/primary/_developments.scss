@@ -125,9 +125,15 @@
 
 			h1 {
 				font-size: 16px;
+				color: $text-color !important;
+
+				strong {
+					color: $text-color !important;
+					font-size: 16px;
+				}
 			}
 
-			h1, h2, h3, h4, h5, h6  {
+			h2, h3, h4, h5, h6  {
 				color: $text-color !important;
 				font-size: 14px;
 
