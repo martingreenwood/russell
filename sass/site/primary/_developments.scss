@@ -123,16 +123,24 @@
 
 		.entry-content {
 
+			h1 {
+				font-size: 16px;
+			}
+
 			h1, h2, h3, h4, h5, h6  {
 				color: $text-color !important;
-				font-size: 16px;
+				font-size: 14px;
 
 				strong {
 					color: $text-color !important;
-					font-size: 16px;
+					font-size: 14px;
 				}
 			}
 		}
+	}
+
+	.grid {
+		margin-top: 50px;
 	}
 
 	#htb-banner {
