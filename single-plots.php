@@ -11,6 +11,8 @@ get_header();
 $developmentID  = get_field('choose_development');
 $house_typeID  = get_field('choose_house_type');
 $dev_colour = get_field('development_colour', $developmentID[0]);
+$plot_availability = get_field('plot_availability');
+
 ?>
 
 	<div class="feature-image" style="border-color: <?php echo $dev_colour; ?>">
@@ -25,7 +27,7 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row" data-avail="<?php echo $plot_availability; ?>">
 			<div id="secondary">
 				<?php get_template_part( 'partials/plot', 'sidebar' ); ?>
 			</div>
@@ -137,6 +139,7 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 	</div>
 	<?php endif; ?>
 
+	<?php if ($plot_availability != "affordable"): ?>
 	<div id="htb-banner">
 		<div class="container">
 			<div class="row">
@@ -165,6 +168,7 @@ $dev_colour = get_field('development_colour', $developmentID[0]);
 			</div>
 		</div>
 	</div>
+	<?php endif; ?>
 
 	<?php if (get_field('special_offers')): ?>
 	<div id="special_offers" style="background-color: <?php echo $dev_colour; ?>">
