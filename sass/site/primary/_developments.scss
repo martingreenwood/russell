@@ -121,9 +121,17 @@
 			@include span-columns(8); 
 		}
 
-		.entry-content h1 {
-			color: $text-color;
-			font-size: 16px;
+		.entry-content {
+
+			h1, h2, h3, h4, h5, h6  {
+				color: $text-color !important;
+				font-size: 16px;
+
+				strong {
+					color: $text-color !important;
+					font-size: 16px;
+				}
+			}
 		}
 	}
 
