@@ -243,6 +243,14 @@ function russell_allow_meta( $valid_vars ) {
 	return $valid_vars;
 }
 
+/*============================
+=            META            =
+============================*/
+
+function russell_add_meta( $valid_vars ) { ?><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<?php }
+add_filter( 'wp_head', 'russell_add_meta', 0 );
+
 /**
  * Setup custom post types.
  */
