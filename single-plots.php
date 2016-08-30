@@ -194,7 +194,7 @@ $plot_availability = get_field('plot_availability');
 							<small><a href="https://www.russell-armer.co.uk/help/terms-conditions/">* Terms &amp; Conditions apply</small></a></p>
 
 							<?php elseif (get_field('special_offers') == 'stamp-duty-paid'): ?>
-							<p>give you a helping hand the Stamp Duty, on the basis that it is your sole home.<br>
+							<p>To give you a helping hand the Stamp Duty, on the basis that it is your sole home.<br>
 							<small><a href="https://www.russell-armer.co.uk/help/terms-conditions/">* Terms &amp; Conditions apply</small></a></p>
 							<?php endif; ?>
 						</div>
