@@ -170,7 +170,7 @@ $plot_availability = get_field('plot_availability');
 	</div>
 	<?php endif; ?>
 
-	<?php if (get_field('special_offers')): ?>
+	<?php if (get_field('special_offers')): if(get_field('special_offers') != 'help-to-buy'): ?>
 	<div id="special_offers" style="background-color: <?php echo $dev_colour; ?>">
 		<div class="container">
 			<div class="row">
@@ -213,7 +213,7 @@ $plot_availability = get_field('plot_availability');
 			</div>
 		</div>
 	</div>
-	<?php endif; ?>
+	<?php endif; endif; ?>
 
 	<?php if( have_rows('floor_plan', $house_typeID[0]) ): ?>
 	<div id="plans">
