@@ -2,8 +2,10 @@
 		$house_typeID  = get_field('choose_house_type');
 		$developmentID  = get_field('choose_development');
 		
-		if (has_post_thumbnail( $house_typeID[0])):
-			echo get_the_post_thumbnail( $house_typeID[0], 'full');
+		if ( has_post_thumbnail() ):
+			the_post_thumbnail('full');
+		elseif ( has_post_thumbnail($house_typeID[0]) ):
+			echo get_the_post_thumbnail($house_typeID[0],'full');
 		else: ?>
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/default.jpg" alt="Russell Armer Homes">
 		<?php endif; ?>
