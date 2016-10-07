@@ -301,7 +301,7 @@ get_header(); ?>
 
 						if (isset($plot->acf->special_offers)) {
 							if($plot->acf->special_offers != "help-to-buy") :
-							$special_offers 	= $plot->acf->special_offers;
+								$special_offers 	= $plot->acf->special_offers;
 							else:
 								$special_offers = null;
 							endif;
@@ -342,8 +342,12 @@ get_header(); ?>
 							<div class="search-result" data-availabiility="<?php echo $plot_availability; ?>" data-price="<?php echo $plot_price_filter; ?>" data-room="<?php echo $house_rooms; ?>" data-location="<?php echo $dev_location; ?>">
 
 								<?php if($special_offers): ?> 
-								<div class="feature">
-									<p><?php echo str_replace("-"," ", $special_offers); ?></p>
+								<div class="feature col-<?php echo count($special_offers); ?>">
+									<?php
+									foreach ($special_offers as $special_offer) {
+										echo "<p class='".$special_offer."'>" . str_replace("-", " ", $special_offer) . "</p>";
+									}
+									?>
 								</div>
 								<?php endif; ?>
 
@@ -392,8 +396,12 @@ get_header(); ?>
 								<span class="ribbon"><?php echo $plot_availability; ?></span>
 
 								<?php if($special_offers): ?> 
-								<div class="feature">
-									<p><?php echo str_replace("-"," ", $special_offers); ?></p>
+								<div class="feature col-<?php echo count($special_offers); ?>">
+									<?php
+									foreach ($special_offers as $special_offer) {
+										echo "<p class='".$special_offer."'>" . str_replace("-", " ", $special_offer) . "</p>";
+									}
+									?>
 								</div>
 								<?php endif; ?>
 
@@ -497,8 +505,12 @@ get_header(); ?>
 						<div class="search-result" data-availabiility="<?php echo $plot_availability; ?>" data-price="<?php echo $plot_price_filter; ?>" data-room="<?php echo $house_rooms; ?>" data-location="<?php echo $dev_location; ?>">
 
 							<?php if($special_offers): ?> 
-							<div class="feature">
-								<p><?php echo str_replace("-"," ", $special_offers); ?></p>
+							<div class="feature col-<?php echo count($special_offers); ?>">
+								<?php
+								foreach ($special_offers as $special_offer) {
+									echo "<p class='".$special_offer."'>" . str_replace("-", " ", $special_offer) . "</p>";
+								}
+								?>
 							</div>
 							<?php endif; ?>
 
