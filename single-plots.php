@@ -170,14 +170,19 @@ $plot_availability = get_field('plot_availability');
 	</div>
 	<?php endif; ?>
 
-	<?php if (get_field('special_offers')): if(get_field('special_offers') != 'help-to-buy'): ?>
-	<div id="special_offers" style="background-color: <?php echo $dev_colour; ?>">
+	<?php $special_offers = get_field('special_offers'); ?>
+
+	<?php 
+	if ($special_offers):
+	foreach ($special_offers as $special_offer):
+	?>
+	<div id="special_offers" class="<?php echo $special_offer; ?>">
 		<div class="container">
 			<div class="row">
 				<div class="icon eq-height">
 					<div class="table">
 						<div class="cell middle">
-							<h3><?php echo str_replace("-"," ", get_field('special_offers')); ?><?php if (get_field('special_offers') == 'carpets-included' || get_field('special_offers') == 'stamp-duty-paid'): ?>*<?php endif; ?></h3>
+							<h3><?php echo str_replace("-"," ", $special_offer); ?><?php if ($special_offer == 'carpets-included' || $special_offer == 'stamp-duty-paid'): ?>*<?php endif; ?></h3>
 						</div>
 					</div>
 				</div>
@@ -185,15 +190,15 @@ $plot_availability = get_field('plot_availability');
 				<div class="text eq-height">
 					<div class="table">
 						<div class="cell middle">
-							<?php if (get_field('special_offers') == 'part-exchange'): ?>
+							<?php if ($special_offer == 'part-exchange'): ?>
 							<p><strong>Do you have a property to sell?</strong> Ask about our Park Exchange Scheme.<br>
 							Make your move a simple and stress-free experience.</p>
 
-							<?php elseif (get_field('special_offers') == 'carpets-included'): ?>
+							<?php elseif ($special_offer == 'carpets-included'): ?>
 							<p>Free flooring from our supplier. Details available from our sales advisor.<br>
 							<small><a href="https://www.russell-armer.co.uk/help/terms-conditions/">* Terms &amp; Conditions apply</small></a></p>
 
-							<?php elseif (get_field('special_offers') == 'stamp-duty-paid'): ?>
+							<?php elseif ($special_offer == 'stamp-duty-paid'): ?>
 							<p>To give you a helping hand we’ll pay the Stamp Duty, on the basis that it is your sole home.<br>
 							<small><a href="https://www.russell-armer.co.uk/help/terms-conditions/">* Terms &amp; Conditions apply</small></a></p>
 							<?php endif; ?>
@@ -204,8 +209,8 @@ $plot_availability = get_field('plot_availability');
 				<div class="btn eq-height">
 					<div class="table">
 						<div class="cell middle">
-							<?php if (get_field('special_offers') == 'part-exchange'): ?>
-							<a style="color: <?php echo $dev_colour; ?>" href="https://www.russell-armer.co.uk/part-exchange-scheme/">Find out More</a>
+							<?php if ($special_offer == 'part-exchange'): ?>
+							<a href="https://www.russell-armer.co.uk/part-exchange-scheme/">Find out More</a>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -213,7 +218,7 @@ $plot_availability = get_field('plot_availability');
 			</div>
 		</div>
 	</div>
-	<?php endif; endif; ?>
+	<?php endforeach; endif; ?>
 
 	<?php if( have_rows('floor_plan', $house_typeID[0]) ): ?>
 	<div id="plans">
