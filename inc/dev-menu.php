@@ -106,7 +106,7 @@ function build_dev_menu( $items, $args ) {
 		// View All Devs
 
 		$view_all = array (
-			'title'            => 'View all Properites',
+			'title'            => 'View all Properties',
 			'menu_item_parent' => 5146,
 			'classes'		   => 'view_all_props',
 			'ID'               => 99999999999987654, //an unlikely, high number
