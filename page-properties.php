@@ -353,7 +353,7 @@ get_header(); ?>
 
 								<?php echo $house_image; ?>
 
-								<?php if($plot_availability != "affordable"): ?>
+								<?php if($plot_availability != "affordable" || !isset($plot->acf->hide_htb)): ?>
 								<span class="htb-logo"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/htb_logo.svg"></span>
 								<?php endif; ?>
 

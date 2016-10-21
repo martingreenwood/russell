@@ -1,0 +1,40 @@
+{
+    "key": "group_580a1ab70077d",
+    "title": "Hide Help To Buy",
+    "fields": [
+        {
+            "key": "field_580a1ac7ace49",
+            "label": "",
+            "name": "hide_htb",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Click to hide the help to buy round icon and banner on this plot.",
+            "default_value": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "plots"
+            }
+        ]
+    ],
+    "menu_order": -10,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1477057302
+}
