@@ -35,7 +35,7 @@
 
 	<div class="column">
 		<div class="headoffice">
-			<h4>Head Ofice</h4>
+			<h4>Head Office</h4>
 			<?php the_field('ho_address'); ?>
 		</div>
 	</div>
