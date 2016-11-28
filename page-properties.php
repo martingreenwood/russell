@@ -395,7 +395,6 @@ get_header(); ?>
 							
 							?>
 							<div class="search-result" data-availabiility="<?php echo $plot_availability; ?>" data-price="<?php echo $plot_price_filter; ?>" data-room="<?php echo $house_rooms; ?>" data-location="<?php echo $dev_location; ?>">
-								<span class="ribbon"><?php echo $plot_availability; ?></span>
 
 								<?php if($special_offers): ?> 
 								<div class="feature col-<?php echo count($special_offers); ?>">
