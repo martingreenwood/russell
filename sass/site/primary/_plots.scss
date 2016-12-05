@@ -1,0 +1,616 @@
+/*=============================
+=            PLOTS            =
+==============================*/
+
+.single-plots {
+
+	.opp {
+		font-weight: 700;
+	}
+
+	.sharedaddy h3.sd-title {
+		color: inherit;
+	}
+
+	.feature-image {
+		position: relative;
+		background: #eeeeee;
+
+		img {
+			display: block;
+			width: auto;
+			height: auto;
+			margin: 0 auto;
+		}
+
+		#dev_logo {
+			position: absolute;
+			top: 20px;
+			width: 100%;
+			text-align: right;
+
+			img {
+				display: inline-block;
+				width: 100px;
+
+				@include media ($medium-screen-up) {
+					width: 195px;
+				}
+			}
+		}
+	}
+
+	#dev-title {
+		@include section-padding(50px, 0);
+		@include span-columns(1);
+
+		@include media ($medium-screen-up) {
+			@include span-columns(9);
+		}
+
+		@include media ($large-screen-up) {
+			@include span-columns(12); 
+		}
+
+		span {
+			margin: 0;
+			font-size: 38px;
+			font-weight: 700;
+			color: $brand-primary;
+			font-family: $heading-font-family;
+		}
+	}
+
+	#secondary {
+		@include span-columns(1);
+
+		@include media ($medium-screen-up) {
+			@include span-columns(3);
+		}
+
+		@include media ($large-screen-up) {
+			@include span-columns(4);
+		}
+
+		.intro {
+			margin-bottom: 30px;
+
+			h1, h2 {
+				margin: 0;
+				line-height: normal
+			}
+		}
+
+		.quicklinks {
+			margin-bottom: 30px;
+			width: 90%;
+
+			ul {
+				margin: 0;
+
+				li {
+					
+					a {
+						display: block;
+						background: #00527b;
+						margin-bottom: 5px;
+						color: white;
+						font-weight: 700;
+						padding: 6px 10px;
+						background-image: url(assets/slide-next.svg);
+						background-size: 9px;
+						background-repeat: no-repeat;
+						background-position: 98% 50%;
+					}
+				}
+			}
+		}
+	}
+
+	#primary {
+		margin-bottom: 50px;
+		@include span-columns(1);
+
+		@include media ($medium-screen-up) {
+			@include span-columns(6);
+		}
+
+		@include media ($large-screen-up) {
+			@include span-columns(8); 
+		}
+
+		header {
+			
+			h2 {
+				display: block;
+				margin: 0;
+				line-height: normal;
+
+				.right {
+					float: right;
+				}
+				.left {
+					float: left;
+					color: $text-color;
+				}
+			}
+
+			h1, h3 {
+				font-size: 24px;
+				color: $text-color;
+			}
+		}
+	}
+
+	#htb-banner {
+		background: #1b9697;
+		padding: 20px 0;
+
+		.icon {
+			@include span-columns(1);
+
+			img {
+				width: 100px;
+				margin-bottom: 20px;
+				display: block;
+			}
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+
+				img {
+					margin-bottom: 0;
+				}
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4);
+			}
+		}
+
+		.text {
+			@include span-columns(1);
+			h3 {
+				color: white;
+				font-size: 22px;
+				margin-bottom: 10px;
+			}
+
+			p {
+				font-size: 13px;
+				color: white;
+				font-weight: 600;
+				margin: 0 0 20px;
+			}
+
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+
+				p {
+					margin: 0;
+				}
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(6);
+			}
+		}
+
+		.btn {
+			@include span-columns(1);
+
+			a {
+				padding: 10px 12px;
+				line-height: 1;
+				background: white;
+				font-weight: 600;
+				display: inline-block;
+			}
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+				text-align: right;
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(2);
+			}
+		}
+	}
+
+	#special_offers {
+		background: $brand-primary;
+		padding: 20px 0;
+
+		&.stamp-duty-paid {
+			background-color: #f39200;
+
+			.btn {
+				a {
+					color: #f39200;
+				}
+			}
+		}
+		&.carpets-included {
+			background-color: #f9b122;
+
+			.btn {
+				a {
+					color: #f9b122;
+				}
+			}
+		}
+		&.part-exchange {
+			background-color: #ee7326;
+
+			.btn {
+				a {
+					color: #ee7326;
+				}
+			}
+		}
+		&.help-to-buy {
+			display: none;
+		}
+
+
+		.icon {
+			@include span-columns(1);
+
+			h3 {
+				color: white;
+				font-size: 22px;
+				margin-bottom: 10px;
+				text-transform: capitalize;
+			}
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+
+				h3 {
+					margin-bottom: 0;
+				}
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(4);
+
+				h3 {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.text {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(6);
+			}
+
+			p {
+				font-size: 13px;
+				color: white;
+				font-weight: 600;
+				margin: 0;
+
+				a {
+					color: white;
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.btn {
+			@include span-columns(1);
+
+			@include media ($medium-screen-up) {
+				@include span-columns(3);
+				text-align: right;
+			}
+
+			@include media ($large-screen-up) {
+				@include span-columns(2);
+			}
+
+			a {
+				padding: 10px 12px;
+				line-height: 1;
+				background: white;
+				font-weight: 600;
+				display: inline-block;
+			}
+		}
+	}
+
+	#plans {
+		background: #eeeeee;
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		.titlea {
+
+			h2 {
+				font-size: 24px;
+				float: left;
+				margin: 0;
+			}
+
+			ul {
+				float: right;
+
+				li {
+					float: left;
+					margin-left: 5px;
+				}
+			}
+
+			a {
+				display: block;
+				background: #00527b;
+				color: white;
+				font-weight: 700;
+				padding: 6px 10px;
+			}
+		}
+
+		.room {
+			position: relative;
+
+			img {
+				margin-bottom: 20px;
+			}
+
+			.desc {
+				
+				h2 {
+					text-transform: uppercase;
+					color: inherit;
+				}
+
+				table {
+					color: $text-color;
+
+					tr {
+
+						td {
+							border-bottom: 0;
+
+							&:first-of-type {
+								width: 42%;
+								font-weight: 700;
+							}
+						}
+					}
+				}
+			}
+
+			&.span1 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(1);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(1); 
+				}
+			}
+
+			&.span2 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(1.5);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(2);
+				}
+			}
+
+			&.span3 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(2.25);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(3);
+				}
+			}
+
+			&.span4 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(3);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(4);
+				}
+			}
+
+			&.span5 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(4.5);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(5);
+				}
+			}
+
+			&.span6 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(4.5);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(6);
+				}
+			}
+
+			&.span7 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(7);
+				}
+			}
+
+			&.span8 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(8);
+				}
+			}
+
+			&.span9 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(9);
+				}
+			}
+
+			&.span10 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(10);
+				}
+			}
+
+			&.span11 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(12);
+				}
+			}
+
+			&.span12 {
+				@include span-columns(1);
+
+				@include media ($medium-screen-up) {
+					@include span-columns(9);
+				}
+
+				@include media ($large-screen-up) {
+					@include span-columns(12);
+				}
+			}
+		}
+	}
+
+	#reginterest {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 20px;
+		overflow: scroll;
+		z-index: 555;
+		background: rgba(0,53,76,0.9);
+		transition: all 300ms ease-in-out;
+
+		#closeme {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			width: 36px;
+			height: 36px;
+
+			&:before {
+				content: "";
+				width: 36px;
+				height: 2px;
+				background: $lightblue;
+				position: absolute;
+				left: 0;
+				top: 18px;
+				transform: rotate(-45deg);
+			}
+
+			&:after {
+				content: "";
+				width: 36px;
+				height: 2px;
+				background: $lightblue;
+				position: absolute;
+				left: 0;
+				top: 18px;
+				transform: rotate(45deg);
+			}
+		}
+
+		&.reveal {
+			width: 100%;
+		}
+
+		&.down {
+			height: 100%;
+		}
+
+		.gform_wrapper {
+			margin-top: 50px;
+		}
+
+		.gform_fields {
+
+			.gfield {
+				
+				label {
+					color: white;
+				}
+
+				.gfield_checkbox {
+
+					li {
+
+						label {
+							color: #ccc;
+
+							&:before {
+								border-color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

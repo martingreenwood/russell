@@ -1,0 +1,30 @@
+/*=======================================
+=            CASE STUDY PAGE            =
+=======================================*/
+
+.supporting-our-community {
+
+	article {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		margin-bottom: 50px;
+	}
+
+	.charity-logos {
+
+		.charity-logo {
+			display: inline-block;
+			margin-right: 20px;
+			margin-bottom: 20px;
+
+			img {
+				width: auto;
+				max-height: 90px;
+				max-width: 270px;
+				vertical-align: middle	
+			}
+		}
+	}
+
+}

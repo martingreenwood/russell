@@ -1,0 +1,77 @@
+/*=======================================
+=            CASE STUDY PAGE            =
+=======================================*/
+
+
+.case-stiudy-list {
+
+	.case-study {
+		@include span-columns(1);
+		margin-bottom: 20px;
+
+		@include media($medium-screen-up) {
+			@include span-columns(3);
+			@include omega(3n);
+		}
+
+		@include media($large-screen-up) {
+			@include span-columns(4);
+		}
+
+		h2 {
+			font-size: 18px;
+			line-height: normal;
+			margin-top: 15px;
+
+			a {
+				color: inherit;
+			}
+		}
+
+		.btn {
+			display: block;
+			background-color: #00527b;
+			background-image: url(assets/slide-next.svg);
+			background-size: 9px;
+			background-repeat: no-repeat;
+			background-position: 98% 50%;
+			color: white;
+			padding: 5px 10px;
+			font-weight: 700;
+		}
+	}
+}
+
+.single-casestudies {
+
+	.feature-image {
+		max-height: 400px;
+		overflow: hidden;
+	}
+
+	#secondary {
+		@include span-columns(1);
+
+		@include media($medium-screen-up) {
+			@include span-columns(3);
+		}
+
+		@include media($large-screen-up) {
+			@include span-columns(3.5);
+			@include shift(0.5);
+		}		
+	}
+
+	#content {
+
+		.default-page {
+			padding-top: 50px;
+
+			h1 {
+				@include rem(font-size, 28px);
+				margin: 0;
+				line-height: normal;
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+/*=============================
+=            PLOTS            =
+=============================*/
+
+.single-developments {
+
+	.the-avenue {
+
+		.tabs-body {
+
+			.tab-content {
+
+				#plots {
+
+					// Large Screens
+
+					@media screen and (min-width: 1000px) {
+
+						.plot-1 { top: 1164px; left: 659px; }
+						.plot-2 { top: 1126px; left: 631px; }
+						.plot-3 { top: 1076px; left: 600px; }
+						.plot-4 { top: 1036px; left: 575px; }
+						.plot-5 { top: 977px; left: 544px; }
+						.plot-6 { top: 934px; left: 521px; }
+						.plot-7 { top: 876px; left: 496px; }
+						.plot-8 { top: 830px; left: 478px; }
+						.plot-9 { top: 757px; left: 460px; }
+						.plot-10 { top: 671px; left: 439px; }
+						.plot-11 { top: 461px; left: 389px; }
+						.plot-12 { top: 421px; left: 365px; }
+						.plot-14 { top: 471px; left: 331px; }
+						.plot-15 { top: 496px; left: 316px; }
+						.plot-16 { top: 566px; left: 296px; }
+
+					}
+				}
+			}
+		}
+	}
+}

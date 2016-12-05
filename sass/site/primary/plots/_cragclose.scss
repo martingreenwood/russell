@@ -1,0 +1,122 @@
+/*=============================
+=            PLOTS            =
+=============================*/
+
+.single-developments {
+
+	.cragg-close {
+
+		.tabs-body {
+
+			.tab-content {
+
+				#plots {
+
+					// Large Screens
+
+					@media screen and (min-width: 1000px) {
+						// stage 1
+						.plot-1 { top: 711px; left: 324px; }
+						.plot-2 { top: 706px; left: 285px; }
+						.plot-3 { top: 692px; left: 237px; }
+						.plot-4 { top: 685px; left: 206px; }
+						.plot-5 { top: 593px; left: 316px; }
+						.plot-6 { top: 563px; left: 314px; }
+						.plot-7 { top: 495px; left: 327px; }
+						.plot-8 { top: 518px; left: 301px; }
+						.plot-9 { top: 464px; left: 316px; }
+						.plot-10 { top: 434px; left: 316px; }
+						.plot-11 { top: 332px; left: 356px; }
+						.plot-12 { top: 332px; left: 307px; }
+						.plot-14 { top: 337px; left: 267px; }
+						.plot-15 { top: 337px; left: 237px; }
+						.plot-16 { top: 148px; left: 372px; }
+						.plot-17 { top: 155px; left: 425px; }
+						.plot-18 { top: 160px; left: 478px; }
+						.plot-19 { top: 160px; left: 599px; }
+						.plot-20 { top: 216px; left: 599px; }
+						.plot-21 { top: 272px; left: 595px; }
+						.plot-22 { top: 329px; left: 595px; }
+						.plot-23 { top: 381px; left: 589px; }
+						.plot-24 { top: 417px; left: 589px; }
+						.plot-25 { top: 630px; left: 589px; }
+						.plot-26 { top: 671px; left: 596px; }
+						.plot-27 { top: 529px; left: 552px; }
+						.plot-28 { top: 529px; left: 521px; }
+						.plot-29 { top: 524px; left: 491px; }
+						.plot-30 { top: 524px; left: 462px; }
+						.plot-31 { top: 505px; left: 432px; }
+						.plot-32 { top: 555px; left: 432px; }
+						.plot-33 { top: 613px; left: 426px; }
+						.plot-34 { top: 644px; left: 426px; }
+						.plot-35 { top: 694px; left: 434px; }
+						.plot-36 { top: 714px; left: 414px; }
+						.plot-37 { top: 769px; left: 422px; }
+						.plot-38 { top: 819px; left: 422px; }
+						.plot-39 { top: 791px; left: 460px; }
+						.plot-40 { top: 791px; left: 503px; }
+						.plot-41 { top: 854px; left: 557px; }
+						.plot-42 { top: 884px; left: 560px; }
+						.plot-43 { top: 912px; left: 568px; }
+						.plot-44 { top: 941px; left: 574px; }
+
+						// stage 2
+						.plot-45 { top: 251px; left: 469px; }
+						.plot-46 { top: 288px; left: 469px; }
+						.plot-47 { top: 318px; left: 473px; }
+						.plot-48 { top: 417px; left: 531px; }
+						.plot-49 { top: 489px; left: 518px; }
+						.plot-50 { top: 455px; left: 575px; }
+						.plot-51 { top: 439px; left: 616px; }
+						.plot-52 { top: 433px; left: 666px; }
+						.plot-53 { top: 429px; left: 712px; }
+						.plot-54 { top: 427px; left: 749px; }
+						.plot-55 { top: 530px; left: 820px; }
+						.plot-56 { top: 560px; left: 826px; }
+						.plot-57 { top: 594px; left: 832px; }
+						.plot-58 { top: 594px; left: 742px; }
+						.plot-59 { top: 627px; left: 770px; }
+						.plot-60 { top: 605px; left: 713px; }
+						.plot-61 { top: 612px; left: 683px; }
+						.plot-62 { top: 598px; left: 546px; }
+						.plot-63 { top: 566px; left: 586px; }
+						.plot-64 { top: 628px; left: 569px; }
+						.plot-65 { top: 664px; left: 569px; }
+						.plot-66 { top: 694px; left: 576px; }
+						.plot-67 { top: 726px; left: 584px; }
+						.plot-68 { top: 755px; left: 674px; }
+						.plot-69 { top: 779px; left: 700px; }
+						.plot-70 { top: 767px; left: 779px; }
+						.plot-71 { top: 790px; left: 805px; }
+						.plot-72 { top: 867px; left: 830px; }
+						.plot-73 { top: 901px; left: 830px; }
+						.plot-74 { top: 959px; left: 830px; }
+						.plot-75 { top: 1016px; left: 830px }
+						.plot-76 { top: 1096px; left: 815px; }
+						.plot-77 { top: 1150px; left: 800px; }
+						.plot-78 { top: 722px; left: 373px; }
+						.plot-79 { top: 719px; left: 418px; }
+						.plot-80 { top: 675px; left: 478px; }
+						.plot-81 { top: 730px; left: 465px; }
+						.plot-82 { top: 536px; left: 405px; }
+						.plot-83 { top: 503px; left: 402px; }
+						.plot-84 { top: 472px; left: 392px; }
+						.plot-85 { top: 437px; left: 412px; }
+						.plot-86 { top: 441px; left: 352px; }
+
+						// stage 1
+						.plot-87 { top: 1115px; left: 598px; }
+						.plot-88 { top: 1075px; left: 597px; }
+						.plot-89 { top: 1010px; left: 605px; }
+						.plot-90 { top: 1046px; left: 565px; }
+						.plot-91 { top: 1040px; left: 516px; }
+						.plot-92 { top: 1060px; left: 476px; }
+						.plot-93 { top: 1041px; left: 426px; }
+						.plot-94 { top: 1071px; left: 376px; }
+						.plot-95 { top: 1131px; left: 326px; }
+					}
+				}
+			}
+		}
+	}
+}

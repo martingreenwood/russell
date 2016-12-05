@@ -1,0 +1,46 @@
+/*====================================
+=            GALLERY PAGE            =
+====================================*/
+
+.our-gallery {
+
+	.page-title {
+		padding-top: 50px;
+		padding-bottom: 25px;
+	}
+
+	article {
+		padding-bottom: 25px;
+	}
+
+	.galleries {
+		margin-bottom: 30px;
+		
+		.gallery {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(2.25);
+				@include omega(4n);
+			}
+
+			@include media($large-screen-up) {
+				@include span-columns(3);
+			}
+
+			img {
+				display: block;
+			}
+
+			span {
+				background-color: #eee;
+				width: 100%;
+				display: block;
+				padding: 7px;
+				color: $text-color;
+				text-align: center;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,348 @@
+/*==================================
+=            OROPERTIES            =
+==================================*/
+
+.view-all-properties {
+
+	h4.countresults {
+		margin: 30px 0 100px 0;
+		color: #878787;
+	}
+
+	.feature-image {
+		display: none;
+	}
+	
+	.title {
+		display: block;
+		margin-bottom: 20px;
+
+		p {
+			float: right;
+			margin: 0;
+
+			span {
+				color: $brand-primary;
+				text-align: center;
+				text-transform: capitalize;
+				font-weight: 600;
+				cursor: pointer;
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.search-box {
+		background: #f9f9f9;
+		padding: 50px 0;
+		margin-bottom: 50px;
+
+		input[type="submit"], input[type="reset"], input[type="button"], button {
+			background-color: $lightblue;
+			border-color: $lightblue;
+		}
+
+		fieldset {
+			border: 0;
+			margin: 0;
+			padding: 0;
+			background-color: transparent;
+			float: left;
+			width: 100%;
+			margin-bottom: 20px;
+			position: relative;
+
+			@include media ($medium-screen-up) {
+				width: 35%;
+			}
+
+			.parsley-errors-list {
+				top: -6px;
+
+				li.parsley-custom-error-message {
+					top: 6px;
+					right: 0;
+					font-size: 11px;
+					background: #cc0000;
+					line-height: 2;
+					color: white;
+					padding: 0 5px;
+				}
+			}
+			
+			&:first-of-type {
+
+				@include media ($medium-screen-up) {
+					width: 65%;
+				}
+			}
+
+			legend {
+				font-size: 15px;
+				margin: 0 0 10px 0;
+				color: $dark-gray;
+				font-weight: 700;
+			}
+
+			&.location-box {
+				
+				p {
+					display: inline-block;
+					width: 100%;
+					position: relative;
+					text-indent: 30px;
+					padding-right: 20px;
+
+					@include media ($medium-screen-up) {
+						width: 50%;
+					}
+
+					label {
+						display: block;
+						font-weight: normal;
+						font-size: 14px;
+						text-indent: 30px;
+						outline: none;
+					}
+
+					input[type="checkbox"] {
+						-webkit-appearance: none;
+						position: absolute;
+						top: 0;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+						left: 0;
+						outline: none;
+						z-index: 1;
+
+						+label:before {
+							content: "";
+							width: 22px;
+							height: 22px;
+							background: white;
+							position: absolute;
+							border: 1px solid #ccc;
+							box-sizing: border-box;
+							left: 0;
+							outline: none;
+							font: normal normal normal 13px/1 FontAwesome;
+							color: white;
+						}
+
+						&:hover {
+
+							+label:before {
+								border-color: $brand-primary;
+							}
+						}
+
+						&:checked {
+
+							+label:before {
+								border-color: $brand-primary;
+								background-color: $brand-primary;
+								content: "\f00c";
+								outline: none;
+								text-indent: 0;
+								text-align: center;
+								line-height: 22px;
+							}
+						}
+					}
+				}
+			}
+
+			&.price-box {
+				
+				select {
+					width: 49%;
+					float: left;
+
+					&:last-of-type {
+						float: right;
+					}
+
+				}
+			}
+		}
+	}
+
+	#results {
+
+		.search-result {
+			@include span-columns(1);
+			position: relative;
+			margin-bottom: 20px;
+			position: relative;
+
+			@include media($medium-screen-up) {
+				@include span-columns(3);
+				@include omega(3n);
+			}
+
+			@include media($large-screen-up) {
+				@include span-columns(4);
+			}
+
+			span.htb-logo {
+				position: absolute;
+				top: 138px;
+				width: 50px;
+				height: 50px;
+				left: 10px;
+			}
+
+			.sub-title {
+				margin-top: 10px;
+
+				h3 {
+					margin: 0;
+					line-height: 1.2;
+					min-height: 38px;
+					font-size: 16px;
+
+					@include media($large-screen-up) {
+						font-size: 18px;
+					}
+				}
+			}
+
+			.placeholder-image {
+				height: 197.86px;
+				text-align: center;
+				background: #f9f9f9;
+				margin-bottom: 6.15px;
+
+				img {
+					margin: 0 auto;
+				}
+			}
+
+			.feature {
+				float: left;
+				width: 100%;
+				position: absolute;
+
+				p {
+					margin: 0;
+					line-height: 30px;
+					text-align: center;
+					text-transform: capitalize;
+					font-weight: bold;
+					float: left;
+					color: white;
+
+					&.stamp-duty-paid {
+						background-color: #f39200;
+					}
+					&.carpets-included {
+						background-color: #f9b122;
+					}
+					&.part-exchange {
+						background-color: #ee7326;
+					}
+					&.help-to-buy {
+						display: none;
+					}
+				}
+
+				&.col-1 {
+					p {
+						width: 100%;
+					}
+				}
+				&.col-2 {
+					p {
+						width: 50%;
+					}
+				}
+				&.col-3 {
+					p {
+						width: 33.3330%;
+					}
+				}
+			}
+
+			.houseprice {
+				margin-bottom: 10px;
+
+				p {
+					font-feature-settings: normal;
+					width: 49%;
+					display: block;
+					float: left;
+					margin: 0;
+
+					img {
+						float: left;
+						width: 22px;
+						height: 22px;
+						margin-right: 5px;
+					}
+
+					&:last-of-type {
+						float: right;
+					}
+				}
+			}
+
+			.plot_features {
+				min-height: 66px;
+				margin-bottom: 20px;
+
+				ul {
+					margin-bottom: 0;
+
+					li {
+						text-transform: capitalize;
+						font-size: 13px;
+					}
+				}
+			}
+
+			a.btn {
+				background: $lightblue;
+				width: 100%;
+				display: block;
+				float: left;
+				line-height: 30px;
+				text-align: center;
+				color: white;
+				font-weight: 700;
+				font-size: 12px;
+
+				@include media($large-screen-up) {
+					width: 49%;
+				}
+
+				&:last-of-type {
+					float: right;
+					background: $brand-primary;
+				}
+			}
+		}
+	}
+}
+
+.win {
+
+	.view-all-properties {
+
+		.search-box {
+
+			fieldset {
+
+				&.location-box {
+				
+					p {
+
+						input[type="checkbox"] {
+							opacity: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

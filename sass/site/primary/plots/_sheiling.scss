@@ -1,0 +1,39 @@
+/*=============================
+=            PLOTS            =
+=============================*/
+
+.single-developments {
+
+	.the-sheiling {
+
+		.tabs-body {
+
+			.tab-content {
+
+				#plots {
+
+					// Large Screens
+
+					@media screen and (min-width: 1000px) {
+
+						.plot-1 { top: 780px; left: 619px; }
+						.plot-2 { top: 820px; left: 519px; }
+						.plot-3 { top: 880px; left: 469px; }
+						.plot-4 { top: 950px; left: 417px; }
+						.plot-5 { top: 940px; left: 287px; }
+						.plot-6 { top: 782px; left: 298px; }
+						.plot-7 { top: 712px; left: 338px; }
+						.plot-8 { top: 552px; left: 358px; }
+						.plot-9 { top: 442px; left: 318px; }
+						.plot-10 { top: 331px; left: 368px; }
+						.plot-11 { top: 352px; left: 418px; }
+						.plot-12 { top: 512px; left: 570px; }
+						.plot-13 { top: 522px; left: 531px; } // should be 14 really
+						.plot-14 { top: 540px; left: 500px; }
+
+					}
+				}
+			}
+		}
+	}
+}

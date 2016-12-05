@@ -1,0 +1,50 @@
+/*====================================
+=            CAREERS PAGE            =
+====================================*/
+
+.careers {
+
+	article {
+		margin-bottom: 50px;
+
+		@include media($medium-screen-up) {
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			column-count: 2;
+		}
+	}
+
+	.jobs {
+		background: #eee;
+		padding: 50px 0;
+
+		h2 {
+			font-size: 24px;
+			margin-bottom: 50px;
+		}
+
+		.job {
+			@include row();
+			border-bottom: 1px solid #ccc;
+			margin-bottom: 20px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+				border-bottom: 0;
+			}
+
+			.half {
+				@include span-columns(1);
+
+				@include media($medium-screen-up) {
+					@include span-columns(4.5);
+					@include omega(2n);
+				}
+
+				@include media($large-screen-up) {
+					@include span-columns(6);
+				}
+			}
+		}
+	}
+}
