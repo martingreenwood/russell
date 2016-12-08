@@ -256,20 +256,20 @@ add_filter( 'wp_head', 'russell_add_meta', 0 );
 ===============================*/
 
 function russell_heatmap() { 
-if (is_home() || is_page('developments/cragg-close') || is_page('developments/oversands-view')) {
+if (is_front_page() || is_single(146) || is_single(144)) {
 ?><!-- Hotjar Tracking Code for https://www.russell-armer.co.uk/ -->
 <script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:356354,hjsv:5};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-</script><?php 
+(function(h,o,t,j,a,r){
+	h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+	h._hjSettings={hjid:356354,hjsv:5};
+	a=o.getElementsByTagName('head')[0];
+	r=o.createElement('script');r.async=1;
+	r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+	a.appendChild(r);
+})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script><?php }
 }
-add_filter( 'wp_head', 'russell_heatmap', 999 );
+add_filter( 'wp_head', 'russell_heatmap', 99 );
 
 
 /**
