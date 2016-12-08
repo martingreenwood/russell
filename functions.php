@@ -256,7 +256,7 @@ add_filter( 'wp_head', 'russell_add_meta', 0 );
 ===============================*/
 
 function russell_heatmap() { 
-if (is_home() || is_page('developments/cragg-close') || is_home('developments/oversands-view')) {
+if (is_home() || is_page('developments/cragg-close') || is_page('developments/oversands-view')) {
 ?><!-- Hotjar Tracking Code for https://www.russell-armer.co.uk/ -->
 <script>
     (function(h,o,t,j,a,r){
