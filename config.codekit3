@@ -867,6 +867,12 @@
 		"oAP": "\/inc\/extras.php",
 		"oF": 0
 		},
+	"\/inc\/get_vars.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/get_vars.php",
+		"oF": 0
+		},
 	"\/inc\/jetpack.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -1348,6 +1354,90 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/partials\/plot-slider.php",
+		"oF": 0
+		},
+	"\/partials\/search-afford-loop-location.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-afford-loop-location.php",
+		"oF": 0
+		},
+	"\/partials\/search-afford-loop.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-afford-loop.php",
+		"oF": 0
+		},
+	"\/partials\/search-affordable.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-affordable.php",
+		"oF": 0
+		},
+	"\/partials\/search-avail-loop-location.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-avail-loop-location.php",
+		"oF": 0
+		},
+	"\/partials\/search-avail-loop.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-avail-loop.php",
+		"oF": 0
+		},
+	"\/partials\/search-available.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-available.php",
+		"oF": 0
+		},
+	"\/partials\/search-base.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-base.php",
+		"oF": 0
+		},
+	"\/partials\/search-not-release-loop-location.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-not-release-loop-location.php",
+		"oF": 0
+		},
+	"\/partials\/search-not-release-loop.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-not-release-loop.php",
+		"oF": 0
+		},
+	"\/partials\/search-not-released.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-not-released.php",
+		"oF": 0
+		},
+	"\/partials\/search-release-loop-location.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-release-loop-location.php",
+		"oF": 0
+		},
+	"\/partials\/search-release-loop.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-release-loop.php",
+		"oF": 0
+		},
+	"\/partials\/search-release-soon.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-release-soon.php",
+		"oF": 0
+		},
+	"\/partials\/search-result-html.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/search-result-html.php",
 		"oF": 0
 		},
 	"\/README.md": {

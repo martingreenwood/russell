@@ -215,13 +215,13 @@ add_action( 'loop_start', 'jptweak_remove_share' );
 =            ACF FILTER            =
 ==================================*/
 
-add_filter( 'json_query_vars', 'filterJsonQueryVars' );
+//add_filter( 'json_query_vars', 'filterJsonQueryVars' );
 function filterJsonQueryVars( $vars ) {
 	$vars[] = 'meta_value';
 	return $vars;
 }
 
-add_action( 'rest_api_init', 'russell_post_meta_register' );
+//add_action( 'rest_api_init', 'russell_post_meta_register' );
 function russell_post_meta_register() {
 	register_api_field( 'post',
 		'testing',
@@ -237,7 +237,7 @@ function russell_get_post_meta( $object, $field_name, $request ) {
 	return get_post_meta( $object[ 'id' ], $field_name, true );
 }
 
-add_filter( 'rest_query_vars', 'russell_allow_meta' );
+//add_filter( 'rest_query_vars', 'russell_allow_meta' );
 function russell_allow_meta( $valid_vars ) {
 	$valid_vars = array_merge( $valid_vars, array( 'meta_key', 'meta_value' ) );
 	return $valid_vars;

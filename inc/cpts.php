@@ -148,3 +148,5 @@ function cpts_register() {
 
 //create Products custom post type
 add_action('init', 'cpts_register');
+
+

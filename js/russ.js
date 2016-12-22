@@ -58,6 +58,16 @@ this.$element.is("select")&&"undefined"!=typeof this.$element.attr("multiple"))r
 
 var $ = jQuery;
 
+// sort function callback
+function sort_li(a, b){
+    return ($(b).data('order')) < ($(a).data('order')) ? 1 : -1;    
+}
+
+$(function($) {
+	$("#results .search-result").sort(sort_li) // sort elements
+		.appendTo('#results'); // append again to the list
+});
+
 // format prices
 $(function($) {
 	$('.price').number( true, 0 ); // Changes the text value of the element matching selector to the formatted number.
