@@ -73,7 +73,6 @@
 								$plot_price = get_field('plot_price', $plot->ID);
 								if (!$plot_price): 
 									$plot_price = "TBC";
-
 								elseif ($plot_price == 'TBC' || $plot_price == 'TBA'): 
 									$plot_price = "TBC";
 								else: 
@@ -82,37 +81,85 @@
 								
 								$plot_title = get_field('big_title', $plot->ID);
 								if(!$plot_title) $plot_title = "Newly built family home";
-							?>
-							<li class="plot-<?php echo $plot_num; ?> <?php echo $plot_availability; ?> <?php echo $development_stage; ?>">
-								<?php if ($enable_info_popup): ?>
-								<div class="plot-popup">
-									<div class="tri"></div>
-									<?php if($plot_availability == 'sold'): ?>
-									
-									<?php echo $house_type_img; ?>
-									<h4>Plot <?php echo $plot_num; ?>, <?php echo $plot_title; ?></h4>
-									<p class="btn">PLOT SOLD</p>
-									
-									<?php elseif($plot_availability == 'reserved'): ?>
-									
-									<?php echo $house_type_img; ?>
-									<h4>Plot <?php echo $plot_num; ?>, <?php echo $plot_title; ?></h4>
-									<p class="btn">PLOT RESERVED</p>
 
-									<?php else: ?>
+								if (get_field('plot_group', $plot->ID)) {
+									$group = 'group';
+								}
+								else {
+									$group = '';
+								}
 
-									<a href="<?php echo get_permalink( $plot->ID ); ?>">
-										<?php echo $house_type_img; ?>
-										<h4>Plot <?php echo $plot_num; ?>, <?php echo $plot_title; ?></h4>
-										<h3>£<?php echo $plot_price; ?></h3>
-										<p class="btn">View Property Details</p>
-									</a>
+								if(!get_field('plot_group', $plot->ID)): ?>
+								<li class="plot-<?php echo $plot_num; ?> <?php echo $plot_availability; ?> <?php echo $development_stage; ?>" data-group="<?php echo $group; ?>">
+									<?php if ($enable_info_popup): ?>
+									<div class="plot-popup">
+										<div class="tri"></div>
+										<?php 
+										if (get_field('show_sub_plots', $plot->ID)) {
+											?>
+											<?php echo $house_type_img; ?>
+											<h4>Plot <?php echo $plot_num; ?>, <?php echo $plot_title; ?></h4>
+											<?php
+											$sub_plots = get_field('sub_plots', $plot->ID);
 
+											if( $sub_plots ): 
+											    foreach( $sub_plots as $post_object): 
+													$plot_num = explode(" ", get_the_title($post_object->ID)); 
+													$plot_num = current($plot_num);
+
+													$choose_house_type = get_field('choose_house_type', $post_object->ID);
+
+													$plot_price = get_field('plot_price');
+													if (!$plot_price): 
+														$plot_price = "£TBC";
+													elseif ($plot_price == 'TBC' || $plot_price == 'TBA'): 
+														$plot_price = "£TBC";
+													else: 
+														$plot_price = '<span class="price">'.get_field('plot_price') .'</span>';
+													endif;
+
+													$house_rooms = get_field('number_of_bedrooms', current($choose_house_type));
+
+													?>
+												    <div class="bar">
+												    	<a href="<?php echo get_permalink($post_object->ID ); ?>">
+												    	<h4>Plot <?php echo $plot_num; ?>, <?php echo $house_rooms; ?> Beds <?php echo $plot_price; ?></h4>
+												    	</a>
+												    </div>
+											    <?php endforeach;
+											endif;
+
+										} else {
+											if($plot_availability == 'sold'): ?>
+											
+											<?php echo $house_type_img; ?>
+											<h4>Plot <?php echo $plot_num; ?>, <?php echo $plot_title; ?></h4>
+											<p class="btn">PLOT SOLD</p>
+											
+											<?php elseif($plot_availability == 'reserved'): ?>
+											
+											<?php echo $house_type_img; ?>
+											<h4>Plot <?php echo $plot_num; ?>, <?php echo $plot_title; ?></h4>
+											<p class="btn">PLOT RESERVED</p>
+
+											<?php else: ?>
+
+											<a href="<?php echo get_permalink( $plot->ID ); ?>">
+												<?php echo $house_type_img; ?>
+												<h4>Plot <?php echo $plot_num; ?>, <?php echo $plot_title; ?></h4>
+												<h3>£<?php echo $plot_price; ?></h3>
+												<p class="btn">View Property Details</p>
+											</a>
+
+											<?php endif;
+										} // end if group
+										?>
+									</div>
 									<?php endif; ?>
-								</div>
-								<?php endif; ?>
-							</li>
-							<?php endforeach;
+								</li>
+								<?php
+								endif; // if not group
+							endforeach;
 						}
 						?>
 						</ul>

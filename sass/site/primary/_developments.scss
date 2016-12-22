@@ -387,6 +387,10 @@
 								.btn {
 									background: darken(#0080be, 20%);
 								}
+
+								.bar {
+									background: darken(#0080be, 20%);
+								}
 							}
 						}
 						&.coming-soon {
@@ -402,6 +406,10 @@
 								}
 
 								.btn {
+									background: darken(#f39200, 20%);
+								}
+
+								.bar {
 									background: darken(#f39200, 20%);
 								}
 							}
@@ -421,6 +429,10 @@
 								.btn {
 									background: darken(#f39200, 20%);
 								}
+
+								.bar {
+									background: darken(#f39200, 20%);
+								}
 							}
 						}
 						&.not-released {
@@ -436,6 +448,10 @@
 								}
 
 								.btn {
+									background: darken(#814a97, 20%);
+								}
+
+								.bar {
 									background: darken(#814a97, 20%);
 								}
 							}
@@ -455,6 +471,10 @@
 								.btn {
 									background: darken(#72bb6f, 20%);
 								}
+
+								.bar {
+									background: darken(#72bb6f, 20%);
+								}
 							}
 						}
 						&.show-home {
@@ -470,6 +490,10 @@
 								}
 
 								.btn {
+									background: darken(#00537b, 20%);
+								}
+
+								.bar {
 									background: darken(#00537b, 20%);
 								}
 							}
@@ -495,6 +519,10 @@
 								.btn {
 									background: darken(#d53620, 20%);
 								}
+
+								.bar {
+									background: darken(#d53620, 20%);
+								}
 							}
 						}
 						&.affordable {
@@ -510,6 +538,10 @@
 								}
 
 								.btn {
+									background: darken(#0080be, 20%);
+								}
+
+								.bar {
 									background: darken(#0080be, 20%);
 								}
 							}
@@ -556,6 +588,17 @@
 								color: white;
 								padding: 6px;
 								font-weight: 700
+							}
+
+							.bar {
+								background: #00527b;
+								padding: 5px;
+								margin-bottom: 5px;
+
+								h4 {
+									margin: 0;
+									font-size: 14px;
+								}
 							}
 						}
 

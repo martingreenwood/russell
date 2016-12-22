@@ -11,6 +11,8 @@
 		'icon',  // https://developer.wordpress.org/resource/dashicons/#arrow-right-alt
 		array('title','editor','thumbnail'),
 		public (true / false),
+		hierarchical (true / false),
+		capability_type (post / page)
 	),
  *	
  * @package russell
@@ -26,6 +28,8 @@ $cpts = array(
 		'dashicons-location', 
 		array('title','editor','thumbnail'),
 		true,
+		false,
+		'post'
 	),
 
 	// Galleries
@@ -36,6 +40,8 @@ $cpts = array(
 		'dashicons-format-gallery',
 		array('title', 'editor', 'thumbnail'),
 		false,
+		false,
+		'post'
 	),
 
 	// Planning
@@ -46,6 +52,8 @@ $cpts = array(
 		'dashicons-clipboard',
 		array('title', 'editor', 'thumbnail'),
 		true,
+		false,
+		'post'
 	),
 
 	// Developments
@@ -56,6 +64,8 @@ $cpts = array(
 		'dashicons-admin-multisite',
 		array('title', 'editor', 'thumbnail'),
 		true,
+		false,
+		'post'
 	),
 
 	// House Types
@@ -66,6 +76,8 @@ $cpts = array(
 		'dashicons-admin-home',
 		array('title', 'editor', 'thumbnail'),
 		false,
+		false,
+		'post'
 	),
 
 	// Plots
@@ -74,8 +86,10 @@ $cpts = array(
 		'Plot',
 		'Plots',
 		'dashicons-welcome-comments',
-		array('title', 'editor', 'thumbnail'),
+		array('title', 'editor', 'thumbnail', 'page-attributes'),
 		true,
+		true,
+		'post'
 	),
 
 	// Case Studies
@@ -86,6 +100,8 @@ $cpts = array(
 		'dashicons-analytics',
 		array('title', 'editor', 'thumbnail'),
 		true,
+		false,
+		'page'
 	),
 
 	// Testimonials
@@ -96,6 +112,8 @@ $cpts = array(
 		'dashicons-thumbs-up',
 		array('title', 'editor', 'thumbnail'),
 		true,
+		false,
+		'post'
 	),
 );
 
@@ -106,12 +124,13 @@ function cpts_register() {
 	
 	foreach($cpts as $cpt){
 		
-		$cpt_wp_name 	= $cpt[0];
-		$cpt_singular 	= $cpt[1];
-		$cpt_plural 	= $cpt[2];
-		$cpt_icon 		= $cpt[3];
-		$cpt_supports 	= $cpt[4];
-		$cpt_public 	= $cpt[5];
+		$cpt_wp_name 		= $cpt[0];
+		$cpt_singular 		= $cpt[1];
+		$cpt_plural 		= $cpt[2];
+		$cpt_icon 			= $cpt[3];
+		$cpt_supports 		= $cpt[4];
+		$cpt_public 		= $cpt[5];
+		$cpt_hierarchical 	= $cpt[6];
 
 		$labels = array(
 	  	'name' 					=> _x($cpt_plural, 'post type general name'),
@@ -132,8 +151,8 @@ function cpts_register() {
 	    'show_ui' 				=> true,
 	    'publicly_queryable'	=> true,
 	    'query_var'				=> true,
-	    'capability_type'		=> 'post',
-	    'hierarchical' 			=> false,
+		'capability_type'		=> 'post',
+	    'hierarchical' 			=> $cpt_hierarchical,
 	    'rewrite' 				=> true,
 	    'menu_icon' 			=> $cpt_icon,
 	    'supports' 				=> $cpt_supports,

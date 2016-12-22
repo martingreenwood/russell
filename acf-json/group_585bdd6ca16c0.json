@@ -1,0 +1,94 @@
+{
+    "key": "group_585bdd6ca16c0",
+    "title": "Plot Group",
+    "fields": [
+        {
+            "default_value": 0,
+            "message": "Hide from Map?",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_585bdd6d2bb2c",
+            "label": "",
+            "name": "plot_group",
+            "type": "true_false",
+            "instructions": "If this plot belongs to a group, tick to hide from the map.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 0,
+            "message": "Show Sub Properties",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_585be9cc41c86",
+            "label": "",
+            "name": "show_sub_plots",
+            "type": "true_false",
+            "instructions": "This will show a list of sub properties instaread of the usual property dropdown.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "post_type": [
+                "plots"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1,
+            "key": "field_585bea2941c87",
+            "label": "Sub Plots",
+            "name": "sub_plots",
+            "type": "post_object",
+            "instructions": "Select the sub properties to display here",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_585be9cc41c86",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "plots"
+            }
+        ]
+    ],
+    "menu_order": -100,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1482420284
+}
