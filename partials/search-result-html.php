@@ -13,7 +13,7 @@
 
 				<?php echo $house_image; ?>
 				
-				<?php if( !isset(get_field('hide_htb') )): ?>
+				<?php if( !get_field('hide_htb')): ?>
 					<?php if($plot_availability != "affordable" ): ?>
 						<span class="htb-logo"><img src="<?php echo get_stylesheet_directory_uri();?>/assets/htb_logo.svg"></span>
 					<?php endif; ?>
