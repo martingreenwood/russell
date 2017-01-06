@@ -17,7 +17,7 @@ while ( $nrs_loop->have_posts() ) : $nrs_loop->the_post();
 		$plot_price 		= "TBC";
 	endif;
 
-
+	$special_offers = null;
 	if (get_field('special_offers')) {
 		if(get_field('special_offers') != "help-to-buy") :
 			$special_offers = get_field('special_offers');

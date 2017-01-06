@@ -1,5 +1,4 @@
 			<div class="search-result" data-dev="<?php echo current($choose_development); ?>" data-order="<?php echo $dorder; ?>" data-availabiility="<?php echo $plot_availability; ?>" data-price="<?php echo $plot_price_filter; ?>" data-room="<?php echo $house_rooms; ?>" data-location="<?php echo $dev_location; ?>">
-				<?php //echo $plot_availability; ?>
 
 				<?php if(isset($special_offers)): ?> 
 				<div class="feature col-<?php echo count($special_offers); ?>">
