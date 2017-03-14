@@ -7,7 +7,7 @@
 		"uuidString": "54D43F45-A105-4502-AF6F-90AAACE1E2F5"
 		}
 	],
-"creatorBuild": "25479",
+"creatorBuild": "25704",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -350,10 +350,12 @@
 	"\/assets\/available.png": {
 		"ft": 32768,
 		"iS": 559,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/available.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/available.svg": {
 		"ft": 2097152,
@@ -378,18 +380,22 @@
 	"\/assets\/benrooms@2x.png": {
 		"ft": 32768,
 		"iS": 842,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/benrooms@2x.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/coming-soon.png": {
 		"ft": 32768,
 		"iS": 563,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/coming-soon.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/coming-soon.svg": {
 		"ft": 2097152,
@@ -407,15 +413,18 @@
 		"oA": 0,
 		"oAP": "\/assets\/default.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/dropdown-arrow.png": {
 		"ft": 32768,
 		"iS": 95,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/dropdown-arrow.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/dropdown-arrow.svg": {
 		"ft": 2097152,
@@ -440,10 +449,12 @@
 	"\/assets\/house_tab.png": {
 		"ft": 32768,
 		"iS": 1040,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/house_tab.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/house_tab.svg": {
 		"ft": 2097152,
@@ -476,10 +487,12 @@
 	"\/assets\/logo-white.png": {
 		"ft": 32768,
 		"iS": 2763,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/logo-white.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/logo-white.svg": {
 		"ft": 2097152,
@@ -494,10 +507,12 @@
 	"\/assets\/no-img.png": {
 		"ft": 32768,
 		"iS": 2355,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/no-img.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/no-img.svg": {
 		"ft": 2097152,
@@ -512,10 +527,12 @@
 	"\/assets\/not-released.png": {
 		"ft": 32768,
 		"iS": 614,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/not-released.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/not-released.svg": {
 		"ft": 2097152,
@@ -530,10 +547,12 @@
 	"\/assets\/play.png": {
 		"ft": 32768,
 		"iS": 2375,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/play.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/play.svg": {
 		"ft": 2097152,
@@ -566,18 +585,22 @@
 	"\/assets\/price@2x.png": {
 		"ft": 32768,
 		"iS": 882,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/price@2x.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/release-soon.png": {
 		"ft": 32768,
 		"iS": 2775,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/release-soon.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/release-soon.svg": {
 		"ft": 2097152,
@@ -592,10 +615,12 @@
 	"\/assets\/reserved.png": {
 		"ft": 32768,
 		"iS": 641,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/reserved.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/reserved.svg": {
 		"ft": 2097152,
@@ -610,10 +635,12 @@
 	"\/assets\/roof.png": {
 		"ft": 32768,
 		"iS": 1139,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/roof.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/roof.svg": {
 		"ft": 2097152,
@@ -628,10 +655,12 @@
 	"\/assets\/school.png": {
 		"ft": 32768,
 		"iS": 585,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/school.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/school.svg": {
 		"ft": 2097152,
@@ -646,10 +675,12 @@
 	"\/assets\/shopping.png": {
 		"ft": 32768,
 		"iS": 533,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/shopping.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/shopping.svg": {
 		"ft": 2097152,
@@ -664,10 +695,12 @@
 	"\/assets\/show-home.png": {
 		"ft": 32768,
 		"iS": 616,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/show-home.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/show-home.svg": {
 		"ft": 2097152,
@@ -682,10 +715,12 @@
 	"\/assets\/slide-next.png": {
 		"ft": 32768,
 		"iS": 396,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/slide-next.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/slide-next.svg": {
 		"ft": 2097152,
@@ -700,10 +735,12 @@
 	"\/assets\/slide-prev.png": {
 		"ft": 32768,
 		"iS": 399,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/slide-prev.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/slide-prev.svg": {
 		"ft": 2097152,
@@ -718,10 +755,12 @@
 	"\/assets\/sold.png": {
 		"ft": 32768,
 		"iS": 589,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/sold.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/sold.svg": {
 		"ft": 2097152,
@@ -736,10 +775,12 @@
 	"\/assets\/sports.png": {
 		"ft": 32768,
 		"iS": 613,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/sports.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/sports.svg": {
 		"ft": 2097152,
@@ -754,10 +795,12 @@
 	"\/assets\/transport.png": {
 		"ft": 32768,
 		"iS": 617,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/transport.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/transport.svg": {
 		"ft": 2097152,
@@ -772,10 +815,12 @@
 	"\/assets\/virtual-icon-white.png": {
 		"ft": 32768,
 		"iS": 3076,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/virtual-icon-white.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/virtual-icon-white.svg": {
 		"ft": 2097152,
@@ -790,10 +835,12 @@
 	"\/assets\/virtual-icon.png": {
 		"ft": 32768,
 		"iS": 3076,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/virtual-icon.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/virtual-icon.svg": {
 		"ft": 2097152,
@@ -5482,10 +5529,12 @@
 	"\/screenshot.png": {
 		"ft": 32768,
 		"iS": 264,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/screenshot.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/search.php": {
 		"ft": 8192,
@@ -6256,6 +6305,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-await-in-loop": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
@@ -6274,6 +6327,10 @@
 			},
 		"no-class-assign": {
 			"active": 1,
+			"optionString": ""
+			},
+		"no-compare-neg-zero": {
+			"active": 0,
 			"optionString": ""
 			},
 		"no-cond-assign": {
@@ -6473,6 +6530,10 @@
 			"optionString": "{'grouping': false, 'allowCall': false }"
 			},
 		"no-mixed-spaces-and-tabs": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-multi-assign": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -6752,6 +6813,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
+			},
 		"object-curly-newline": {
 			"active": 0,
 			"optionString": "{'ObjectExpression': {'multiline': true}, 'ObjectPattern': {'multiline': true}}"
@@ -6796,9 +6861,17 @@
 			"active": 0,
 			"optionString": "{'destructuring': 'any', 'ignoreReadBeforeAssign': false}"
 			},
+		"prefer-destructuring": {
+			"active": 0,
+			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
+			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -6893,6 +6966,10 @@
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},
@@ -7339,7 +7416,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -7432,7 +7510,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"enableLossy": 1,
+		"quality": 100
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,
